@@ -1,0 +1,809 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>15-interfaces.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/16-traits.html" />
+    
+    
+    <link rel="prev" href="../spec/14-classes.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.15"
+        data-chapter-title="15-interfaces.md"
+        data-filepath="spec/15-interfaces.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="interfaces">Interfaces</h1>
+<h2 id="general">General</h2>
+<p>A class can implement a set of capabilities &#x2014; herein called a
+<em>contract</em> &#x2014; through what is called an interface. An <em>interface</em> is a set
+of method declarations and constants.  Note that the methods are only
+declared, not defined; that is, an interface defines a type consisting
+of abstract methods, where those methods are implemented by client
+classes as they see fit. An interface allows unrelated classes to
+implement the same facilities with the same names and types without
+requiring those classes to share a common base class.</p>
+<p>An interface can extend one or more other interfaces, in which case, it
+inherits all members from its <em>base interface(s)</em>.</p>
+<h2 id="interface-declarations">Interface Declarations</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>interface-declaration:</i>
+    interface   <i>name   interface-base-clause<sub>opt</sub></i> {  <i>interface-member-declarations<sub>opt</sub></i>  }
+
+  <i>interface-base-clause:</i>
+    extends   <i>qualified-name</i>
+    <i>interface-base-clause</i>  ,  <i>qualified-name</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+<li><a href="#interface-members"><em>interface-member-declarations</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>An interface must not be derived directly or indirectly from itself.</p>
+<p>Every <em>qualified-name</em> must name an interface type.</p>
+<p><strong>Semantics</strong></p>
+<p>An interface-declaration defines a contract that one or more classes can
+implement.</p>
+<p>Interface names are case-insensitive.</p>
+<p>The optional <em>interface-base-clause</em> specifies the base interfaces from
+which the interface being defined is derived. In such a case, the
+derived interface inherits all the members from the base interfaces.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyCollection</span>
+</span>{
+  <span class="hljs-keyword">const</span> MAX_NUMBER_ITEMS = <span class="hljs-number">1000</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-variable">$item</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">()</span></span>;
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyList</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">MyCollection</span>
+</span>{
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-variable">$item</span>)</span>  </span>{ <span class="hljs-comment">/* implement method */</span> }
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">()</span>   </span>{ <span class="hljs-comment">/* implement method */</span> }
+  ...
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyQueue</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">MyCollection</span>
+</span>{
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-variable">$item</span>)</span>  </span>{ <span class="hljs-comment">/* implement method */</span> }
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">()</span>   </span>{ <span class="hljs-comment">/* implement method */</span> }
+  ...
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processCollection</span><span class="hljs-params">(MyCollection <span class="hljs-variable">$p1</span>)</span>
+</span>{
+  ... <span class="hljs-comment">/* can process any object whose class implements MyCollection */</span>
+}
+processCollection(<span class="hljs-keyword">new</span> MyList(...));
+processCollection(<span class="hljs-keyword">new</span> MyQueue(...));
+</code></pre>
+<h2 id="interface-members">Interface Members</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>interface-member-declarations:</i>
+    <i>interface-member-declaration</i>
+    <i>interface-member-declarations   interface-member-declaration</i>
+
+  <i>interface-member-declaration:</i>
+    <i>const-declaration</i>
+    <i>method-declaration</i>
+</pre>
+
+<ul>
+<li><a href="14-classes.html#constants"><em>const-declaration</em></a></li>
+<li><a href="14-classes.html#methods"><em>method-declaration</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The members of an interface are those specified by its
+<em>interface-member-declaration</em>, and the members inherited from its base
+interfaces.</p>
+<p>An interface may contain the following members:</p>
+<ul>
+<li><a href="#constants">Constants</a> &#x2013; the constant values associated with the interface.</li>
+<li><a href="#methods">Methods</a> &#x2013; placeholders for the computations and actions that can be
+performed by implementers of the interface.</li>
+</ul>
+<h2 id="constants">Constants</h2>
+<p><strong>Semantics</strong></p>
+<p>An interface constant is just like a class <a href="14-classes.html#constants">constant</a>, except that
+an interface constant cannot be overridden by a class that implements it
+nor by an interface that extends it.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyCollection</span>
+</span>{
+  <span class="hljs-keyword">const</span> MAX_NUMBER_ITEMS = <span class="hljs-number">1000</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-variable">$item</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p><strong>Constraints</strong></p>
+<p>All methods declared in an interface must be implicitly or explicitly
+public, and they must not be declared <code>abstract</code>.</p>
+<p><strong>Semantics</strong></p>
+<p>An interface method is just like an <a href="14-classes.html#methods">abstract method</a>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyCollection</span>
+</span>{
+  <span class="hljs-keyword">const</span> MAX_NUMBER_ITEMS = <span class="hljs-number">1000</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-variable">$item</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<h2 id="predefined-interfaces">Predefined Interfaces</h2>
+<h3 id="interface-arrayaccess">Interface <code>ArrayAccess</code></h3>
+<p>This interface allows an instance of an implementing class to be
+accessed using array-like notation. This interface is defined, as
+follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ArrayAccess</span>
+</span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">offsetExists</span><span class="hljs-params">(<span class="hljs-variable">$offset</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">offsetGet</span><span class="hljs-params">(<span class="hljs-variable">$offset</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">offsetSet</span><span class="hljs-params">(<span class="hljs-variable">$offset</span>, <span class="hljs-variable">$value</span>)</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">offsetUnset</span><span class="hljs-params">(<span class="hljs-variable">$offset</span>)</span></span>;
+}
+</code></pre>
+<p>The interface members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>offsetExists</code></td>
+<td>This instance method returns <code>TRUE</code> if the instance contains an element with key <code>$offset</code>, otherwise, <code>FALSE</code>.</td>
+</tr>
+<tr>
+<td><code>offsetGet</code></td>
+<td>This instance method gets the value having key <code>$offset</code>. It may return by value or byRef. (Ordinarily, this wouldn&apos;t be allowed because a class implementing an interface needs to match the interface&apos;s method signatures; however, the Engine gives special treatment to <code>ArrayAccess</code> and allows this). This method is called when an instance of a class that implements this interface is <a href="10-expressions.html#subscript-operator">subscripted</a> in a non-lvalue context.</td>
+</tr>
+<tr>
+<td><code>offsetSet</code></td>
+<td>This instance method sets the value having key <code>$offset</code> to $value. It returns no value. This method is called when an instance of a class that implements this interface is <a href="10-expressions.html#subscript-operator">subscripted</a> in a modifiable-lvalue context.</td>
+</tr>
+<tr>
+<td><code>offsetUnset</code></td>
+<td>This instance method unsets the value having key <code>$offset</code>. It returns no value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interface-iterator">Interface <code>Iterator</code></h3>
+<p>This interface allows instances of an implementing class to be treated
+as a collection. This interface is defined, as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Iterator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Traversable</span>
+</span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">current</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">key</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rewind</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">valid</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>The interface members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>current</code></td>
+<td>This instance method returns the element at the current position.</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>This instance method returns the key of the current element. On failure, it returns <code>NULL</code>; otherwise, it returns the scalar value of the key.</td>
+</tr>
+<tr>
+<td><code>next</code></td>
+<td>This instance method moves the current position forward to the next element. It returns no value. From within a <code>foreach</code> statement, this method is called after each loop.</td>
+</tr>
+<tr>
+<td><code>rewind</code></td>
+<td>This instance method resets the current position to the first element. It returns no value. From within a <code>foreach</code> statement, this method is called once, at the beginning.</td>
+</tr>
+<tr>
+<td><code>valid</code></td>
+<td>This instance method checks if the current position is valid. It takes no arguments. It returns a bool value of <code>TRUE</code> to indicate the current position is valid; <code>FALSE</code>, otherwise. This method is called after each call to <a href="http://php.net/manual/iterator.rewind.php" target="_blank"><code>Iterator::rewind()</code></a> and <a href="http://php.net/manual/iterator.next.php" target="_blank"><code>Iterator::next()</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interface-iteratoraggregate">Interface <code>IteratorAggregate</code></h3>
+<p>This interface allows the creation of an external iterator. This
+interface is defined, as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">IteratorAggregate</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Traversable</span>
+</span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getIterator</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>The interface members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getIterator</code></td>
+<td>This instance method retrieves an iterator, which implements <code>Iterator</code> or <code>Traversable</code>. It throws an <code>Exception</code> on failure.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interface-throwable">Interface <code>Throwable</code></h3>
+<p>This type is the base interface for the type of any object that can be thrown via a
+<a href="11-statements.html#the-throw-statement">throw statement</a>. A user-written class cannot
+implement <code>Throwable</code> directly. Instead, it must extend <code>Error</code> or <code>Exception</code>.</p>
+<p>This type is defined, as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Throwable</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__toString</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCode</span><span class="hljs-params">()</span>: <span class="hljs-title">int</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFile</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLine</span><span class="hljs-params">()</span>: <span class="hljs-title">int</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getMessage</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPrevious</span><span class="hljs-params">()</span>: <span class="hljs-title">Throwable</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTrace</span><span class="hljs-params">()</span>: <span class="hljs-title">array</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTraceAsString</span><span class="hljs-params">()</span>: <span class="hljs-title">string</span></span>;
+}
+</code></pre>
+<p>The interface members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__toString</code></td>
+<td><code>string</code>; retrieves a string representation of the exception in some unspecified format</td>
+</tr>
+<tr>
+<td><code>getCode</code></td>
+<td><code>int</code>; retrieves the exception code</td>
+</tr>
+<tr>
+<td><code>getFile</code></td>
+<td><code>string</code>; retrieves the name of the script where the exception was generated</td>
+</tr>
+<tr>
+<td><code>getLine</code></td>
+<td><code>int</code>; retrieves the source line number in the script where the exception was generated</td>
+</tr>
+<tr>
+<td><code>getMessage</code></td>
+<td><code>string</code>; retrieves the exception message</td>
+</tr>
+<tr>
+<td><code>getPrevious</code></td>
+<td><code>Throwable</code>; retrieves the previous exception, if one exists; otherwise returns <code>NULL</code></td>
+</tr>
+<tr>
+<td><code>getTrace</code></td>
+<td><code>array</code>; retrieves the function stack <a href="17-exception-handling.html#tracing-exceptions">trace information</a> as an array</td>
+</tr>
+<tr>
+<td><code>getTraceAsString</code></td>
+<td><code>string</code>; retrieves the function stack trace information formatted as a single string in some unspecified format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interface-traversable">Interface <code>Traversable</code></h3>
+<p>This interface is intended as the base interface for all traversable
+classes. This interface is defined, as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Traversable</span>
+</span>{
+}
+</code></pre>
+<p>This interface has no members.</p>
+<h3 id="interface--serializable">Interface  <code>Serializable</code></h3>
+<p>This interface provides support for custom serialization. It is defined,
+as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Serializable</span>
+</span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serialize</span><span class="hljs-params">()</span></span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unserialize</span> <span class="hljs-params">(<span class="hljs-variable">$serialized</span>)</span></span>;
+
+}
+</code></pre>
+<p>The interface members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>serialize</code></td>
+<td>This instance method returns a string representation of the current instance. On failure, it returns <code>NULL</code>.</td>
+</tr>
+<tr>
+<td><code>unserialize</code></td>
+<td>This instance method constructs an object from its string form designated by <code>$serialized</code>. It does not return a value.</td>
+</tr>
+</tbody>
+</table>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/14-classes.html" class="navigation navigation-prev " aria-label="Previous page: 14-classes.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/16-traits.html" class="navigation navigation-next " aria-label="Next page: 16-traits.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

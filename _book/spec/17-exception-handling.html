@@ -1,0 +1,678 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>17-exception-handling.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/18-namespaces.html" />
+    
+    
+    <link rel="prev" href="../spec/16-traits.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.17"
+        data-chapter-title="17-exception-handling.md"
+        data-filepath="spec/17-exception-handling.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="exception-handling">Exception Handling</h1>
+<h2 id="general">General</h2>
+<p>An <em>exception</em> is some unusual condition in that it is outside the
+ordinary expected behavior. Examples include dealing with situations in
+which a critical resource is needed, but is unavailable, and detecting
+an out-of-range value for some computation. As such, exceptions require
+special handling. This chapter describes how exceptions can be created
+and handled.</p>
+<p>Whenever some exceptional condition is detected at runtime, an exception
+is <em>thrown</em>. A designated exception handler can <em>catch</em> the thrown
+exception and service it. Among other things, the handler might recover
+from the situation completely (allowing the script to continue
+execution), it might perform some recovery and then throw an exception
+to get further help, or it might perform some cleanup action and
+terminate the script. Exceptions may be thrown on behalf of the Engine
+or by explicit code source code in the script.</p>
+<p>Exception handling involves the use of the following keywords:</p>
+<ul>
+<li><a href="11-statements.html#the-try-statement"><code>try</code></a>, which allows a <em>try-block</em> of code containing one or
+more possible exception generations, to be tried.</li>
+<li><a href="11-statements.html#the-try-statement"><code>catch</code></a>, which defines a handler for a specific type of
+exception thrown from the corresponding try-block or from some
+function it calls.</li>
+<li><a href="11-statements.html#the-try-statement"><code>finally</code></a>, which allows the <em>finally-block</em> of a try-block to
+be executed (to perform some cleanup, for example), whether or not
+an exception occurred within that try-block.</li>
+<li><a href="11-statements.html#the-throw-statement"><code>throw</code></a>, which generates an exception of a given type, from
+a place called a <em>throw point</em>.</li>
+</ul>
+<p>When an exception is thrown, an <em>exception object</em> of type <a href="#class-exception"><code>Exception</code></a>,
+or of a subclass of that type, is created and made available to
+the first catch-handler that can catch it. Among other things, the
+exception object contains an <em>exception message</em> and an <em>exception
+code</em>, both of which can be used by a handler to determine how to handle
+the situation.</p>
+<p>PHP errors also can be translated to exceptions via the class
+<a href="http://php.net/manual/class.errorexception.php" target="_blank"><code>ErrorException</code></a>
+(which is not part of this specification).</p>
+<h2 id="class-exception">Class <code>Exception</code></h2>
+<p>Class <code>Exception</code> is the base class of all exception types. This class is
+defined, as follows:</p>
+<pre><code class="lang-PHP"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Exception</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Throwable</span>
+</span>{
+  <span class="hljs-keyword">protected</span> <span class="hljs-variable">$message</span> = <span class="hljs-string">&apos;Unknown exception&apos;</span>;
+  <span class="hljs-keyword">protected</span> <span class="hljs-variable">$code</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">protected</span> <span class="hljs-variable">$file</span>;
+  <span class="hljs-keyword">protected</span> <span class="hljs-variable">$line</span>;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">(<span class="hljs-variable">$message</span> = <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-variable">$code</span> = <span class="hljs-number">0</span>,
+               Throwable <span class="hljs-variable">$previous</span> = NULL)</span></span>;
+
+  <span class="hljs-keyword">final</span> <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__clone</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>For information about exception trace-back and nested exceptions, see <a href="#tracing-exceptions">tracing exceptions</a>.</p>
+<p>For information about the base interface, see <a href="15-interfaces.html#interface-throwable">Throwable</a>.
+Note that the methods from Throwable are implemented as <code>final</code> in the Exception class, which means
+the extending class can not override them.</p>
+<p>The class members are defined below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$code</code></td>
+<td><code>int</code>; the exception code (as provided by the constructor)</td>
+</tr>
+<tr>
+<td><code>$file</code></td>
+<td><code>string</code>; the name of the script where the exception was generated</td>
+</tr>
+<tr>
+<td><code>$line</code></td>
+<td><code>int</code>; the source line number in the script where the exception was generated</td>
+</tr>
+<tr>
+<td><code>$message</code></td>
+<td><code>string</code>; the exception message (as provided by the constructor)</td>
+</tr>
+<tr>
+<td><code>__construct</code></td>
+<td>Takes three (optional) arguments &#x2013; <code>string</code>: the exception message (defaults to &quot;&quot;), <code>int</code>: the exception code (defaults to 0), and <code>Exception</code>: the previous exception in the chain (defaults to <code>NULL</code>)</td>
+</tr>
+<tr>
+<td><code>__clone</code></td>
+<td>Present to inhibit the cloning of exception objects</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tracing-exceptions">Tracing Exceptions</h2>
+<p>When an exception is caught, the <code>get*</code> functions in class <code>Exception</code>
+provide useful information. If one or more nested function calls were
+involved to get to the place where the exception was generated, a record
+of those calls is also retained, and made available by <code>getTrace, through
+what is referred to as the *function stack trace*, or simply,</code><em>trace</em>`.</p>
+<p>Let&apos;s refer to the top level of a script as <em>function-level</em> 0.
+Function-level 1 is inside any function called from function-level 0.
+Function-level 2 is inside any function called from function-level 1,
+and so on. The method <code>getTrace</code> returns an array. Exceptions
+generated at function-level 0 involve no function call, in which case,
+the array returned by <code>getTrace</code> is empty.</p>
+<p>Each element of the array returned by <code>getTrace</code> provides information
+about a given function level. Let us call this array <em>trace-array</em> and
+the number of elements in this array <em>call-level</em>. The key for each of
+trace-array&apos;s elements has type int, and ranges from 0 to
+call-level - 1. For example, when a top-level script calls function <code>f1</code>,
+which calls function <code>f2</code>, which calls function <code>f3</code>, which then generates
+an exception, there are four function levels, 0&#x2013;3, and there are three
+lots of trace information, one per call level. That is, trace-array
+contains three elements, and they each correspond to the reverse order
+of the function calls. For example, <code>trace-array[0]</code> is for the call to
+function <code>f3</code>, <code>trace-array[1]</code> is for the call to function <code>f2</code>, and
+<code>trace-array[2]</code> is for the call to function <code>f1</code>.</p>
+<p>Each element in trace-array is itself an array that contains elements
+with the following key/value pairs:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;args&quot;</td>
+<td><code>array</code></td>
+<td>The set of arguments passed to the function</td>
+</tr>
+<tr>
+<td>&quot;class&quot;</td>
+<td><code>string</code></td>
+<td>The name of the function&apos;s parent class</td>
+</tr>
+<tr>
+<td>&quot;file&quot;</td>
+<td><code>string</code></td>
+<td>The name of the script where the function was called</td>
+</tr>
+<tr>
+<td>&quot;function&quot;</td>
+<td><code>string</code></td>
+<td>The name of the function or class method</td>
+</tr>
+<tr>
+<td>&quot;line&quot;</td>
+<td><code>int</code></td>
+<td>The line number in the source where the function was called</td>
+</tr>
+<tr>
+<td>&quot;object&quot;</td>
+<td><code>object</code></td>
+<td>The current object</td>
+</tr>
+<tr>
+<td>&quot;type&quot;</td>
+<td><code>string</code></td>
+<td>Type of call; <code>-&gt;</code> for an instance method call, <code>::</code> for a static method call, for ordinary function call, empty string(<code>&quot;&quot;</code>) is returned.</td>
+</tr>
+</tbody>
+</table>
+<p>The key <code>args</code> has a value that is yet another array, which we shall
+call <em>argument-array</em>. That array contains a set of values that
+corresponds directly to the set of values passed as arguments to the
+corresponding function. Regarding element order, <code>argument-array[0]</code>
+corresponds to the left-most argument, <code>argument-array[1]</code> corresponds to
+the next argument to the right, and so on.</p>
+<p>Note that only the actual arguments passed to the function are reported.
+Consider the case in which a function has a default argument value
+defined for a parameter. If that function is called without an argument
+for the parameter having the default value, no corresponding argument
+exists in the argument array. Only arguments present at the function-call
+site have their values recorded in array-argument.</p>
+<p>See also, library functions <a href="http://www.php.net/debug_backtrace" target="_blank"><code>debug_backtrace</code></a> and
+<a href="http://www.php.net/debug_print_backtrace" target="_blank"><code>debug_print_backtrace</code></a>.</p>
+<h2 id="userdefined-exception-classes">User-Defined Exception Classes</h2>
+<p>An exception class is defined simply by having it extend class <a href="#class-exception"><code>Exception</code></a>.
+However, as that class&apos;s <code>__clone</code> method is declared <a href="14-classes.html#methods"><code>final</code></a>,
+exception objects cannot be cloned.</p>
+<p>When an exception class is defined, typically, its constructors call the
+parent class&apos; constructor as their first operation to ensure the
+base-class part of the new object is initialized appropriately. They
+often also provide an augmented implementation of
+<a href="14-classes.html#method-__tostring"><code>__toString()</code></a>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/16-traits.html" class="navigation navigation-prev " aria-label="Previous page: 16-traits.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/18-namespaces.html" class="navigation navigation-next " aria-label="Next page: 18-namespaces.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

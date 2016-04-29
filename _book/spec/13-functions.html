@@ -1,0 +1,712 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>13-functions.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/14-classes.html" />
+    
+    
+    <link rel="prev" href="../spec/12-arrays.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.13"
+        data-chapter-title="13-functions.md"
+        data-filepath="spec/13-functions.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="functions">Functions</h1>
+<h2 id="general">General</h2>
+<p>When a function is called, information may be passed to it by the caller
+via an <em>argument list</em>, which contains one or more <em>argument
+expressions</em>, or more simply, <em>arguments</em>. These correspond by position
+to the <em>parameters</em> in a <em>parameter list</em> in the called <a href="#function-definitions">function&apos;s
+definition</a>.</p>
+<p>An <em>unconditionally defined function</em> is a function whose definition is
+at the top level of a script. A <em>conditionally defined function</em> is a
+function whose definition occurs inside a compound statement,
+such as the body of another function (a <em>nested function</em>), conditional statement, etc.
+There is no limit on the depth of levels of function nesting. Consider the
+case of an <em>outer function</em>, and an <em>inner function</em> defined within it.
+Until the outer function is called at least once, its inner function
+does not exist. Even if the outer function is called, if its runtime logic
+bypasses the definition of the inner function, that inner function still
+does not exist. The conditionally defined function comes into existance when
+the execution flow reaches the point where the function is defined.</p>
+<p>Any function containing <a href="10-expressions.html#yield-operator"><code>yield</code></a> is a <em>generator function</em>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP">ucf1(); <span class="hljs-comment">// can call ucf1 before its definition is seen</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ucf1</span><span class="hljs-params">()</span> </span>{ ... }
+ucf1(); <span class="hljs-comment">// can call ucf1 after its definition is seen</span>
+cf1(); <span class="hljs-comment">// Error; call to non-existent function</span>
+<span class="hljs-variable">$flag</span> = <span class="hljs-keyword">TRUE</span>;
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$flag</span>) { <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cf1</span><span class="hljs-params">()</span> </span>{ ... } } <span class="hljs-comment">// cf1 now exists</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$flag</span>) { cf1(); } <span class="hljs-comment">// can call cf1 now</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ucf2</span><span class="hljs-params">()</span> </span>{ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cf2</span><span class="hljs-params">()</span> </span>{ ... } }
+cf2(); <span class="hljs-comment">// Error; call to non-existent function</span>
+ucf2(); <span class="hljs-comment">// now cf2 exists</span>
+cf2(); <span class="hljs-comment">// so we can call it</span>
+</code></pre>
+<h2 id="function-calls">Function Calls</h2>
+<p>A function is called via the function-call operator <a href="10-expressions.html#function-call-operator"><code>()</code></a>.</p>
+<h2 id="function-definitions">Function Definitions</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>function-definition:</i>
+    <i>function-definition-header   compound-statement</i>
+
+  <i>function-definition-header:</i>
+    function  &amp;<i><sub>opt</sub></i>   <i>name</i>  (  <i>parameter-declaration-list<sub>opt</sub></i>  )  <i>return-type<sub>opt</sub></i>
+
+  <i>parameter-declaration-list:</i>
+    <i>simple-parameter-declaration-list</i>
+    <i>variadic-declaration-list</i>
+
+  <i>simple-parameter-declaration-list:</i>
+    <i>parameter-declaration</i>
+    <i>parameter-declaration-list</i>  ,  <i>parameter-declaration</i>
+
+  <i>variadic-declaration-list:</i>
+    <i>simple-parameter-declaration-list</i>  ,  <i>variadic-parameter</i>
+    <i>variadic-parameter</i>
+
+  <i>parameter-declaration:</i>
+    <i>type-declaration<sub>opt</sub></i>  &amp;<i><sub>opt</sub></i>  <i>variable-name   default-argument-specifier<sub>opt</sub></i>
+
+  <i>variadic-parameter:</i>
+    <i>type-declaration<sub>opt</sub></i>  &amp;<i><sub>opt</sub></i>  ...  <i>variable-name</i>
+
+  <i>return-type:</i>
+    : <i>type-declaration</i>
+    : void
+
+  <i>type-declaration:</i>
+    array
+    callable
+    <i>scalar-type</i>
+    <i>qualified-name</i>
+
+  <i>scalar-type:</i>
+    bool
+    float
+    int
+    string
+
+  <i>default-argument-specifier:</i>
+    =  <i>constant-expression</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#constant-expressions"><em>constant-expression</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>qualified-name</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>Each parameter name in a <em>function-definition</em> must be distinct.</p>
+<p>A <a href="#general">conditionally defined function</a> must exist before any calls are
+made to that function.</p>
+<p>The <em>function-definition</em> for constructors, destructors, and clone methods must not contain <em>return-type</em>.</p>
+<p>For generator functions, if the the return type is specified, it can only be one of:
+<code>Generator</code>, <code>Iterator</code> or <code>Traversable</code>.</p>
+<p><strong>Semantics</strong></p>
+<p>A <em>function-definition</em> defines a function called <em>name</em>. Function names
+are <strong>not</strong> case-sensitive. A function can be defined with zero or more
+parameters, each of which is specified in its own
+<em>parameter-declaration</em> in a <em>parameter-declaration-list</em>. Each
+parameter has a name, <em>variable-name</em>, and optionally, a
+<em>default-argument-specifier</em>. An <code>&amp;</code> in <em>parameter-declaration</em> indicates
+that parameter is passed <a href="04-basic-concepts.html#assignment">byRef</a> rather than by value. An <code>&amp;</code>
+before <em>name</em> indicates that the value returned from this function is to
+be returned byRef. Returning values is described in <a href="11-statements.html#the-return-statement"><code>return</code> statement description</a>.</p>
+<p>When the function is called, if there exists a parameter for which there
+is a corresponding argument, the argument is assigned to the parameter
+variable using value assignment, while for passing byRef, the argument is
+<a href="04-basic-concepts.html#argument-passing">assigned</a> to the parameter variable using <a href="04-basic-concepts.html#assignment">byRef assignment</a>.
+If that parameter has no corresponding argument, but the parameter has a
+default argument value, for passing by value or byRef, the default
+value is assigned to the parameter variable using value assignment.
+Otherwise, if the parameter has no corresponding argument and the parameter
+does not have a default value, the parameter variable is non-existent and no corresponding
+<a href="04-basic-concepts.html#the-memory-model">VSlot</a> exists.  After all possible parameters have been
+assigned initial values or aliased to arguments, the body of the function,
+<em>compound-statement</em>, is executed. This execution may terminate <a href="04-basic-concepts.html#program-termination">normally</a>,
+with <a href="11-statements.html#the-return-statement"><code>return</code> statement</a> or <a href="04-basic-concepts.html#program-termination">abnormally</a>.</p>
+<p>Each parameter is a variable local to the parent function, and is a
+modifiable lvalue.</p>
+<p>A <em>function-definition</em> may exist at the top level of a script, inside
+any <em>compound-statement</em>, in which case, the function is <a href="#general">conditionally
+defined</a>, or inside a <a href="14-classes.html#methods"><em>method-declaration</em> section of a class</a>.</p>
+<p>If <em>variadic-parameter</em> is defined, every parameter that is supplied to function and is not matched
+by the preceding parameters is stored in this parameter, as an array element.
+The first such parameter gets index 0, the next one 1, etc. If no extra parameters is supplied,
+the value of the parameter is an empty array.
+Note that if type and/or byRef specifications are supplied to variadic parameter, they apply
+to every extra parameter captured by it.</p>
+<p>By default, a parameter will accept an argument of any type. However, by
+specifying a <em>type-declaration</em>, the types of argument accepted can be
+restricted. By specifying <code>array</code>, only an argument of the <code>array</code>
+type is accepted. By specifying <code>callable</code>, only an argument designating a
+function (see below) is accepted. By specifying <em>qualified-name</em>, only an instance
+of a class having that type, or being derived from that type, are
+accepted, or only an instance of a class that implements that interface
+type directly or indirectly is accepted. The check is the same as for <a href="10-expressions.html#instanceof-operator"><code>instanceof</code> operator</a>.</p>
+<p><code>callable</code> pseudo-type accepts the following:</p>
+<ul>
+<li>A string value containing the name of a function defined at the moment of the call.</li>
+<li>An array value having two elements under indexes <code>0</code> and <code>1</code>. First element can be either string or object.
+If the first element is a string, the second element must be a string naming a method in a class designated by the first element.
+If the first element is an object, the second element must be a string naming a method
+that can be called on an object designated by the first element, from the context of the function being called.</li>
+<li>An instance of the <a href="14-classes.html#class-closure"><code>Closure</code></a> class.</li>
+<li>An instance of a class implementing <a href="14-classes.html#method-__invoke"><code>__invoke</code></a>.</li>
+</ul>
+<p>The library function <a href="http://php.net/is_callable" target="_blank"><code>is_callable</code></a> reports whether the contents of
+a variable can be called as a function.</p>
+<p>Parameters typed with <em>scalar-type</em> are accepted if they pass the type check for this <a href="05-types.html#scalar-types">scalar type</a>,
+as <a href="#type-check-modes">described below</a>. Once the checks have been passed, the parameter types are always of the scalar type
+specified (or <code>NULL</code> if <code>NULL</code> is allowed).</p>
+<p>If a parameter has a type declaration, <code>NULL</code> is not accepted unless it has a default value that evaluates to <code>NULL</code>.</p>
+<p>The default value for a typed parameter must be of the type specified, or <code>NULL</code>,
+and conversion is not be performed for defaults, regardless of the mode.</p>
+<h2 id="return-typing">Return typing</h2>
+<p>If the function is defined with <em>return-type</em> declaration, the value returned by the function should
+be compatible with the defined type, using the same rules as for parameter type checks. <code>NULL</code> values
+are not allowed for typed returns. If the value of the <a href="11-statements.html#the-return-statement"><code>return</code> statement</a>
+does not pass the type check, a fatal error is produced.</p>
+<p>The <code>void</code> type is a special type that can only be used as a return type, and
+not in other contexts. It has no effect at runtime, see the <a href="11-statements.html#the-return-statement"><code>return</code> statement</a>.</p>
+<h2 id="type-check-modes">Type check modes</h2>
+<p>The type checking can be performed in two modes, strict and coercive (default).
+The difference between modes exists only for scalar typed parameters (<code>int</code>, <code>float</code>, <code>string</code> and <code>bool</code>).</p>
+<p>For coercive mode, if the value passed is of the same type as the parameter, it is accepted.
+If not, the <a href="08-conversions.html#general">conversion</a> is attempted. If the conversion succeeds,
+the converted value is the value assigned to the parameter. If the conversion fails, a fatal error
+is produced.</p>
+<p>For strict mode, the parameter must be exactly of the type that is declared (e.g., string <code>&quot;1&quot;</code> is not
+accepted as a value for parameter typed as <code>int</code>). The only exception is that <code>int</code> values will be accepted
+for <code>float</code> typed parameter and <a href="08-conversions.html#converting-to-floating-point-type">converted to <code>float</code></a>.
+Note that the strict mode applies not only to user-defined but also to internal functions,
+please consult <a href="http://php.net/manual/" target="_blank">the manual</a> for appropriate parameter types. If the types do not match,
+an exception of type <code>TypeError</code> is thrown.</p>
+<p>Note that if the parameter is passed byRef, and conversion happened,
+then the value will be re-assigned with the newly converted value.</p>
+<p>The mode is set by the <a href="11-statements.html#the-declare-statement"><code>declare</code> statement</a>.</p>
+<p>Note that the type check mode is for the function call controleed by the caller, not the callee.
+While the check is performed in the function being called, the caller defines whether the check is strict.
+Same function can be called with both strict and coercive mode checks from different contexts.</p>
+<p>The check for the return type is always defined by the script that the function was defined in.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-comment">// coercive mode by default</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">accept_int</span><span class="hljs-params">(int <span class="hljs-variable">$a</span>)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-variable">$a</span>+<span class="hljs-number">1</span>; }
+accept_int(<span class="hljs-number">1</span>); <span class="hljs-comment">// ok</span>
+accept_int(<span class="hljs-string">&quot;123&quot;</span>); <span class="hljs-comment">// ok</span>
+accept_int(<span class="hljs-string">&quot;123.34&quot;</span>); <span class="hljs-comment">// ok</span>
+accept_int(<span class="hljs-string">&quot;123.34 and some&quot;</span>); <span class="hljs-comment">// ok + notice</span>
+accept_int(<span class="hljs-string">&quot;not 123&quot;</span>); <span class="hljs-comment">// fatal error!</span>
+accept_int(<span class="hljs-keyword">null</span>); <span class="hljs-comment">// fatal error</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">accept_int_or_not</span><span class="hljs-params">(int <span class="hljs-variable">$a</span> = null)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-variable">$a</span>+<span class="hljs-number">1</span>; }
+accept_int_or_not(<span class="hljs-keyword">null</span>); <span class="hljs-comment">// ok</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">convert_int</span><span class="hljs-params">(int &amp;<span class="hljs-variable">$a</span>)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-variable">$a</span>+<span class="hljs-number">1</span>; }
+<span class="hljs-variable">$a</span> = <span class="hljs-string">&quot;12&quot;</span>;
+convert_int(<span class="hljs-variable">$a</span>);
+var_dump(<span class="hljs-variable">$a</span>); <span class="hljs-comment">// $a is now int</span>
+
+<span class="hljs-comment">// Now in strict mode</span>
+<span class="hljs-keyword">declare</span>(strict_types=<span class="hljs-number">1</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">accept_int</span><span class="hljs-params">(int <span class="hljs-variable">$a</span>)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-variable">$a</span>+<span class="hljs-number">1</span>; }
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">accept_float</span><span class="hljs-params">(float <span class="hljs-variable">$a</span>)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-variable">$a</span>+<span class="hljs-number">1</span>; }
+accept_int(<span class="hljs-number">1</span>); <span class="hljs-comment">// ok</span>
+accept_float(<span class="hljs-number">1</span>); <span class="hljs-comment">// ok</span>
+accept_int(<span class="hljs-number">1.5</span>); <span class="hljs-comment">// fatal error</span>
+accept_int(<span class="hljs-string">&quot;123&quot;</span>); <span class="hljs-comment">// fatal error</span>
+<span class="hljs-keyword">echo</span> substr(<span class="hljs-string">&quot;123&quot;</span>, <span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">// fatal error</span>
+</code></pre>
+<h2 id="variable-functions">Variable Functions</h2>
+<p>If a variable name is followed by the function-call operator <a href="10-expressions.html#function-call-operator"><code>()</code></a>,
+and the value of that variable designates the function currently defined and visible (see description above),
+that function will be executed. If the variable does not designate a function or this function can not be called,
+a fatal error is produced.</p>
+<h2 id="anonymous-functions">Anonymous Functions</h2>
+<p>An <em>anonymous function</em>, also known as a <em>closure</em>, is a function
+defined with no name. As such, it must be defined in the context of an
+expression whose value is used immediately to call that function, or
+that is saved in a variable for later execution. An anonymous function
+is defined via the <a href="10-expressions.html#anonymous-function-creation">anonymous function creation operator</a>.</p>
+<p>For both <a href="06-constants.html#context-dependent-constants"><code>__FUNCTION__</code> and <code>__METHOD__</code></a>, an anonymous
+function&apos;s name is reported as <code>{closure}</code>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/12-arrays.html" class="navigation navigation-prev " aria-label="Previous page: 12-arrays.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/14-classes.html" class="navigation navigation-next " aria-label="Next page: 14-classes.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

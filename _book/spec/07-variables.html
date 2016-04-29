@@ -1,0 +1,771 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>07-variables.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/08-conversions.html" />
+    
+    
+    <link rel="prev" href="../spec/06-constants.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.7"
+        data-chapter-title="07-variables.md"
+        data-filepath="spec/07-variables.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="variables">Variables</h1>
+<h2 id="general">General</h2>
+<p>A <em>variable</em> is a named area of data storage that contains a PHP value. A variable is represented by a <a href="04-basic-concepts.html#general">VSlot</a>. A variable is created by <a href="04-basic-concepts.html#assignment">assigning a value</a> to it.
+A variable is destroyed by <em>unsetting</em> it, either by an explicit call to the intrinsic <a href="10-expressions.html#unset"><code>unset</code></a>, or by the Engine. The intrinsic <a href="10-expressions.html#isset"><code>isset</code></a> tests if a given variable exists and is not set to <code>NULL</code>. A variable that somehow becomes defined, but is not initialized starts out with the value <code>NULL</code>.</p>
+<p>Variables have <a href="09-lexical-structure.html#names">names</a>. Distinct variables may have
+the same name provided they are in different <a href="04-basic-concepts.html#scope">scopes</a>.</p>
+<p>A <a href="06-constants.html#general">constant</a> is a variable that, once initialized, its value cannot
+be changed.</p>
+<p>Based on the context in which it is declared, a variable has a <a href="04-basic-concepts.html#scope">scope</a> and a <a href="04-basic-concepts.html#storage-duration">storage duration</a>.</p>
+<p>A <em>superglobal</em> variable is a global variable that is accessible in all scopes without
+the need for a <a href="#global-variables"><em>global-declaration</em></a>.</p>
+<p>The following kinds of variable may exist in a script:</p>
+<ul>
+<li><a href="#constants">Constant</a>.</li>
+<li><a href="#local-variables">Local variable</a>.</li>
+<li><a href="#array-elements">Array element</a>.</li>
+<li><a href="#function-statics">Function static</a>.</li>
+<li><a href="#global-variables">Global variable</a>.</li>
+<li><a href="#instance-properties">Instance property</a>.</li>
+<li><a href="#static-properties">Static class property</a>.</li>
+<li><a href="#class-and-interface-constants">Class and interface constant</a>.</li>
+</ul>
+<h2 id="kinds-of-variables">Kinds of Variables</h2>
+<h3 id="constants">Constants</h3>
+<p><strong>Syntax</strong></p>
+<p>See <a href="06-constants.html#general">constants section</a>.</p>
+<p><strong>Constraints</strong></p>
+<p>Outside of a class or interface, a c-constant can be defined only at the
+top level of a script.</p>
+<p><strong>Semantics</strong></p>
+<p>See <a href="06-constants.html#general">constants</a> and <a href="14-classes.html#constants">class constants</a>.</p>
+<p>A constant defined outside of a class or interface is a <a href="#general">superglobal</a>. A constant has static <a href="04-basic-concepts.html#storage-duration">storage duration</a>
+and is a non-modifiable lvalue.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">const</span> MAX_HEIGHT = <span class="hljs-number">10.5</span>;        <span class="hljs-comment">// define two c-constants</span>
+<span class="hljs-keyword">const</span> UPPER_LIMIT = MAX_HEIGHT;
+define(<span class="hljs-string">&apos;COEFFICIENT_1&apos;</span>, <span class="hljs-number">2.345</span>); <span class="hljs-comment">// define two d-constants</span>
+define(<span class="hljs-string">&apos;FAILURE&apos;</span>, <span class="hljs-keyword">TRUE</span>);
+</code></pre>
+<h3 id="local-variables">Local Variables</h3>
+<p><strong>Syntax</strong></p>
+<p>See Semantics below.</p>
+<p><strong>Semantics</strong></p>
+<p>Except for a parameter, a local variable is never defined explicitly;
+instead, it is created when it is first assigned a value. A local
+variable can be assigned to as a parameter in the parameter list of a
+<a href="13-functions.html#function-definitions">function definition</a> or inside any <a href="11-statements.html#compound-statements">compound statement</a>. It
+has function <a href="04-basic-concepts.html#scope">scope</a> and automatic <a href="04-basic-concepts.html#storage-duration">storage duration</a>. A local
+variable is a modifiable lvalue.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doit</span><span class="hljs-params">(<span class="hljs-variable">$p1</span>)</span>  // <span class="hljs-title">assigned</span> <span class="hljs-title">the</span> <span class="hljs-title">value</span> <span class="hljs-title">TRUE</span> <span class="hljs-title">when</span> <span class="hljs-title">called</span>
+</span>{
+  <span class="hljs-variable">$count</span> = <span class="hljs-number">10</span>;
+    ...
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$p1</span>)
+  {
+    <span class="hljs-variable">$message</span> = <span class="hljs-string">&quot;Can&apos;t open master file.&quot;</span>;
+    ...
+  }
+  ...
+}
+doit(<span class="hljs-keyword">TRUE</span>);
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-variable">$lv</span> = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$lv = $lv\n&quot;</span>;
+  ++<span class="hljs-variable">$lv</span>;
+}
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">3</span>; ++<span class="hljs-variable">$i</span>)
+  f();
+</code></pre>
+<p>Unlike the <a href="#function-statics">function static equivalent</a>, function <code>f</code> outputs
+&quot;<code>$lv = 1</code>&quot; each time.</p>
+<p>See the recursive function example in <a href="04-basic-concepts.html#storage-duration">storage duration section</a>.</p>
+<h3 id="array-elements">Array Elements</h3>
+<p><strong>Syntax</strong></p>
+<p><a href="12-arrays.html#arrays">Arrays</a> are created via the <a href="10-expressions.html#array-creation-operator">array-creation operator</a> or
+the intrinsic <a href="10-expressions.html#array"><code>array</code></a>. At the same time, one or more elements
+may be created for that array. New elements are inserted into an
+existing array via the <a href="10-expressions.html#simple-assignment">simple-assignment operator</a> in
+conjunction with the subscript <a href="10-expressions.html#subscript-operator">operator <code>[]</code></a>. Elements can be
+removed by calling the <a href="10-expressions.html#unset"><code>unset</code> intrinsic</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>The <a href="04-basic-concepts.html#scope">scope</a> of an array element is the same as the scope of that
+array&apos;s name. An array element has allocated <a href="04-basic-concepts.html#storage-duration">storage duration</a>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$colors</span> = [<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;white&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>]; <span class="hljs-comment">// create array with 3 elements</span>
+<span class="hljs-variable">$colors</span>[] = <span class="hljs-string">&quot;green&quot;</span>;                <span class="hljs-comment">// insert a new element</span>
+</code></pre>
+<h3 id="function-statics">Function Statics</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>function-static-declaration:</i>
+    static <i>static-variable-name-list</i>  ;
+
+  <i>static-variable-name-list:</i>
+    <i>static-variable-declaration</i>
+    <i>static-variable-name-list</i>  ,  <i>static-variable-declaration</i>
+
+  <i>static-variable-declaration:</i>
+    <i>variable-name</i> <i>function-static-initializer<sub>opt</sub></i>
+
+  <i>function-static-initializer:</i>
+    = <i>constant-expression</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>variable-name</em></a></li>
+<li><a href="10-expressions.html#constant-expressions"><em>constant-expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>A function static must be defined inside a function.</p>
+<p><strong>Semantics</strong></p>
+<p>A function static may be defined inside any <a href="11-statements.html#compound-statements">compound statement</a>.
+It is a modifiable lvalue.</p>
+<p>A function static has function <a href="04-basic-concepts.html#scope">scope</a> and static <a href="04-basic-concepts.html#storage-duration">storage duration</a>.</p>
+<p>The value of a function static is retained across calls to its parent
+function. Each time the function containing a function static
+declaration is called, that execution is dealing with an <a href="04-basic-concepts.html#general">alias</a>
+to that static variable. If that alias is passed to the <a href="10-expressions.html#unset"><code>unset</code> intrinsic</a>,
+only that alias is destroyed. The next time that function is called, a new alias is created.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">static</span> <span class="hljs-variable">$fs</span> = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$fs = $fs\n&quot;</span>;
+  ++<span class="hljs-variable">$fs</span>;
+}
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">3</span>; ++<span class="hljs-variable">$i</span>)
+  f();
+</code></pre>
+<p>Unlike the <a href="#local-variables">local variable equivalent</a>, function <code>f</code> outputs &quot;<code>$fs
+= 1</code>&quot;, &quot;<code>$fs = 2</code>&quot;, and &quot;<code>$fs = 3</code>&quot;, as <code>$fs</code> retains its value across
+calls.</p>
+<h3 id="global-variables">Global Variables</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>global-declaration:</i>
+    global <i>variable-name-list</i> ;
+
+  <i>variable-name-list:</i>
+    <i>global-variable</i>
+    <i>variable-name-list</i>  ,  <i>global-variable</i>
+
+  <i>global-variable:</i>
+    <i>variable-name</i>
+    <i>variable-name-creation-expression</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>variable-name</em></a></li>
+<li><a href="10-expressions.html#variable-name-creation-operator"><em>variable-name-creation-expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>Each <em>variable-name-creation-expression</em> must designate a simple variable name, i.e. it can not include array elements,
+property accesses, etc. that are not inside braced expression.</p>
+<p><strong>Semantics</strong></p>
+<p>A global variable is never defined explicitly; instead, it is created
+when it is first assigned a value. That may be done at the top level of
+a script, or from within a block in which that variable has been
+declared (<em>imported</em>, that is) using the <code>global</code> keyword.</p>
+<p>One of the <a href="#predefined-variables">predefined variables</a>,
+<a href="http://php.net/manual/reserved.variables.globals.php" target="_blank"><code>$GLOBALS</code></a> is
+a <a href="#general">superglobal</a> array whose elements&apos; key/value pairs contain the
+name and value, respectively, of each global variable currently defined.
+As such, a global variable <code>gv</code> can be initialized with the value <code>v</code>,
+and possibly be created, using the following form of assignment:</p>
+<p><code>$GLOBALS[&apos;gv&apos;] = v</code></p>
+<p>As <code>$GLOBALS</code> is a superglobal, <code>gv</code> need not first be the subject of a
+<em>global-declaration</em>.</p>
+<p>A global variable has global <a href="04-basic-concepts.html#scope">scope</a> and static
+<a href="04-basic-concepts.html#storage-duration">storage duration</a>. A global variable is a modifiable lvalue.</p>
+<p>When a global value is imported into a function, each time the function
+is called, that execution is dealing with an <a href="04-basic-concepts.html#general">alias</a> to that
+global variable. If that alias is passed to the <a href="10-expressions.html#unset"><code>unset</code> intrinsic</a>,
+only that alias is destroyed. The next time that function
+is called, a new alias is created with the current value of the global variable.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$colors</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;white&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+<span class="hljs-variable">$GLOBALS</span>[<span class="hljs-string">&apos;done&apos;</span>] = <span class="hljs-keyword">FALSE</span>;
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-variable">$min</span> = <span class="hljs-number">10</span>; <span class="hljs-variable">$max</span> = <span class="hljs-number">100</span>; <span class="hljs-variable">$average</span> = <span class="hljs-keyword">NULL</span>;
+<span class="hljs-keyword">global</span> <span class="hljs-variable">$min</span>, <span class="hljs-variable">$max</span>;         <span class="hljs-comment">// allowed, but serves no purpose</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compute</span><span class="hljs-params">(<span class="hljs-variable">$p</span>)</span>
+</span>{
+  <span class="hljs-keyword">global</span> <span class="hljs-variable">$min</span>, <span class="hljs-variable">$max</span>;
+  <span class="hljs-keyword">global</span> <span class="hljs-variable">$average</span>;
+  <span class="hljs-variable">$average</span> = (<span class="hljs-variable">$max</span> + <span class="hljs-variable">$min</span>)/<span class="hljs-number">2</span>;
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$p</span>)
+  {
+    <span class="hljs-keyword">global</span> <span class="hljs-variable">$result</span>;
+    <span class="hljs-variable">$result</span> = <span class="hljs-number">3.456</span>;  <span class="hljs-comment">// initializes a global, creating it, if necessary</span>
+  }
+}
+compute(<span class="hljs-keyword">TRUE</span>);
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$average = $average\n&quot;</span>;  <span class="hljs-comment">// $average = 55</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$result = $result\n&quot;</span>;  <span class="hljs-comment">// $result = 3.456</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-variable">$g</span> = <span class="hljs-number">100</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-variable">$v</span> = <span class="hljs-string">&apos;g&apos;</span>;
+  <span class="hljs-keyword">global</span> <span class="hljs-variable">$$v</span>;          <span class="hljs-comment">// import global $g</span>
+  ...
+}
+</code></pre>
+<h3 id="instance-properties">Instance Properties</h3>
+<p>These are described in <a href="14-classes.html#properties">class instance properties section</a>.
+They have class <a href="04-basic-concepts.html#scope">scope</a> of the defining class and
+allocated <a href="04-basic-concepts.html#storage-duration">storage duration</a>.
+Access to the instance properties is governed by <a href="14-classes.html#general">visibility rules</a>.</p>
+<h3 id="static-properties">Static Properties</h3>
+<p>These are described in <a href="14-classes.html#properties">class static properties section</a>.
+They have class <a href="04-basic-concepts.html#scope">scope</a> of the defining class
+and static <a href="04-basic-concepts.html#storage-duration">storage duration</a>.
+Access to the static properties is governed by <a href="14-classes.html#general">visibility rules</a>.</p>
+<h3 id="class-and-interface-constants">Class and Interface Constants</h3>
+<p>These are described in <a href="14-classes.html#constants">class constants section</a> and <a href="15-interfaces.html#constants">interface constants section</a>. They have class <a href="04-basic-concepts.html#scope">scope</a> of the defining class or interface
+ and static <a href="04-basic-concepts.html#storage-duration">storage duration</a>.</p>
+<h2 id="predefined-variables">Predefined Variables</h2>
+<p>The following global variables are available to all scripts:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$argc</code></td>
+<td><code>int</code>; The number of command-line arguments passed to the script. This is at least 1. (See <code>$argv</code> below). This may not be available in non-command-line builds of the Engine.</td>
+</tr>
+<tr>
+<td><code>$argv</code></td>
+<td><code>array</code>; An array of <code>$argc</code> elements containing the command-line arguments passed to the script as strings. Each element has an <code>int</code> key with the keys being numbered sequentially starting at zero through <code>$argc-1</code>. <code>$argv[0]</code> is the name of the script. It is implementation-defined as to how white space on command lines is handled, whether letter casing is preserved, which characters constitute quotes, or how <code>$argv[0]</code>&apos;s string is formatted. As to how command-line arguments are defined, is unspecified. This may not be available in non-command-line builds of the Engine.</td>
+</tr>
+<tr>
+<td><code>$_COOKIE</code></td>
+<td><code>array</code>; The variables passed to the current script via HTTP Cookies.</td>
+</tr>
+<tr>
+<td><code>$_ENV</code></td>
+<td><code>array</code>; An array in which the environment variable names are element keys, and the environment variable value strings are element values. As to how an environment variable is defined, is unspecified.</td>
+</tr>
+<tr>
+<td><code>$_FILES</code></td>
+<td><code>array</code>; The items uploaded to the current script via the HTTP POST method.</td>
+</tr>
+<tr>
+<td><code>$_GET</code></td>
+<td><code>array</code>; The variables passed to the current script via the URL parameters.</td>
+</tr>
+<tr>
+<td><code>$GLOBALS</code></td>
+<td><code>array</code>; A <a href="#general">superglobal</a> array containing the names of all variables that are currently defined in the global scope of the script. The variable names are the element keys, and the variable values are the element values.</td>
+</tr>
+<tr>
+<td><code>$_POST</code></td>
+<td><code>array</code>; The variables passed to the current script via the HTTP POST method.</td>
+</tr>
+<tr>
+<td><code>$_REQUEST</code></td>
+<td><code>array</code>; By default contains the contents of <code>$_COOKIE</code>, <code>$_GET</code>, and <code>$_POST</code>. The exact contents may depend on the Engine settings.</td>
+</tr>
+<tr>
+<td><code>$_SERVER</code></td>
+<td><code>array</code>; Server and execution environment information, such as headers, paths, and script locations. The entries in this array are taken from the Engine environment, e.g. the webserver.</td>
+</tr>
+<tr>
+<td><code>$_SESSION</code></td>
+<td><code>array</code>; The session variables available to the current script. This global is defined only if a <a href="http://php.net/manual/en/book.session.php" target="_blank">session</a> is active.</td>
+</tr>
+</tbody>
+</table>
+<p>All <code>$_*</code> variables above are superglobals. The exact set of the variables available may depend on the implementation, the Engine build and the environment.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/06-constants.html" class="navigation navigation-prev " aria-label="Previous page: 06-constants.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/08-conversions.html" class="navigation navigation-next " aria-label="Next page: 08-conversions.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

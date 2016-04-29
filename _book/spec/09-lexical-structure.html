@@ -1,0 +1,1272 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>09-lexical-structure.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/10-expressions.html" />
+    
+    
+    <link rel="prev" href="../spec/08-conversions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.9"
+        data-chapter-title="09-lexical-structure.md"
+        data-filepath="spec/09-lexical-structure.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="lexical-structure">Lexical Structure</h1>
+<h2 id="scripts">Scripts</h2>
+<p>A <a href="04-basic-concepts.html#program-structure">script</a> is an ordered sequence of characters. Typically, a
+script has a one-to-one correspondence with a file in a file system, but
+this correspondence is not required.</p>
+<p>Conceptually speaking, a script is translated using the following steps:</p>
+<ol>
+<li><p>Transformation, which converts a script from a particular character
+repertoire and encoding scheme into a sequence of 8-bit characters.</p>
+</li>
+<li><p>Lexical analysis, which translates a stream of input characters into
+a stream of tokens.</p>
+</li>
+<li><p>Syntactic analysis, which translates the stream of tokens into
+executable code.</p>
+</li>
+</ol>
+<p>Conforming implementations must accept scripts encoded with the UTF-8
+encoding form (as defined by the Unicode standard), and transform them
+into a sequence of characters. Implementations can choose to accept and
+transform additional character encoding schemes.</p>
+<h2 id="grammars">Grammars</h2>
+<p>This specification shows the syntax of the PHP programming language
+using two grammars. The <em>lexical grammar</em> defines how source
+characters are combined to form white space, comments, and tokens. The
+<em>syntactic grammar</em> defines how the resulting tokens are combined to
+form PHP programs.</p>
+<p>The grammars are presented using <em>grammar productions</em>, with each one
+defining a non-terminal symbol and the possible expansions of that
+non-terminal symbol into sequences of non-terminal or terminal symbols.
+In productions, non-terminal symbols are shown in slanted type <em>like
+this</em>, and terminal symbols are shown in a fixed-width font <code>like this</code>.</p>
+<p>The first line of a grammar production is the name of the non-terminal
+symbol being defined, followed by one colon for a syntactic grammar
+production, and two colons for a lexical grammar production. Each
+successive indented line contains a possible expansion of the
+non-terminal given as a sequence of non-terminal or terminal symbols.
+For example, the production:</p>
+<pre>
+  <i>single-line-comment::</i>
+    // input-characters<sub>opt</sub>
+    #  input-characters<sub>opt</sub>
+</pre>
+
+<p>defines the lexical grammar production <em>single-line-comment</em> as being
+the terminals <code>//</code> or <code>#</code>, followed by an optional <em>input-characters</em>. Each
+expansion is listed on a separate line.</p>
+<p>Although alternatives are usually listed on separate lines, when there
+is a large number, the shorthand phrase &#x201C;one of&#x201D; may precede a list of
+expansions given on a single line. For example,</p>
+<pre>
+  <i>hexadecimal-digit:: one of</i>
+    0   1   2   3   4   5   6   7   8   9
+    a   b   c   d   e   f
+    A   B   C   D   E   F
+</pre>
+
+<h2 id="lexical-analysis">Lexical analysis</h2>
+<h3 id="general">General</h3>
+<p>The production <em>input-file</em> is the root of the lexical structure for a
+script. Each script must conform to this production.</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>input-file::</i>
+    <i>input-element</i>
+    <i>input-file   input-element</i>
+  <i>input-element::</i>
+    <i>comment</i>
+    <i>white-space</i>
+    <i>token</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#comments"><em>comment</em></a></li>
+<li><a href="#white-space"><em>white-space</em></a></li>
+<li><a href="#tokens"><em>token</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The basic elements of a script are comments, white space, and tokens.</p>
+<p>The lexical processing of a script involves the reduction of that script
+into a sequence of <a href="#tokens">tokens</a> that becomes the input to the
+syntactic analysis. Tokens can be separated by <a href="#white-space">white space</a> and
+delimited <a href="#comments">comments</a>.</p>
+<p>Lexical processing always results in the creation of the longest
+possible lexical element. (For example, <code>$a+++++$b</code> must be parsed as
+<code>$a++ ++ +$b</code>, which syntactically is invalid).</p>
+<h3 id="comments">Comments</h3>
+<p>Two forms of comments are supported: <em>delimited comments</em> and
+<em>single-line comments</em>.</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>comment::</i>
+    <i>single-line-comment</i>
+    <i>delimited-comment</i>
+
+  <i>single-line-comment::</i>
+    //   <i>input-characters<sub>opt</sub></i>
+    #    <i>input-characters<sub>opt</sub></i>
+
+  <i>input-characters::</i>
+    <i>input-character</i>
+    <i>input-characters   input-character</i>
+
+  <i>input-character::</i>
+    Any source character except <i>new-line</i>
+
+  <i>new-line::</i>
+    Carriage-return character (U+000D)
+    Line-feed character (U+000A)
+    Carriage-return character (U+000D) followed by line-feed character (U+000A)
+
+  <i>delimited-comment::</i>
+    /*   No characters or any source character sequence except */   */
+</pre>
+
+<p><strong>Semantics</strong></p>
+<p>Except within a string literal or a comment, the characters /* start a
+delimited comment, which ends with the characters */. Except within a
+string literal or a comment, the characters // or # start a single-line
+comment, which ends with a new line. That new line is not part of the
+comment. However, if the single-line comment is the last source element
+in an embedded script, the trailing new line can be omitted. (Note: this
+allows for uses like <code>&lt;?php ... // ... ?&gt;</code>).</p>
+<p>A delimited comment can occur in any place in a script in which <a href="#white-space">white
+space</a> can occur. (For example;
+<code>/*...*/$c/*...*/=/*...*/567/*...*/;/*...*/</code> is parsed as <code>$c=567;</code>, and
+<code>$k = $i+++/*...*/++$j;</code> is parsed as <code>$k = $i+++ ++$j;</code>).</p>
+<p><strong>Implementation Notes</strong></p>
+<p>During tokenizing, an implementation can treat a delimited comment as
+though it was white space.</p>
+<h3 id="white-space">White Space</h3>
+<p>White space consists of an arbitrary combination of one or more
+new-line, space, horizontal tab, vertical tab, and form-feed characters.</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>white-space::</i>
+    <i>white-space-character</i>
+    <i>white-space   white-space-character</i>
+
+  <i>white-space-character::</i>
+    <i>new-line</i>
+    Space character (U+0020)
+    Horizontal-tab character (U+0009)
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#comments"><em>new-line</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The space and horizontal tab characters are considered <em>horizontal
+white-space characters</em>.</p>
+<h3 id="tokens">Tokens</h3>
+<h4 id="general">General</h4>
+<p>There are several kinds of source <em>tokens</em>:</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>token::</i>
+    <i>variable-name</i>
+    <i>name</i>
+    <i>keyword</i>
+    <i>literal</i>
+    <i>operator-or-punctuator</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#names"><em>variable-name</em></a></li>
+<li><a href="#names"><em>name</em></a></li>
+<li><a href="#keywords"><em>keyword</em></a></li>
+<li><a href="#general-2"><em>literal</em></a></li>
+<li><a href="#operators-and-punctuators"><em>operator-or-punctuator</em></a></li>
+</ul>
+<h4 id="names">Names</h4>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>variable-name::</i>
+    $   <i>name</i>
+
+  <i>namespace-name::</i>
+    <i>name</i>
+    <i>namespace-name</i>   \   <i>name</i>
+
+  <i>namespace-name-as-a-prefix::</i>
+    \
+    \<sub>opt</sub>   <i>namespace-name</i>   \
+    namespace   \
+    namespace   \   <i>namespace-name</i>   \
+
+  <i>qualified-name::</i>
+    <i>namespace-name-as-a-prefix<sub>opt</sub>   name</i>
+
+  <i>name::</i>
+    <i>name-nondigit</i>
+    <i>name   name-nondigit</i>
+    <i>name   digit</i>
+
+  <i>name-nondigit::</i>
+    <i>nondigit</i>
+    one of the characters U+007f&#x2013;U+00ff
+
+  <i>nondigit:: one of</i>
+    _
+    a   b   c   d   e   f   g   h   i   j   k   l   m
+    n   o   p   q   r   s   t   u   v   w   x   y   z
+    A   B   C   D   E   F   G   H   I   J   K   L   M
+    N   O   P   Q   R   S   T   U   V   W   X   Y   Z
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#integer-literals"><em>digit</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>Names are used to identify the following: <a href="06-constants.html#general">constants</a>,
+<a href="07-variables.html#general">variables</a>, <a href="11-statements.html#labeled-statements">labels</a>,
+<a href="13-functions.html#function-definitions">functions</a>, <a href="14-classes.html#class-declarations">classes</a>,
+<a href="14-classes.html#class-members">class members</a>, <a href="15-interfaces.html#interface-declarations">interfaces</a>,
+<a href="16-traits.html#general">traits</a>, <a href="18-namespaces.html#general">namespaces</a>,
+and names in <a href="#heredoc-string-literals">heredoc</a> and <a href="#nowdoc-string-literals">nowdoc comments</a>.</p>
+<p>A <em>name</em> begins with an underscore (_), <em>name-nondigit</em>, or extended
+name character in the range U+007f&#x2013;-U+00ff. Subsequent characters can
+also include <em>digits</em>. A <em>variable name</em> is a name with a leading
+dollar ($).</p>
+<p>Unless stated otherwise (<a href="13-functions.html#function-definitions">functions</a>,
+<a href="14-classes.html#class-declarations">classes</a>, <a href="14-classes.html#methods">methods</a>,
+<a href="15-interfaces.html#interface-declarations">interfaces</a>, <a href="16-traits.html#trait-declarations">traits</a>,
+<a href="18-namespaces.html#defining-namespaces">namespaces</a>, names are case-sensitive, and every character in a name is significant.</p>
+<p>Names beginning with two underscores (__) are reserved by the PHP language and should not be defined by the user code.</p>
+<p>The following names cannot be used as the names of classes, interfaces, or traits: <code>bool</code>, <code>FALSE</code>, <code>float</code>, <code>int</code>, <code>NULL</code>, <code>string</code>, <code>TRUE</code>, and <code>void</code>.</p>
+<p>The following names are reserved for future use and should not be used as the names of classes, interfaces, or traits: <code>mixed</code>, <code>numeric</code>, <code>object</code>, and <code>resource</code>.</p>
+<p>With the exception of <code>class</code>, all <a href="09-lexical-structures#keywords">keywords</a> can be used as names for the members of a class, interface, or trait. However, <code>class</code> can be used as the name of a property or method.</p>
+<p>Variable names and function names (when used in a function-call context)
+need not be defined as source tokens; they can also be created at
+runtime using the <a href="10-expressions.html#variable-name-creation-operator">variable name-creation operator</a>. (For
+example, given <code>$a = &quot;Total&quot;; $b = 3; $c = $b + 5;</code>, <code>${$a.$b.$c} = TRUE;</code>
+is equivalent to <code>$Total38 = TRUE;</code>, and <code>${$a.$b.$c}()</code> is
+equivalent to <code>Total38()</code>).</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">const</span> MAX_VALUE = <span class="hljs-number">100</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getData</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">/*...*/</span> }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>{ <span class="hljs-comment">/*...*/</span> }
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ICollection</span> </span>{ <span class="hljs-comment">/*...*/</span> }
+</code></pre>
+<p><strong>Implementation Notes</strong></p>
+<p>An implementation is discouraged from placing arbitrary restrictions on
+name lengths.</p>
+<h4 id="keywords">Keywords</h4>
+<p>A <em>keyword</em> is a name-like sequence of characters that is reserved, and
+cannot be used as a name.</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>keyword:: one of</i>
+    abstract   and   array   as   break   callable   case   catch   class   clone
+    const   continue   declare   default   die   do   echo   else   elseif   empty
+    enddeclare   endfor   endforeach   endif   endswitch   endwhile   eval   exit
+    extends   final   finally   for   foreach   function   global
+    goto   if   implements   include   include_once   instanceof
+    insteadof   interface   isset   list   namespace   new   or   print   private
+    protected   public   require   require_once   return static   switch
+    throw   trait   try   unset   use   var   while   xor   yield   yield from
+</pre>
+
+<p><strong>Semantics</strong></p>
+<p>Keywords are not case-sensitive.</p>
+<p>Note carefully that <code>yield from</code> is a single token that contains whitespace. However, <a href="#comments">comments</a> are not permitted in that whitespace.</p>
+<p>Also, all <a href="06-constants.html#context-dependent-constants"><em>magic constants</em></a> are also treated as keywords.</p>
+<h4 id="literals">Literals</h4>
+<h5 id="general">General</h5>
+<p>The source code representation of a value is called a <em>literal</em>.</p>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>literal::</i>
+    <i>integer-literal</i>
+    <i>floating-literal</i>
+    <i>string-literal</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#integer-literals"><em>integer-literal</em></a></li>
+<li><a href="#floating-point-literals"><em>floating-literal</em></a></li>
+<li><a href="#string-literals"><em>string-literal</em></a></li>
+</ul>
+<h5 id="integer-literals">Integer Literals</h5>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>integer-literal::</i>
+    <i>decimal-literal</i>
+    <i>octal-literal</i>
+    <i>hexadecimal-literal</i>
+    <i>binary-literal</i>
+
+    <i>decimal-literal::</i>
+      <i>nonzero-digit</i>
+      <i>decimal-literal   digit</i>
+
+    <i>octal-literal::</i>
+      0
+      <i>octal-literal   octal-digit</i>
+
+    <i>hexadecimal-literal::</i>
+      <i>hexadecimal-prefix   hexadecimal-digit</i>
+      <i>hexadecimal-literal   hexadecimal-digit</i>
+
+    <i>hexadecimal-prefix:: one of</i>
+      0x  0X
+
+    <i>binary-literal::</i>
+      <i>binary-prefix   binary-digit</i>
+      <i>binary-literal   binary-digit</i>
+
+    <i>binary-prefix:: one of</i>
+      0b  0B
+
+    <i>digit:: one of</i>
+      0  1  2  3  4  5  6  7  8  9
+
+    <i>nonzero-digit:: one of</i>
+      1  2  3  4  5  6  7  8  9
+
+    <i>octal-digit:: one of</i>
+      0  1  2  3  4  5  6  7
+
+    <i>hexadecimal-digit:: one of</i>
+      0  1  2  3  4  5  6  7  8  9
+      a  b  c  d  e  f
+      A  B  C  D  E  F
+
+    <i>binary-digit:: one of</i>
+        0  1
+</pre>
+
+<p><strong>Semantics</strong></p>
+<p>The value of a decimal integer literal is computed using base 10; that
+of an octal integer literal, base 8; that of a hexadecimal integer
+literal, base 16; and that of a binary integer literal, base 2.</p>
+<p>If the value represented by <em>integer-literal</em> can fit in type int,
+that would be the type of the resulting value; otherwise, the type would be float,
+as described below.</p>
+<p>Since negative numbers are represented in PHP as a negation of a positive
+number, the smallest negative value (-2147483648 for 32 bits and -9223372036854775808 for 64 bits)
+can not be represented as a decimal integer literal. If the non-negative
+value is too large to represent as an <code>int</code>, it becomes <code>float</code>, which is
+then negated.</p>
+<p>Literals written using hexadecimal, octal, or binary notations are
+considered to have non-negative values.</p>
+<p>An integer literal is always a constant expression.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$count</span> = <span class="hljs-number">10</span>;      <span class="hljs-comment">// decimal 10</span>
+
+<span class="hljs-number">0b101010</span> &gt;&gt; <span class="hljs-number">4</span>;    <span class="hljs-comment">// binary 101010 and decimal 4</span>
+
+<span class="hljs-number">0XAF</span> &lt;&lt; <span class="hljs-number">023</span>;      <span class="hljs-comment">// hexadecimal AF and octal 23</span>
+</code></pre>
+<p>On an implementation using 32-bit int representation</p>
+<pre><code>2147483648 -&gt; 2147483648 (too big for int, so is a float)
+
+-2147483648 -&gt; -2147483648 (too big for int, so is a float, negated)
+
+-2147483647 - 1 -&gt; -2147483648 fits in int
+
+0x80000000 -&gt; 2147483648 (too big for int, so is a float)
+</code></pre><h5 id="floatingpoint-literals">Floating-Point Literals</h5>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>floating-literal::</i>
+    <i>fractional-literal   exponent-part<sub>opt</sub></i>
+    <i>digit-sequence   exponent-part</i>
+
+  <i>fractional-literal::</i>
+    <i>digit-sequence<sub>opt</sub></i> . <i>digit-sequence</i>
+    <i>digit-sequence</i> .
+
+  <i>exponent-part::</i>
+    e  <i>sign<sub>opt</sub>   digit-sequence</i>
+    E  <i>sign<sub>opt</sub>   digit-sequence</i>
+
+  <i>sign:: one of</i>
+    +  -
+
+  <i>digit-sequence::</i>
+    <i>digit</i>
+    <i>digit-sequence   digit</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#integer-literals"><em>digit</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The value of a floating-point literal must be representable by its type.</p>
+<p><strong>Semantics</strong></p>
+<p>The type of a <em>floating-literal</em> is <code>float</code>.</p>
+<p>The constants <a href="06-constants.html#core-predefined-constants"><code>INF</code></a> and
+<a href="06-constants.html#core-predefined-constants"><code>NAN</code></a> provide access to the
+floating-point values for infinity and Not-a-Number, respectively.</p>
+<p>A floating point literal is always a constant expression.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$values</span> = <span class="hljs-keyword">array</span>(<span class="hljs-number">1.23</span>, <span class="hljs-number">3e12</span>, <span class="hljs-number">543.678E-23</span>);
+</code></pre>
+<h5 id="string-literals">String Literals</h5>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>string-literal::</i>
+    <i>single-quoted-string-literal</i>
+    <i>double-quoted-string-literal</i>
+    <i>heredoc-string-literal</i>
+    <i>nowdoc-string-literal</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#single-quoted-string-literals"><em>single-quoted-string-literal</em></a></li>
+<li><a href="#double-quoted-string-literals"><em>double-quoted-string-literal</em></a></li>
+<li><a href="#heredoc-string-literals"><em>heredoc-string-literal</em></a></li>
+<li><a href="#nowdoc-string-literals"><em>nowdoc-string-literal</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>A string literal is a sequence of zero or more characters delimited in
+some fashion. The delimiters are not part of the literal&apos;s content.</p>
+<p>The type of a string literal is <code>string</code>.</p>
+<h6 id="singlequoted-string-literals">Single-Quoted String Literals</h6>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>single-quoted-string-literal::</i>
+    b<i><sub>opt</sub></i>  &apos; <i>sq-char-sequence<sub>opt</sub></i>  &apos;
+
+  <i>sq-char-sequence::</i>
+    <i>sq-char</i>
+    <i>sq-char-sequence   sq-char</i>
+
+  <i>sq-char::</i>
+    <i>sq-escape-sequence</i>
+    \<i><sub>opt</sub></i>   any member of the source character set except single-quote (&apos;) or backslash (\)
+
+  <i>sq-escape-sequence:: one of</i>
+    \&apos;  \\
+</pre>
+
+<p><strong>Semantics</strong></p>
+<p>A single-quoted string literal is a string literal delimited by
+single-quotes (<code>&apos;</code>, U+0027). The literal can contain any source character except
+single-quote (<code>&apos;</code>) and backslash (<code>\\</code>), which can only be represented by
+their corresponding escape sequence.</p>
+<p>The optional <code>b</code> prefix is reserved for future use in dealing with
+so-called <em>binary strings</em>. For now, a <em>single-quoted-string-literal</em>
+with a <code>b</code> prefix is equivalent to one without.</p>
+<p>A single-quoted string literal is always a constant expression.</p>
+<p><strong>Examples</strong></p>
+<pre><code>&apos;This text is taken verbatim&apos;
+
+&apos;Can embed a single quote (\&apos;) and a backslash (\\) like this&apos;
+</code></pre><h6 id="doublequoted-string-literals">Double-Quoted String Literals</h6>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>double-quoted-string-literal::</i>
+    b<i><sub>opt</sub></i>  &quot; <i>dq-char-sequence<sub>opt</sub></i>  &quot;
+
+  <i>dq-char-sequence::</i>
+    <i>dq-char</i>
+    <i>dq-char-sequence   dq-char</i>
+
+  <i>dq-char::</i>
+    <i>dq-escape-sequence</i>
+    any member of the source character set except double-quote (&quot;) or backslash (\)
+    \  any member of the source character set except &quot;\$efnrtvxX or <i>octal-digit</i>
+
+  <i>dq-escape-sequence::</i>
+    <i>dq-simple-escape-sequence</i>
+    <i>dq-octal-escape-sequence</i>
+    <i>dq-hexadecimal-escape-sequence</i>
+    <i>dq-unicode-escape-sequence</i>
+
+  <i>dq-simple-escape-sequence:: one of</i>
+    \&quot;   \\   \$   \e   \f   \n   \r   \t   \v
+
+  <i>dq-octal-escape-sequence::</i>
+    \   <i>octal-digit</i>
+    \   <i>octal-digit   octal-digit</i>
+    \   <i>octal-digit   octal-digit   octal-digit</i>
+
+  <i>dq-hexadecimal-escape-sequence::</i>
+    \x  <i>hexadecimal-digit   hexadecimal-digit<sub>opt</sub></i>
+    \X  <i>hexadecimal-digit   hexadecimal-digit<sub>opt</sub></i>
+
+  <i>dq-unicode-escape-sequence::</i>
+    \u{  codepoint-digits  }
+
+  <i>codepoint-digits::</i>
+     <i>hexadecimal-digit</i>
+     <i>hexadecimal-digit   codepoint-digits</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#integer-literals"><em>octal-digit</em></a></li>
+<li><a href="#integer-literals"><em>hexadecimal-digit</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>A double-quoted string literal is a string literal delimited by
+double-quotes (<code>&quot;</code>, U+0022). The literal can contain any source character except
+double-quote (<code>&quot;</code>) and backslash (<code>\\</code>), which can only be represented by
+their corresponding escape sequence. Certain other (and sometimes
+non-printable) characters can also be expressed as escape sequences.</p>
+<p>The optional <code>b</code> prefix is reserved for future use in dealing with
+so-called <em>binary strings</em>. For now, a <em>double-quoted-string-literal</em>
+with a <code>b</code> prefix is equivalent to one without.</p>
+<p>An escape sequence represents a single-character encoding, as described
+in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Escape sequence</th>
+<th>Character name</th>
+<th>Unicode character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>Dollar sign</td>
+<td>U+0024</td>
+</tr>
+<tr>
+<td>\&quot;</td>
+<td>Double quote</td>
+<td>U+0022</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Backslash</td>
+<td>U+005C</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>Escape</td>
+<td>U+001B</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form feed</td>
+<td>U+000C</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>New line</td>
+<td>U+000A</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>Carriage Return</td>
+<td>U+000D</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Horizontal Tab</td>
+<td>U+0009</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>Vertical Tab</td>
+<td>U+000B</td>
+</tr>
+<tr>
+<td>\ooo</td>
+<td>1&#x2013;3-digit octal digit value ooo</td>
+</tr>
+<tr>
+<td>\xhh or \Xhh</td>
+<td>1&#x2013;2-digit hexadecimal digit value hh</td>
+</tr>
+<tr>
+<td>\u{xxxxxx}</td>
+<td>UTF-8 encoding of Unicode codepoint U+xxxxxx</td>
+<td>U+xxxxxx</td>
+</tr>
+</tbody>
+</table>
+<p>Within a double-quoted string literal, except when recognized as the
+start of an escape sequence, a backslash (\) is retained verbatim.</p>
+<p>Within a double-quoted string literal a dollar ($) character not
+escaped by a backslash (\) is handled using a variable substitution rules
+described below.</p>
+<p>The <code>\u{xxxxxx}</code> escape sequence produces the UTF-8 encoding of the Unicode
+codepoint with the hexadecimal number specified within the curly braces.
+Implementations MUST NOT allow Unicode codepoints beyond U+10FFFF as this is
+outside the range UTF-8 can encode (see
+<a href="http://tools.ietf.org/html/rfc3629#section-3" target="_blank">RFC 3629</a>). If a codepoint
+larger than U+10FFFF is specified, implementations MUST error.
+Implementations MUST pass through <code>\u</code> verbatim and not interpret it as an
+escape sequence if it is not followed by an opening <code>{</code>, but if it is,
+implementations MUST produce an error if there is no terminating <code>}</code> or the
+contents are not a valid codepoint. Implementations MUST support leading zeroes,
+but MUST NOT support leading or trailing whitespace for the codepoint between
+the opening and terminating braces. Implementations MUST allow Unicode
+codepoints that are not Unicode scalar values, such as high and low surrogates.</p>
+<p>A Unicode escape sequence cannot be created by variable substitution. For example, given <code>$v = &quot;41&quot;</code>,
+<code>&quot;\u{$v}&quot;</code> results in <code>&quot;\u41&quot;</code>, a string of length 4, while <code>&quot;\u{0$v}&quot;</code> and <code>&quot;\u{{$v}}&quot;</code> contain
+ill-formed Unicode escape sequences.</p>
+<p><strong>Variable substitution</strong></p>
+<p>The variable substitution accepts the following syntax:</p>
+<pre>
+    <i>string-variable::</i>
+        <i>variable-name</i>   <i>offset-or-property<sub>opt</sub></i>
+        ${   <i>expression</i>   }
+
+    <i>offset-or-property::</i>
+        <i>offset-in-string</i>
+        <i>property-in-string</i>
+
+    <i>offset-in-string::</i>
+        [   <i>name</i>   ]
+        [   <i>variable-name</i>   ]
+        [   <i>integer-literal</i>   ]
+
+    <i>property-in-string::</i>
+        -&gt;   <i>name</i>
+
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#names"><em>variable-name</em></a></li>
+<li><a href="#names"><em>name</em></a></li>
+<li><a href="#integer-literals"><em>integer-literal</em></a></li>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><em>expression</em> works the same way as in <a href="10-expressions.html#variable-name-creation-operator">variable name creation operator</a>.</p>
+<p>After the variable defined by the syntax above is evaluated, its value is converted
+to string according to the rules of <a href="08-conversions.html#converting-to-string-type">string conversion</a>
+and is substituted into the string in place of the variable substitution expression.</p>
+<p>Subscript or property access defined by <em>offset-in-string</em> and <em>property-in-string</em>
+is resolved according to the rules of the <a href="10-expressions.html#subscript-operator">subscript operator</a>
+and <a href="10-expressions.html#member-selection-operator">member selection operator</a> respectively.
+The exception is that <em>name</em> inside <em>offset-in-string</em> is interpreted as a string literal even if it is not
+quoted.</p>
+<p>If the character sequence following the <code>$</code> does not parse as <em>name</em> and does not start with <code>{</code>, the <code>$</code> character
+is instead interpreted verbatim and no variable substitution is performed.</p>
+<p>Variable substitution also provides limited support for the evaluation
+of expressions. This is done by enclosing an expression in a pair of
+matching braces (<code>{ ... }</code>). The opening brace must be followed immediately by
+a dollar (<code>$</code>) without any intervening white space, and that dollar must
+begin a variable name. If this is not the case, braces are treated
+verbatim. If the opening brace (<code>{</code>) is escaped it is not interpreted as a start of
+the embedded expression and instead is interpreted verbatim.</p>
+<p>The value of the expression is converted to string according to the rules of
+<a href="08-conversions.html#converting-to-string-type">string conversion</a> and is substituted into the string
+in place of the substitution expression.</p>
+<p>A double-quoted string literal is a constant expression if it does not
+contain any variable substitution.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$x</span> = <span class="hljs-number">123</span>;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&gt;\$x.$x&quot;</span>.<span class="hljs-string">&quot;&lt;&quot;</span>; <span class="hljs-comment">// &#x2192; &gt;$x.123&lt;</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-variable">$colors</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;white&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+<span class="hljs-variable">$index</span> = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$colors[$index] contains &gt;$colors[$index]&lt;\n&quot;</span>;
+  <span class="hljs-comment">// &#x2192; $colors[2] contains &gt;blue&lt;</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-variable">$p1</span> = <span class="hljs-number">2</span>;
+}
+<span class="hljs-variable">$myC</span> = <span class="hljs-keyword">new</span> C();
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;\$myC-&gt;p1 = &gt;$myC-&gt;p1&lt;\n&quot;</span>;  <span class="hljs-comment">// &#x2192; $myC-&gt;p1 = &gt;2&lt;</span>
+</code></pre>
+<h6 id="heredoc-string-literals">Heredoc String Literals</h6>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>heredoc-string-literal::</i>
+    &lt;&lt;&lt;  <i>hd-start-identifier   new-line   hd-char-sequence<sub>opt</sub>  new-line hd-end-identifier</i>  ;<i><sub>opt</sub>   new-line</i>
+
+  <i>hd-start-identifier::</i>
+    <i>name</i>
+    &quot;   <i>name</i>  &quot;
+
+  <i>hd-end-identifier::</i>
+    <i>name</i>
+
+  <i>hd-char-sequence::</i>
+    <i>hd-char</i>
+    <i>hd-char-sequence   hd-char</i>
+
+  <i>hd-char::</i>
+    <i>hd-escape-sequence</i>
+    any member of the source character set except backslash (\)
+    \  any member of the source character set except \$efnrtvxX or <i>octal-digit</i>
+
+  <i>hd-escape-sequence::</i>
+    <i>hd-simple-escape-sequence</i>
+    <i>dq-octal-escape-sequence</i>
+    <i>dq-hexadecimal-escape-sequence</i>
+    <i>dq-unicode-escape-sequence</i>
+
+  <i>hd-simple-escape-sequence:: one of</i>
+    \\   \$   \e   \f   \n   \r   \t   \v
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#names"><em>name</em></a></li>
+<li><a href="#comments"><em>new-line</em></a></li>
+<li><a href="#double-quoted-string-literals"><em>dq-octal-escape-sequence</em></a></li>
+<li><a href="#double-quoted-string-literals"><em>dq-hexadecimal-escape-sequence</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The start and end identifier names must be the same. Only horizontal white
+space is permitted between <code>&lt;&lt;&lt;</code> and the start identifier. No white
+space is permitted between the start identifier and the new-line that
+follows. No white space is permitted between the new-line and the end
+identifier that follows. Except for an optional semicolon (<code>;</code>), no
+characters&#x2014;-not even comments or white space-&#x2014;are permitted between the
+end identifier and the new-line that terminates that source line.</p>
+<p><strong>Semantics</strong></p>
+<p>A heredoc string literal is a string literal delimited by
+&quot;<code>&lt;&lt;&lt; name</code>&quot; and &quot;<code>name</code>&quot;. The literal can contain any source
+character. Certain other (and sometimes non-printable) characters can
+also be expressed as escape sequences.</p>
+<p>A heredoc literal supports variable substitution as defined for
+<a href="#double-quoted-string-literals">double-quoted string literals</a>.</p>
+<p>A heredoc string literal is a constant expression if it does not contain
+any variable substitution.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$v</span> = <span class="hljs-number">123</span>;
+<span class="hljs-variable">$s</span> = &lt;&lt;&lt;    ID
+S<span class="hljs-string">&apos;o&apos;</span>me <span class="hljs-string">&quot;\&quot;t e\txt; \$v = $v&quot;</span>
+Some more text
+ID;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&gt;$s&lt;&quot;</span>;
+<span class="hljs-comment">// &#x2192; &gt;S&apos;o&apos;me &quot;\&quot;t e  xt; $v = 123&quot;</span>
+<span class="hljs-comment">// Some more text&lt;</span>
+</code></pre>
+<h6 id="nowdoc-string-literals">Nowdoc String Literals</h6>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>nowdoc-string-literal::</i>
+    &lt;&lt;&lt;  &apos;  <i>name</i>  &apos;  <i>new-line  hd-char-sequence<sub>opt</sub>   new-line name</i>  ;<i><sub>opt</sub>   new-line</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#heredoc-string-literals"><em>hd-char-sequence</em></a></li>
+<li><a href="#comments"><em>new-line</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The start and end identifier names must be the same.
+No white space is permitted between the start identifier name and its
+enclosing single quotes (<code>&apos;</code>). See also <a href="#heredoc-string-literals">heredoc string literal</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>A nowdoc string literal looks like a <a href="#heredoc-string-literals">heredoc string literal</a>
+except that in the former the start identifier name is
+enclosed in single quotes (<code>&apos;</code>). The two forms of string literal have the
+same semantics and constraints except that a nowdoc string literal is
+not subject to variable substitution (like the single-quoted string).</p>
+<p>A nowdoc string literal is a constant expression.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$v</span> = <span class="hljs-number">123</span>;
+<span class="hljs-variable">$s</span> = &lt;&lt;&lt;    <span class="hljs-string">&apos;ID&apos;</span>
+S<span class="hljs-string">&apos;o&apos;</span>me <span class="hljs-string">&quot;\&quot;t e\txt; \$v = $v&quot;</span>
+Some more text
+ID;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&gt;$s&lt;\n\n&quot;</span>;
+<span class="hljs-comment">// &#x2192; &gt;S&apos;o&apos;me &quot;\&quot;t e\txt; \$v = $v&quot;</span>
+<span class="hljs-comment">// Some more text&lt;</span>
+</code></pre>
+<h4 id="operators-and-punctuators">Operators and Punctuators</h4>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>operator-or-punctuator:: one of</i>
+    [   ]    (   )   {    }   .   -&gt;   ++   --   **   *   +   -   ~   !
+    $   /   %   &lt;&lt;    &gt;&gt;   &lt;   &gt;   &lt;=   &gt;=   ==   ===   !=   !==   ^   |
+    &amp;   &amp;&amp;   ||   ?   :   ; =   **=   *=   /=   %=   +=   -=   .=   &lt;&lt;=
+    &gt;&gt;=   &amp;=   ^=   |=   =&amp;   ,   ??   &lt;=&gt;
+</pre>
+
+<p><strong>Semantics</strong></p>
+<p>Operators and punctuators are symbols that have independent syntactic
+and semantic significance. <em>Operators</em> are used in expressions to
+describe operations involving one or more <em>operands</em>, and that yield a
+resulting value, produce a side effect, or some combination thereof.
+<em>Punctuators</em> are used for grouping and separating.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/08-conversions.html" class="navigation navigation-prev " aria-label="Previous page: 08-conversions.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/10-expressions.html" class="navigation navigation-next " aria-label="Next page: 10-expressions.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

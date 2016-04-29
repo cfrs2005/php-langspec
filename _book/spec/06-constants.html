@@ -1,0 +1,869 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>06-constants.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/07-variables.html" />
+    
+    
+    <link rel="prev" href="../spec/05-types.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.6"
+        data-chapter-title="06-constants.md"
+        data-filepath="spec/06-constants.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="constants">Constants</h1>
+<h2 id="general">General</h2>
+<p>A <em>constant</em> is a <a href="09-lexical-structure.html#names">named</a> value. Once defined, the value
+of the constant can not be changed.</p>
+<p>A constant can be defined in one of two ways: as a <em>c-constant</em> using a
+<a href="14-classes.html#constants"><em>const-declaration</em></a>, or as a <em>d-constant</em> by calling the library
+function <a href="http://www.php.net/define" target="_blank"><code>define</code></a>. However, the two approaches differ slightly.
+Specifically:</p>
+<ul>
+<li>The name of a c-constant must comply with the lexical grammar for a
+name while that for a d-constant can contain any source character.</li>
+<li>The name of a c-constant is case-sensitive while that for a
+d-constant can be case-sensitive or case-insensitive based on the
+value of the third argument passed to <code>define</code>.</li>
+<li>If <code>define</code> is able to define the given name, it returns <code>TRUE</code>;
+otherwise, it returns <code>FALSE</code>.</li>
+</ul>
+<p>The constants can only hold a value of a <a href="05-types.html#scalar-types">scalar type</a>, an array or a <a href="05-types.html#resource-types">resource</a>.</p>
+<p>The library function <a href="http://www.php.net/defined" target="_blank"><code>defined</code></a> reports if a given name (specified as
+a string) is defined as a constant. The library function <a href="http://www.php.net/constant" target="_blank"><code>constant</code></a>
+returns the value of a given constant whose name is specified as a
+string.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">const</span> MAX_HEIGHT = <span class="hljs-number">10.5</span>;              <span class="hljs-comment">// define two (case-sensitive) c-constants</span>
+<span class="hljs-keyword">const</span> UPPER_LIMIT = MAX_HEIGHT;
+define(<span class="hljs-string">&apos;COEFFICIENT_1&apos;</span>, <span class="hljs-number">2.345</span>, <span class="hljs-keyword">TRUE</span>); <span class="hljs-comment">// define a case-insensitive d-constant</span>
+define(<span class="hljs-string">&apos;FAILURE&apos;</span>, <span class="hljs-keyword">FALSE</span>, <span class="hljs-keyword">FALSE</span>);      <span class="hljs-comment">// define a case-sensitive d-constant</span>
+</code></pre>
+<h2 id="contextdependent-constants">Context-Dependent Constants</h2>
+<p>The following constants&#x2014;sometimes referred to as <em>magic constants</em>&#x2014;are
+automatically available to all scripts; their values are not fixed and they are case-insensitive:</p>
+<table>
+<thead>
+<tr>
+<th>Constant Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>__CLASS__</code></td>
+<td><code>string</code>; The name of the current class. From within a trait method, the name of the class in which that trait is used. If the current namespace is other than the default, the namespace name and <code>\</code> are prepended, in that order. If used outside all classes, the value is the empty string.</td>
+</tr>
+<tr>
+<td><code>__COMPILER_HALT_OFFSET__</code></td>
+<td><code>int</code>; When the <a href="04-basic-concepts.html#__halt_compiler"><code>__halt_compiler();</code></a> construct is used, this constant contains the byte offset in the source file immediately following the <code>__halt_compiler();</code> token in this file.</td>
+</tr>
+<tr>
+<td><code>__DIR__</code></td>
+<td><code>string</code>; The directory name of the script. A directory separator is only appended for the root directory.</td>
+</tr>
+<tr>
+<td><code>__FILE__</code></td>
+<td><code>string</code>; The full name of the script.</td>
+</tr>
+<tr>
+<td><code>__FUNCTION__</code></td>
+<td><code>string</code>; Inside a function, the name of the current function exactly as it was declared, with the following prepended: If a named namespace exists, that namespace name followed by &quot;\&quot;. If used outside all functions, the result is the empty string. For a method, no parent-class prefix is present. (See <code>__METHOD__</code> and <a href="13-functions.html#anonymous-functions">anonymous functions</a>).</td>
+</tr>
+<tr>
+<td><code>__LINE__</code></td>
+<td><code>int</code>; the number of the current source line.</td>
+</tr>
+<tr>
+<td><code>__METHOD__</code></td>
+<td><code>string</code>; Inside a method, the name of the current method exactly as it was declared, with the following prepended, in order: If a named namespace exists, that namespace name followed by <code>\</code>; the parent class name or trait name followed by <code>::</code>. If used outside all methods, the result is the same as for <code>__FUNCTION__</code>.</td>
+</tr>
+<tr>
+<td><code>__NAMESPACE__</code></td>
+<td><code>string</code>; The name of the current namespace exactly as it was declared. For the default namespace, the result is the empty string.</td>
+</tr>
+<tr>
+<td><code>__TRAIT__</code></td>
+<td><code>string</code>; The name of the current trait. From within a trait method, the name of the current trait. If used outside all traits, the result is the empty string.</td>
+</tr>
+</tbody>
+</table>
+<p>Constant names beginning with __ are reserved for future use by the Engine.</p>
+<h2 id="core-predefined-constants">Core Predefined Constants</h2>
+<p>The following constants are automatically available to all scripts; they are case-sensitive with the exception of <code>NULL</code>, <code>TRUE</code> and <code>FALSE</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Constant Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DEFAULT_INCLUDE_PATH</code></td>
+<td><code>string</code>; the <a href="http://www.php.net/fopen" target="_blank"><code>fopen</code></a> library function include path is used if it is not overridden by the <code>php.ini</code> setting <code>include_path</code>.</td>
+</tr>
+<tr>
+<td><code>E_ALL</code></td>
+<td><code>int</code>; All errors and warnings, as supported.</td>
+</tr>
+<tr>
+<td><code>E_COMPILE_ERROR</code></td>
+<td><code>int</code>; Fatal compile-time errors. This is like an <code>E_ERROR</code>, except that <code>E_COMPILE_ERROR</code> is generated by the scripting engine.</td>
+</tr>
+<tr>
+<td><code>E_COMPILE_WARNING</code></td>
+<td><code>int</code>; Compile-time warnings (non-fatal errors). This is like an <code>E_WARNING</code>, except that <code>E_COMPILE_WARNING</code> is generated by the scripting engine.</td>
+</tr>
+<tr>
+<td><code>E_CORE_ERROR</code></td>
+<td><code>int</code>; Fatal errors that occur during PHP&apos;s initial start-up. This is like an <code>E_ERROR</code>, except that <code>E_CORE_ERROR</code> is generated by the core of PHP.</td>
+</tr>
+<tr>
+<td><code>E_CORE_WARNING</code></td>
+<td><code>int</code>; Warnings (non-fatal errors) that occur during PHP&apos;s initial start-up. This is like an <code>E_WARNING</code>, except that <code>E_CORE_WARNING</code> is generated by the core of PHP.</td>
+</tr>
+<tr>
+<td><code>E_DEPRECATED</code></td>
+<td><code>int</code>; Deprecation notices. Enable this to receive warnings about code that will not work in future versions.</td>
+</tr>
+<tr>
+<td><code>E_ERROR</code></td>
+<td><code>int</code>; Fatal run-time errors. These indicate errors that cannot be recovered from, such as a memory allocation problem. Execution of the script is halted.</td>
+</tr>
+<tr>
+<td><code>E_NOTICE</code></td>
+<td><code>int</code>; Run-time notices. Indicate that the script encountered something that could indicate an error, but could also happen in the normal course of running a script.</td>
+</tr>
+<tr>
+<td><code>E_PARSE</code></td>
+<td><code>int</code>; Compile-time parse errors.</td>
+</tr>
+<tr>
+<td><code>E_RECOVERABLE_ERROR</code></td>
+<td><code>int</code>; Catchable fatal error. It indicates that a probably dangerous error occurred, but did not leave the Engine in an unstable state. If the error is not caught by a user defined handler (see the library function <a href="http://www.php.net/set_error_handler" target="_blank"><code>set_error_handler</code></a>), the application aborts as it was an <code>E_ERROR</code>.</td>
+</tr>
+<tr>
+<td><code>E_STRICT</code></td>
+<td><code>int</code>; Have PHP suggest changes to the source code to ensure the best interoperability.</td>
+</tr>
+<tr>
+<td><code>E_USER_DEPRECATED</code></td>
+<td><code>int</code>; User-generated error message. This is like an <code>E_DEPRECATED</code>, except that <code>E_USER_DEPRECATED</code> is generated in PHP code by using the library function <a href="http://www.php.net/trigger_error" target="_blank"><code>trigger_error</code></a>.</td>
+</tr>
+<tr>
+<td><code>E_USER_ERROR</code></td>
+<td><code>int</code>; User-generated error message. This is like an <code>E_ERROR</code>, except that <code>E_USER_ERROR</code> is generated in PHP code by using the library function <a href="http://www.php.net/trigger_error" target="_blank"><code>trigger_error</code></a>.</td>
+</tr>
+<tr>
+<td><code>E_USER_NOTICE</code></td>
+<td><code>int</code>; User-generated warning message. This is like an <code>E_NOTICE</code>, except that <code>E_USER_NOTICE</code> is generated in PHP code by using the library function <a href="http://www.php.net/trigger_error" target="_blank"><code>trigger_error</code></a>.</td>
+</tr>
+<tr>
+<td><code>E_USER_WARNING</code></td>
+<td><code>int</code>; User-generated warning message. This is like an <code>E_WARNING</code>, except that  <code>E_USER_WARNING</code> is generated in PHP code by using the library function <a href="http://www.php.net/trigger_error" target="_blank"><code>trigger_error</code></a>.</td>
+</tr>
+<tr>
+<td><code>E_WARNING</code></td>
+<td><code>int</code>; Run-time warnings (non-fatal errors). Execution of the script is not halted.</td>
+</tr>
+<tr>
+<td><code>E_USER_DEPRECATED</code></td>
+<td><code>int</code>; User-generated warning message. This is like an <code>E_DEPRECATED</code>, except that <code>E_USER_DEPRECATED</code> is generated in PHP code by using the library function <a href="http://www.php.net/trigger_error" target="_blank"><code>trigger_error</code></a>.</td>
+</tr>
+<tr>
+<td><code>FALSE</code></td>
+<td><code>bool</code>; the case-insensitive Boolean value <code>FALSE</code>.</td>
+</tr>
+<tr>
+<td><code>INF</code></td>
+<td><code>float</code>; Infinity</td>
+</tr>
+<tr>
+<td><code>M_1_PI</code></td>
+<td><code>float</code>; 1/pi</td>
+</tr>
+<tr>
+<td><code>M_2_PI</code></td>
+<td><code>float</code>; 2/pi</td>
+</tr>
+<tr>
+<td><code>M_2_SQRTPI</code></td>
+<td><code>float</code>; 2/sqrt(pi)</td>
+</tr>
+<tr>
+<td><code>M_E</code></td>
+<td><code>float</code>; e</td>
+</tr>
+<tr>
+<td><code>M_EULER</code></td>
+<td><code>float</code>; Euler constant</td>
+</tr>
+<tr>
+<td><code>M_LN10</code></td>
+<td><code>float</code>; log_e 10</td>
+</tr>
+<tr>
+<td><code>M_LN2</code></td>
+<td><code>float</code>; log_e 2</td>
+</tr>
+<tr>
+<td><code>M_LNPI</code></td>
+<td><code>float</code>; log_e(pi)</td>
+</tr>
+<tr>
+<td><code>M_LOG10E</code></td>
+<td><code>float</code>; log_10 e</td>
+</tr>
+<tr>
+<td><code>M_LOG2E</code></td>
+<td><code>float</code>; log_2 e</td>
+</tr>
+<tr>
+<td><code>M_PI</code></td>
+<td><code>float</code>; Pi</td>
+</tr>
+<tr>
+<td><code>M_PI_2</code></td>
+<td><code>floa</code>t; pi/2</td>
+</tr>
+<tr>
+<td><code>M_PI_4</code></td>
+<td><code>float</code>; pi/4</td>
+</tr>
+<tr>
+<td><code>M_SQRT1_2</code></td>
+<td><code>float</code>; 1/sqrt(2)</td>
+</tr>
+<tr>
+<td><code>M_SQRT2</code></td>
+<td><code>float</code>; sqrt(2)</td>
+</tr>
+<tr>
+<td><code>M_SQRT3</code></td>
+<td><code>float</code>; sqrt(3)</td>
+</tr>
+<tr>
+<td><code>M_SQRTPI</code></td>
+<td><code>float</code>; sqrt(pi)</td>
+</tr>
+<tr>
+<td><code>NAN</code></td>
+<td><code>float</code>; Not-a-Number</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td><code>null</code>; the case-insensitive value <code>NULL</code>.</td>
+</tr>
+<tr>
+<td><code>PHP_BINARY</code></td>
+<td><code>string</code>; the PHP binary path during script execution.</td>
+</tr>
+<tr>
+<td><code>PHP_BINDIR</code></td>
+<td><code>string</code>; the installation location of the binaries.</td>
+</tr>
+<tr>
+<td><code>PHP_CONFIG_FILE_PATH</code></td>
+<td><code>string</code>; location from which php.ini values were parsed</td>
+</tr>
+<tr>
+<td><code>PHP_CONFIG_FILE_SCAN_DIR</code></td>
+<td><code>string</code>; The directory containing multiple INI files, all of which were parsed on start-up.</td>
+</tr>
+<tr>
+<td><code>PHP_DEBUG</code></td>
+<td><code>int</code>; Indicates whether the engine was built with debugging enabled.</td>
+</tr>
+<tr>
+<td><code>PHP_EOL</code></td>
+<td><code>string</code>; the end-of-line terminator for this platform.</td>
+</tr>
+<tr>
+<td><code>PHP_EXTENSION_DIR</code></td>
+<td><code>string</code>; The directory to be searched by the library function <a href="http://www.pph.net/dl" target="_blank"><code>dl</code></a> when looking for runtime extensions.</td>
+</tr>
+<tr>
+<td><code>PHP_EXTRA_VERSION</code></td>
+<td><code>string</code>; the current PHP extra version.</td>
+</tr>
+<tr>
+<td><code>PHP_INT_MAX</code></td>
+<td><code>int</code>; the maximum representable value for an integer.</td>
+</tr>
+<tr>
+<td><code>PHP_INT_MIN</code></td>
+<td><code>int</code>; the minimum representable value for an integer.</td>
+</tr>
+<tr>
+<td><code>PHP_INT_SIZE</code></td>
+<td><code>int</code>; the number of bytes used to represent an integer.</td>
+</tr>
+<tr>
+<td><code>PHP_MAJOR_VERSION</code></td>
+<td><code>int</code>; the current PHP major version</td>
+</tr>
+<tr>
+<td><code>PHP_MANDIR</code></td>
+<td><code>string</code>; the installation location of the manual pages.</td>
+</tr>
+<tr>
+<td><code>PHP_MAXPATHLEN</code></td>
+<td><code>int</code>; the maximum length of a fully qualified filename supported by this build.</td>
+</tr>
+<tr>
+<td><code>PHP_MINOR_VERSION</code></td>
+<td><code>int</code>; the current PHP minor version.</td>
+</tr>
+<tr>
+<td><code>PHP_OS</code></td>
+<td><code>string</code>; the current operating system.</td>
+</tr>
+<tr>
+<td><code>PHP_PREFIX</code></td>
+<td><code>string</code>; the value to which &quot;--prefix&quot; was set when configured.</td>
+</tr>
+<tr>
+<td><code>PHP_RELEASE_VERSION</code></td>
+<td><code>int</code>; the current PHP release version.</td>
+</tr>
+<tr>
+<td><code>PHP_ROUND_HALF_DOWN</code></td>
+<td><code>int</code>; Round halves down.</td>
+</tr>
+<tr>
+<td><code>PHP_ROUND_HALF_EVEN</code></td>
+<td><code>int</code>; Round halves to even numbers.</td>
+</tr>
+<tr>
+<td><code>PHP_ROUND_HALF_ODD</code></td>
+<td><code>int</code>; Round halves to odd numbers.</td>
+</tr>
+<tr>
+<td><code>PHP_ROUND_HALF_UP</code></td>
+<td><code>int</code>; Round halves up.</td>
+</tr>
+<tr>
+<td><code>PHP_SAPI</code></td>
+<td><code>string</code>; the Server API for this build.</td>
+</tr>
+<tr>
+<td><code>PHP_SHLIB_SUFFIX</code></td>
+<td><code>string</code>; build-platform&apos;s shared library suffix.</td>
+</tr>
+<tr>
+<td><code>PHP_SYSCONFDIR</code></td>
+<td><code>string</code>; the PHP system configuration directory.</td>
+</tr>
+<tr>
+<td><code>PHP_VERSION</code></td>
+<td><code>string</code>; the current PHP version in the form &quot;major.minor.release[extra]&quot;.</td>
+</tr>
+<tr>
+<td><code>PHP_VERSION_ID</code></td>
+<td><code>int</code>; the current PHP version.</td>
+</tr>
+<tr>
+<td><code>PHP_ZTS</code></td>
+<td><code>int</code>; Indicates whether the compiler was built with thread safety enabled.</td>
+</tr>
+<tr>
+<td><code>STDIN</code></td>
+<td><code>resource</code>; File resource that maps to standard input (<code>php://stdin</code>).</td>
+</tr>
+<tr>
+<td><code>STDOUT</code></td>
+<td><code>resource</code>; File resource that maps to standard output (<code>php://stdout</code>).</td>
+</tr>
+<tr>
+<td><code>STDERR</code></td>
+<td><code>resource</code>; File resource that maps to standard error (<code>php://stderr</code>).</td>
+</tr>
+<tr>
+<td><code>TRUE</code></td>
+<td><code>bool</code>; the case-insensitive Boolean value <code>TRUE</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The members of the <code>E_*</code> family have values that are powers of 2, so
+they can be combined meaningfully using bitwise operators.</p>
+<h2 id="userdefined-constants">User-Defined Constants</h2>
+<p>A constant may be defined inside or outside of functions, inside
+a <a href="14-classes.html#constants">class</a>, or inside an <a href="15-interfaces.html#constants">interface</a>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/05-types.html" class="navigation navigation-prev " aria-label="Previous page: 05-types.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/07-variables.html" class="navigation navigation-next " aria-label="Next page: 07-variables.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

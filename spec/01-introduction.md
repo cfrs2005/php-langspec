@@ -1,13 +1,12 @@
-#Introduction
-This specification is intended to provide a complete and concise
-definition of the syntax and semantics of the PHP language, suitable for
-use by the following:
+# 介绍
 
--   Implementers of a PHP compiler.
--   Implementers of a test suite for the PHP language.
--   Programmers writing PHP code.
+本文是PHP的语法规范,主旨是介绍将简单和清晰的描述方式表述关于PHP语法,以及语法定义规范。
+本规范适用于如下群体:
 
-For now, the runtime library has been excluded, as that is documented at
-[www.php.net](http://www.php.net). However, the document can contain references
-to the library functions, usually in the form of links to http://www.php.net.
 
+-   PHP开发者.
+-   PHP测试工程师.
+-   PHP开发工程师P.
+
+本规范所要描述的东西是非PHP手册相关的，因为文档类的你可以访问[www.php.net](http://www.php.net).
+当然本人还是会有一些关于PHP常见的类库连接到  http://www.php.net.

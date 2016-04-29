@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>05-types.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/06-constants.html" />
+    
+    
+    <link rel="prev" href="../spec/04-basic-concepts.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.5"
+        data-chapter-title="05-types.md"
+        data-filepath="spec/05-types.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="types">Types</h1>
+<h2 id="general">General</h2>
+<p>The meaning of a value is determined by its <em>type</em>. PHP&apos;s types are
+categorized as <em>scalar types</em> and <em>composite types</em>. The scalar types
+are <a href="#the-boolean-type">Boolean</a>, <a href="#the-integer-type">integer</a>, <a href="#the-floating-point-type">floating point</a>, <a href="#the-string-type">string</a>, and <a href="#the-null-type">null</a>. The composite types are <a href="#the-array-type">array</a>,
+and <a href="#objects">object</a>. The <a href="#resources">resource</a> is an opaque type whose internal structure is not specified and depends
+on the implementation.</p>
+<p>The scalar types are <em>value types</em>. That is, a variable of scalar type
+behaves as though it contains its own value.</p>
+<p>The composite types can contain other variables, besides the variable itself, e.g.
+array contains its elements and object contains its properties.</p>
+<p>The objects and resources are <em>handle types</em>. The type contains information &#x2014; in a <em>handle</em> &#x2014;
+that leads to the value. The differences between value and handle types become apparent
+when it comes to understanding the <a href="04-basic-concepts.html#the-memory-model">semantics</a> of assignment, and passing
+arguments to, and returning values from, functions.</p>
+<p>Variables are not declared to have a particular type. Instead, a
+variable&apos;s type is determined at runtime by the value it contains.
+The same variable can contain values of different types at different times.</p>
+<p>Useful library functions for interrogating and using type information
+include <a href="http://www.php.net/gettype" target="_blank"><code>gettype</code></a>, <a href="http://www.php.net/is_type" target="_blank"><code>is_type</code></a>, <a href="http://www.php.net/settype" target="_blank"><code>settype</code></a>, and <a href="http://www.php.net/var_dump" target="_blank"><code>var_dump</code></a>.</p>
+<h2 id="scalar-types">Scalar Types</h2>
+<h3 id="general">General</h3>
+<p>The integer and floating-point types are collectively known as
+<em>arithmetic types</em>. The library function <a href="http://www.php.net/is_numeric" target="_blank"><code>is_numeric</code></a> indicates if
+a given value is a number or a numeric <a href="#the-string-type">string</a>.</p>
+<p>The library function <a href="http://www.php.net/is_scalar" target="_blank"><code>is_scalar</code></a> indicates if a given value has a
+scalar type. However, that function does not consider <code>NULL</code> to be scalar.
+To test for <code>NULL</code>, use <a href="http://www.php.net/is_null" target="_blank"><code>is_null</code></a>.</p>
+<p>Some objects may support arithmetic and other scalar operations and/or be
+convertible to scalar types (this is currently available only to internal classes).
+Such object types together with scalar types are called <em>scalar-compatible types</em>.
+Note that the same object type may be scalar-compatible for one operation but not for another.</p>
+<h3 id="the-boolean-type">The Boolean Type</h3>
+<p>The Boolean type is <code>bool</code>, for which the name <code>boolean</code> is a synonym. This
+type is capable of storing two distinct values, which correspond to the
+Boolean values <a href="06-constants.html#core-predefined-constants"><code>true</code> and <code>false</code></a>, respectively.
+The internal representation of this type and its values is unspecified.</p>
+<p>The library function <a href="http://www.php.net/is_bool" target="_blank"><code>is_bool</code></a> indicates if a given value has type
+<code>bool</code>.</p>
+<h3 id="the-integer-type">The Integer Type</h3>
+<p>There is one integer type, <code>int</code>, for which the name <code>integer</code> is a synonym.
+This type is binary, signed, and uses twos-complement representation for
+negative values. The range of values that can be stored is
+implementation-defined; however, the range [-2147483648, 2147483647],
+must be supported. This range must be finite.</p>
+<p>Certain operations on integer values produce a mathematical result that
+cannot be represented as an integer. Examples include the following:</p>
+<ul>
+<li>Incrementing the largest value or decrementing the smallest value.</li>
+<li>Applying the unary minus to the smallest value.</li>
+<li>Multiplying, adding, or subtracting two values.</li>
+</ul>
+<p>In such cases, the computation is done as though the types of the values were
+<code>float</code> with the result having that type.</p>
+<p>The constants <a href="06-constants.html#core-predefined-constants"><code>PHP_INT_SIZE</code>, <code>PHP_INT_MIN</code> and <code>PHP_INT_MAX</code></a> define certain
+characteristics about type <code>int</code>.</p>
+<p>The library function <a href="http://www.php.net/is_int" target="_blank"><code>is_int</code></a> indicates if a given value has type
+<code>int</code>.</p>
+<h3 id="the-floatingpoint-type">The Floating-Point Type</h3>
+<p>There is one floating-point type, <code>float</code>, for which the names <code>double</code> and
+<code>real</code> are synonyms. The <code>float</code> type must support at least the range and
+precision of IEEE 754 64-bit double-precision representation.</p>
+<p>The library function <a href="http://www.php.net/is_float" target="_blank"><code>is_float</code></a> indicates if a given value has type
+<code>float</code>. The library function <a href="http://www.php.net/is_finite" target="_blank"><code>is_finite</code></a> indicates if a given
+floating-point value is finite. The library function <a href="http://www.php.net/is_infinite" target="_blank"><code>is_infinite</code></a>
+indicates if a given floating-point value is infinite. The library
+function <a href="http://www.php.net/is_nan" target="_blank"><code>is_nan</code></a> indicates if a given floating-point value is a
+<code>NaN</code>.</p>
+<h3 id="the-string-type">The String Type</h3>
+<p>A string is a set of contiguous bytes that represents a sequence of zero
+or more characters.</p>
+<p>Conceptually, a string can be considered as an <a href="#array-types">array</a> of
+bytes&#x2014;the <em>elements</em>&#x2014;whose keys are the <code>int</code> values starting at zero. The
+type of each element is <code>string</code>. However, a string is <em>not</em> considered a
+collection, so it cannot be iterated over.</p>
+<p>A string whose length is zero is an <em>empty string</em>.</p>
+<p>As to how the bytes in a string translate into characters is
+unspecified.</p>
+<p>Although a user of a string might choose to ascribe special semantics to
+bytes having the value <code>\0</code>, from PHP&apos;s perspective, such <em>null bytes</em>
+have no special meaning. PHP does not assume strings contain any specific
+data or assign special values to any bytes or sequences. However, many
+library functions assume the strings they receive as arguments are UTF-8
+encoded, often without explicitly mentioning that fact.</p>
+<p>A <em>numeric string</em> is a string whose content exactly matches the pattern
+defined by the <em>str-numeric</em> production below.
+A <em>leading-numeric string</em> is a string whose initial characters follow
+the requirements of a numeric string, and whose trailing characters are
+non-numeric. A <em>non-numeric string</em> is a string that is not a numeric
+string.</p>
+<pre>
+  <i>str-numeric::</i>
+    <i>str-whitespace<sub>opt</sub>   sign<sub>opt</sub>   str-number</i>
+
+  <i>str-whitespace::</i>
+    <i>str-whitespace<sub>opt</sub>   str-whitespace-char</i>
+
+  <i>str-whitespace-char::</i>
+    <i>new-line</i>
+    Space character (U+0020)
+    Horizontal-tab character (U+0009)
+    Vertical-tab character (U+000B)
+    Form-feed character (U+000C)
+
+  <i>str-number::</i>
+    <i>digit-sequence</i>
+    <i>floating-literal</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#floating-point-literals"><em>digit-sequence</em></a></li>
+<li><a href="09-lexical-structure.html#floating-point-literals"><em>floating-literal</em></a></li>
+<li><a href="09-lexical-structure.html#comments"><em>new-line</em></a></li>
+<li><a href="09-lexical-structure.html#floating-point-literals"><em>sign</em></a></li>
+</ul>
+<p>Note that <em>digit-sequence</em> is interpreted as having base-10 (so <code>&quot;0377&quot;</code> is treated as 377 decimal with a redundant
+leading zero, rather than as octal 377).</p>
+<p>Only one mutation operation may be performed on a string, offset
+assignment, which involves the simple assignment <a href="10-expressions.html#simple-assignment">operator =</a>.</p>
+<p>The library function <a href="http://www.php.net/is_string" target="_blank"><code>is_string</code></a> indicates if a given value has
+type string.</p>
+<h3 id="the-null-type">The Null Type</h3>
+<p>The null type has only one possible value, <a href="06-constants.html#core-predefined-constants"><code>NULL</code></a>. The representation
+of this type and its value is unspecified.</p>
+<p>The library function <a href="http://www.php.net/is_null" target="_blank"><code>is_null</code></a> indicates if a given value is <code>NULL</code>.</p>
+<h2 id="composite-types">Composite Types</h2>
+<h3 id="the-array-type">The Array Type</h3>
+<p>An array is a data structure that contains a collection of zero or more
+elements whose values are accessed through keys that are of type <code>int</code> or
+<code>string</code>. See more details in <a href="12-arrays.html#arrays">arrays chapter</a>.</p>
+<p>The library function <a href="http://www.php.net/is_array" target="_blank"><code>is_array</code></a> indicates if a given value is an
+array.</p>
+<h3 id="objects">Objects</h3>
+<p>An <em>object</em> is an instance of a <a href="14-classes.html#classes">class</a>. Each distinct
+<a href="14-classes.html#class-declarations">]<em>class-declaration</em></a> defines a new class type, and each class
+type is an object type. The representation of object types is unspecified.</p>
+<p>The library function <a href="http://www.php.net/is_object" target="_blank"><code>is_object</code></a> indicates if a given value is an
+object, and the library function
+<a href="http://php.net/manual/function.get-class.php" target="_blank"><code>get_class</code></a> indicates the name of an object&apos;s class.</p>
+<h3 id="resources">Resources</h3>
+<p>A <a href="http://php.net/manual/language.types.resource.php" target="_blank"><em>resource</em></a>
+is a descriptor to some sort of external entity. Examples include
+files, databases, and network sockets.</p>
+<p>A resource is an abstract entity whose representation is unspecified.
+Resources are only created or consumed by the implementation; they are
+never created or consumed by PHP code.</p>
+<p>Each distinct resource has a unique identity of some unspecified form.</p>
+<p>The library function <a href="http://www.php.net/is_resource" target="_blank"><code>is_resource</code></a> indicates if a given value is a
+resource, and the library function
+<a href="http://php.net/manual/function.get-resource-type.php" target="_blank"><code>get_resource_type</code></a> indicates the type of a resource.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/04-basic-concepts.html" class="navigation navigation-prev " aria-label="Previous page: 04-basic-concepts.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/06-constants.html" class="navigation navigation-next " aria-label="Next page: 06-constants.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -2,8 +2,8 @@
 
 * [关于本书](README.md)
 * [语法篇](spec.md)
-  * [01-introduction.md](spec/01-introduction.md)
-  * [02-conformance.md](spec/02-conformance.md)
+  * [介绍.md](spec/01-introduction.md)
+  * [一致性.md](spec/02-conformance.md)
   * [03-terms-and-definitions.md](spec/03-terms-and-definitions.md)
   * [04-basic-concepts.md](spec/04-basic-concepts.md)
   * [05-types.md](spec/05-types.md)

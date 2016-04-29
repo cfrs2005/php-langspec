@@ -1,0 +1,757 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>18-namespaces.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/19-grammar.html" />
+    
+    
+    <link rel="prev" href="../spec/17-exception-handling.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.18"
+        data-chapter-title="18-namespaces.md"
+        data-filepath="spec/18-namespaces.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="namespaces">Namespaces</h1>
+<h2 id="general">General</h2>
+<p>A problem encountered when managing large projects is that of avoiding
+the use of the same name in the same scope for different purposes. This
+is especially problematic in a language that supports modular design and
+component libraries.</p>
+<p>A <em>namespace</em> is a container for a set of (typically related)
+definitions of classes, interfaces, traits, functions, and constants.
+Namespaces serve two purposes:</p>
+<ul>
+<li>They help avoid name collisions.</li>
+<li>They allow certain long names to be accessed via shorter, more
+convenient and readable, names.</li>
+</ul>
+<p>A namespace may have <em>sub-namespaces</em>, where a sub-namespace name shares
+a common prefix with another namespace. For example, the namespace
+<code>Graphics</code> might have sub-namespaces <code>Graphics\D2</code> and <code>Graphics\D3</code>, for
+two- and three-dimensional facilities, respectively. Apart from their
+common prefix, a namespace and its sub-namespaces have no special
+relationship. The namespace whose prefix is part of a sub-namespace need
+not actually exist for the sub-namespace to exist. That is, <code>NS1\Sub</code> can
+exist without <code>NS1</code>.</p>
+<p>In the absence of any namespace definition, the names of subsequent
+classes, interfaces, traits, functions, and constants are in the
+<em>default namespace</em>, which has no name, per se.</p>
+<p>The namespaces <code>PHP</code>, <code>php</code>, and sub-namespaces beginning with those
+prefixes are reserved for use by PHP.</p>
+<h2 id="defining-namespaces">Defining Namespaces</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>namespace-definition:</i>
+    namespace  <i>name</i>  ;
+    namespace  <i>name<sub>opt</sub>   compound-statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+<li><a href="11-statements.html#compound-statements"><em>compound-statement</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>Except for white space and <a href="11-statements.html#the-declare-statement"><em>declare-statement</em></a>, the
+first occurrence of a <em>namespace-definition</em> in a script must be the
+first thing in that script.</p>
+<p>All occurrence of a <em>namespace-definition</em> in a script must have the
+<em>compound-statement</em> form or must not have that form; the two forms
+cannot be mixed within the same script file.</p>
+<p>When a script contains source code that is not inside a namespace, and
+source code that is inside one or namespaces, the namespaced code must
+use the <em>compound-statement</em> form of <em>namespace-definition</em>.</p>
+<p><em>compound-statement</em> must not contain a <em>namespace-definition</em>.</p>
+<p><strong>Semantics</strong></p>
+<p>Although a namespace may contain any PHP source code, the fact that that
+code is contained in a namespace affects only the declaration and name
+resolution of classes, interfaces, traits, functions, and constants.
+For each of those, if they are defined using <a href="#name-lookup">unqualified or qualified name</a>,
+the current namespace name is prepended to the specified name.
+Note that while definition has a short name, the name known to the engine
+is always the full name, and can be either specified as fully qualified name,
+composed from current namespace name and specified name, or <a href="#namespace-use-declarations">imported</a>.</p>
+<p>Namespace and sub-namespace names are case-insensitive.</p>
+<p>The pre-defined constant <a href="06-constants.html#context-dependent-constants"><code>__NAMESPACE__</code></a> contains the name of
+the current namespace.</p>
+<p>When the same namespace is defined in multiple scripts, and those
+scripts are combined into the same program, the namespace is considered
+the merger of its individual contributions.</p>
+<p>The scope of the non-<em>compound-statement</em> form of <em>namespace-definition</em>
+runs until the end of the script, or until the lexically next
+<em>namespace-definition</em>, whichever comes first. The scope of the
+<em>compound-statement</em> form is the <em>compound-statement</em>.</p>
+<p><strong>Examples</strong></p>
+<p>Script1.php:</p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">namespace</span> <span class="hljs-title">NS1</span>;
+...       <span class="hljs-comment">// __NAMESPACE__ is &quot;NS1&quot;</span>
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">NS3</span>\<span class="hljs-title">Sub1</span>;
+...       <span class="hljs-comment">// __NAMESPACE__ is &quot;NS3\Sub1&quot;</span>
+</code></pre>
+<p>Script2.php:</p>
+<pre><code class="lang-PHP">namespace NS1
+{
+...       // __NAMESPACE__ is &quot;NS1&quot;
+}
+namespace
+{
+...       // __NAMESPACE__ is &quot;&quot;
+}
+namespace NS3\Sub1;
+{
+...       // __NAMESPACE__ is &quot;NS3\Sub1&quot;
+}
+</code></pre>
+<h2 id="namespace-use-declarations">Namespace Use Declarations</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>namespace-use-declaration:</i>
+    use  <i>namespace-function-or-const<sub>opt</sub></i> <i>namespace-use-clauses</i>  ;
+    use  <i>namespace-function-or-const</i>  \<i><sub>opt</sub>  namespace-name</i>  \
+       {  <i>namespace-use-group-clauses-1</i>  }  ;
+    use  \<i><sub>opt</sub>   namespace-name</i>   \   {  <i>namespace-use-group-clauses-2</i>  }  ;
+
+  <i>namespace-use-clauses:</i>
+    <i>namespace-use-clause</i>
+    <i>namespace-use-clauses</i>  ,  <i>namespace-use-clause</i>
+
+  <i>namespace-use-clause:</i>
+    <i>qualified-name   namespace-aliasing-clause<sub>opt</sub></i>
+
+  <i>namespace-aliasing-clause:</i>
+    as  <i>name</i>
+
+  <i>namespace-function-or-const:</i>
+    function
+    const
+
+  <i>namespace-use-group-clauses-1:</i>
+    <i>namespace-use-group-clause-1</i>
+    <i>namespace-use-group-clauses-1</i>  ,  <i>namespace-use-group-clause-1</i>
+
+  <i>namespace-use-group-clause-1:</i>
+    <i>namespace-name</i>  <i>namespace-aliasing-clause<sub>opt</sub></i>
+
+  <i>namespace-use-group-clauses-2:</i>
+    <i>namespace-use-group-clause-2</i>
+    <i>namespace-use-group-clauses-2</i>  ,  <i>namespace-use-group-clause-2</i>
+
+  <i>namespace-use-group-clause-2:</i>
+    <i>namespace-function-or-const<sub>opt</sub></i>  <i>namespace-name</i>  <i>namespace-aliasing-clause<sub>opt</sub></i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>namespace-name</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>qualified-name</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>A <em>namespace-use-declaration</em> must not occur except at the top level or directly in the context of a <em>namespace-definition</em>.</p>
+<p>If the same <em>qualified-name</em>, <em>name</em>, or <em>namespace-name</em> is imported multiple times in the same
+scope, each occurrence must have a different alias.</p>
+<p><strong>Semantics</strong></p>
+<p>If <em>namespace-use-declaration</em> has a <em>namespace-function-or-const</em> with value <code>function</code>, the statement imports
+one or more functions. If <em>namespace-use-declaration</em> has a <em>namespace-function-or-const</em> with value <code>const</code>, the statement imports one or more constants. Otherwise, <em>namespace-use-declaration</em> has no <em>namespace-function-or-const</em>. In that case, if <em>namespace-use-clauses</em> is present, the names being imported are considered to be classes/interfaces/traits. Otherwise, <em>namespace-use-group-clauses-2</em> is present, in which case, the names being imported are considered to be functions, constants, or classes/interfaces/traits based on the respective presence of <code>function</code> or <code>const</code>, or the absence of <em>namespace-function-or-const</em> on each <em>namespace-name</em> in subordinate <em>namespace-use-group-clause-2</em>s.</p>
+<p>Note that constant, function and class imports live in different spaces, so the same name
+can be used as function and class import and apply to the respective cases of class and function use,
+without interfering with each other.</p>
+<p>A <em>namespace-use-declaration</em> <em>imports</em> &#x2014; that is, makes available &#x2014; one or
+more names into a scope, optionally giving them each an alias. Each of
+those names may designate a namespace, a sub-namespace, a class, an
+interface, or a trait. If a <em>namespace-aliasing-clause</em> is present, its
+<em>name</em> is the alias for <em>qualified-name</em>, <em>name</em>, or <em>namespace-name</em>. Otherwise, the right-most name component
+in <em>qualified-name</em> is the implied alias for <em>qualified-name</em>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">namespace</span> <span class="hljs-title">NS1</span>
+{
+  <span class="hljs-title">const</span> <span class="hljs-title">CON1</span> = 100;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">()</span> </span>{ ... }
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> </span>{ ... }
+  <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">I</span> </span>{ ... }
+  <span class="hljs-keyword">trait</span> T { ... }
+}
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">NS2</span>
+{
+  <span class="hljs-title">use</span> \<span class="hljs-title">NS1</span>\<span class="hljs-title">C</span>, \<span class="hljs-title">NS1</span>\<span class="hljs-title">I</span>, \<span class="hljs-title">NS1</span>\<span class="hljs-title">T</span>;
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">D</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">C</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">I</span>
+  </span>{
+    <span class="hljs-keyword">use</span> <span class="hljs-title">T</span>;  <span class="hljs-comment">// trait (and not a namespace use declaration)</span>
+  }
+  <span class="hljs-variable">$v</span> = \NS1\CON1; <span class="hljs-comment">// explicit namespace still needed for constants</span>
+  \NS1\f();   <span class="hljs-comment">// explicit namespace still needed for functions</span>
+
+  <span class="hljs-keyword">use</span> \<span class="hljs-title">NS1</span>\<span class="hljs-title">C</span> <span class="hljs-title">as</span> <span class="hljs-title">C2</span>; <span class="hljs-comment">// C2 is an alias for the class name \NS1\C</span>
+  <span class="hljs-variable">$c2</span> = <span class="hljs-keyword">new</span> C2;
+
+  <span class="hljs-comment">// importing a group of classes and interfaces</span>
+  <span class="hljs-keyword">use</span> \<span class="hljs-title">NS</span>\{<span class="hljs-title">C11</span>, <span class="hljs-title">C12</span>, <span class="hljs-title">I10</span>};
+
+  <span class="hljs-comment">// importing a function</span>
+  <span class="hljs-keyword">use</span> <span class="hljs-title">function</span> \<span class="hljs-title">My</span>\<span class="hljs-title">Full</span>\<span class="hljs-title">functionName</span>;
+
+  <span class="hljs-comment">// aliasing a function</span>
+  <span class="hljs-keyword">use</span> <span class="hljs-title">function</span> \<span class="hljs-title">NS1</span>\<span class="hljs-title">f</span> <span class="hljs-title">as</span> <span class="hljs-title">func</span>;
+  <span class="hljs-keyword">use</span> <span class="hljs-title">function</span> \<span class="hljs-title">NS</span>\{<span class="hljs-title">f1</span>, <span class="hljs-title">g1</span> <span class="hljs-title">as</span> <span class="hljs-title">myG</span>};
+
+  <span class="hljs-comment">// importing a constant</span>
+  <span class="hljs-keyword">use</span> <span class="hljs-title">const</span> \<span class="hljs-title">NS1</span>\<span class="hljs-title">CON1</span>;
+  <span class="hljs-keyword">use</span> \<span class="hljs-title">NS</span>\{<span class="hljs-title">const</span> <span class="hljs-title">CON11</span>, <span class="hljs-title">const</span> <span class="hljs-title">CON12</span>};
+
+  <span class="hljs-variable">$v</span> = CON1; <span class="hljs-comment">// imported constant</span>
+  func();   <span class="hljs-comment">// imported function</span>
+
+  <span class="hljs-comment">// importing a class, a constant, and a function</span>
+  <span class="hljs-keyword">use</span> \<span class="hljs-title">NS</span>\ { <span class="hljs-title">C2</span> <span class="hljs-title">as</span> <span class="hljs-title">CX</span>, <span class="hljs-title">const</span> <span class="hljs-title">CON2</span> <span class="hljs-title">as</span> <span class="hljs-title">CZ</span>, <span class="hljs-title">function</span> <span class="hljs-title">f1</span> <span class="hljs-title">as</span> <span class="hljs-title">FZ</span> };
+}
+</code></pre>
+<p>Note that the <em>qualified-name</em> is treated as absolute even if it does not start with <code>\</code>.
+For example:</p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">namespace</span> <span class="hljs-title">b</span>
+{
+  <span class="hljs-title">class</span> <span class="hljs-title">B</span>
+  {
+    <span class="hljs-title">function</span> <span class="hljs-title">foo</span>(){ <span class="hljs-title">echo</span> &quot;<span class="hljs-title">goodbye</span>&quot;; }
+  }
+}
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">a</span>\<span class="hljs-title">b</span>
+{
+  <span class="hljs-title">class</span> <span class="hljs-title">B</span>
+  {
+    <span class="hljs-title">function</span> <span class="hljs-title">foo</span>(){ <span class="hljs-title">echo</span> &quot;<span class="hljs-title">hello</span>&quot;; }
+  }
+}
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">a</span>
+{
+  $<span class="hljs-title">b</span> = <span class="hljs-title">new</span> <span class="hljs-title">b</span>\<span class="hljs-title">B</span>();
+  <span class="hljs-variable">$b</span>-&gt;foo(); <span class="hljs-comment">// hello</span>
+  <span class="hljs-keyword">use</span> <span class="hljs-title">b</span>\<span class="hljs-title">B</span> <span class="hljs-title">as</span> <span class="hljs-title">C</span>;
+  <span class="hljs-variable">$b</span> = <span class="hljs-keyword">new</span> C();
+  <span class="hljs-variable">$b</span>-&gt;foo(); <span class="hljs-comment">// goodbye</span>
+}
+</code></pre>
+<h2 id="name-lookup">Name Lookup</h2>
+<p>When an existing name is used in source code, the Engine must determine
+how that name is found with respect to namespace lookup. For this
+purpose, names can have one of the three following forms:</p>
+<ul>
+<li>Unqualified name: Such names are just simple names without any
+prefix, as in the class name <code>Point</code> in the following expression:
+<code>$p = new Point(3,5)</code>. If the current namespace is <code>NS1</code>, the name
+<code>Point</code> resolves to <code>NS1\Point</code>. If the current namespace is the
+default namespace, the name <code>Point</code> resolves to just <code>Point</code>. In the
+case of an unqualified function or constant name, if that name does
+not exist in the current namespace, a global function or constant by
+that name is used.</li>
+<li>Qualified name: Such names have a prefix consisting of a namespace
+name and/or one or more levels of sub-namespace names,
+preceding a class, interface, trait, function, or constant name.
+Such names are relative. For example, <code>D2\Point</code> could be used to
+refer to the class <code>Point</code> in the sub-namespace <code>D2</code> of the current
+namespace. One special case of this is when the first component of
+the name is the keyword <code>namespace</code>. This means &quot;the current
+namespace&quot;.</li>
+<li>Fully qualified name: Such names begin with a backslash (<code>\</code>) and are
+followed optionally by a namespace name and one or more levels of
+sub-namespace names, and, finally, a class, interface, trait,
+function, or constant name. Such names are absolute. For example,
+<code>\Graphics\D2\Point</code> could be used to refer unambiguously to the
+class <code>Point</code> in namespace <code>Graphics</code>, sub-namespace <code>D2</code>.</li>
+</ul>
+<p>However, if an unqualified name is used in a context where it represents the name
+of a constant or function, within a non-default namespace, if this namespace does not have
+such constant of function defined, the global unqualified name is used.</p>
+<p>For example:</p>
+<pre><code class="lang-PHP"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">A</span>\<span class="hljs-title">B</span>\<span class="hljs-title">C</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">strlen</span><span class="hljs-params">(<span class="hljs-variable">$str</span>)</span>
+</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">42</span>;
+}
+<span class="hljs-keyword">print</span> strlen(<span class="hljs-string">&quot;Life, Universe and Everything&quot;</span>); <span class="hljs-comment">// prints 42</span>
+<span class="hljs-keyword">print</span> mb_strlen(<span class="hljs-string">&quot;Life, Universe and Everything&quot;</span>); <span class="hljs-comment">// calls global function and prints 29</span>
+</code></pre>
+<p>The names of the standard types (such as <code>Exception</code>), constants (such as
+<code>PHP_INT_MAX</code>), and library functions (such as <code>is_null</code>) are defined outside
+any namespace. To refer unambiguously to such names, one can prefix them
+with a backslash (<code>\</code>), as in <code>\Exception</code>, <code>\PHP_INT_MAX</code>, and <code>\is_null</code>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/17-exception-handling.html" class="navigation navigation-prev " aria-label="Previous page: 17-exception-handling.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/19-grammar.html" class="navigation navigation-next " aria-label="Next page: 19-grammar.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

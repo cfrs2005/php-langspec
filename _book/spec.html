@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>语法篇 | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./spec/01-introduction.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="语法篇"
+        data-filepath="spec.md"
+        data-basepath="."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="spec.html">
+            
+                
+                    <a href="./spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="./spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="./spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="./spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="./spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="./spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="./spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="./spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="./spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="./spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="./spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="./spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="./spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="./spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="./spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="./spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="./spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="./spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="./spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="./spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="./spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <!-- This file is autogenerated, do not edit it manually -->
+<!-- Run tools/toc.php instead -->
+<h1 id="specification-for-php">Specification for PHP</h1>
+<p>Facebook has dedicated all copyright to this specification to the public
+domain worldwide under the CC0 Public Domain Dedication located at
+<a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">http://creativecommons.org/publicdomain/zero/1.0/</a>. This specification
+is distributed without any warranty.</p>
+<p>(Initially written in 2014 by Facebook, Inc., July 2014)</p>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="spec/01-introduction.html#introduction">Introduction</a></li>
+<li><a href="spec/02-conformance.html#conformance">Conformance</a></li>
+<li><a href="spec/03-terms-and-definitions.html#terms-and-definitions">Terms and Definitions</a></li>
+<li><a href="spec/04-basic-concepts.html#basic-concepts">Basic Concepts</a><ul>
+<li><a href="spec/04-basic-concepts.html#program-structure">Program Structure</a></li>
+<li><a href="spec/04-basic-concepts.html#program-start-up">Program Start-Up</a></li>
+<li><a href="spec/04-basic-concepts.html#program-termination">Program Termination</a></li>
+<li><a href="spec/04-basic-concepts.html#__halt_compiler">__halt_compiler</a></li>
+<li><a href="spec/04-basic-concepts.html#the-memory-model">The Memory Model</a><ul>
+<li><a href="spec/04-basic-concepts.html#general">General</a></li>
+<li><a href="spec/04-basic-concepts.html#reclamation-and-automatic-memory-management">Reclamation and Automatic Memory Management</a></li>
+<li><a href="spec/04-basic-concepts.html#assignment">Assignment</a><ul>
+<li><a href="spec/04-basic-concepts.html#general-1">General</a></li>
+<li><a href="spec/04-basic-concepts.html#value-assignment-of-scalar-types-to-a-local-variable">Value Assignment of Scalar Types to a Local Variable</a></li>
+<li><a href="spec/04-basic-concepts.html#value-assignment-of-objects-to-a-local-variable">Value Assignment of Objects to a Local Variable</a></li>
+<li><a href="spec/04-basic-concepts.html#byref-assignment-for-scalar-types-with-local-variables">ByRef Assignment for Scalar Types with Local Variables</a></li>
+<li><a href="spec/04-basic-concepts.html#byref-assignment-of-non-scalar-types-with-local-variables">ByRef Assignment of Non-Scalar Types with Local Variables</a></li>
+<li><a href="spec/04-basic-concepts.html#value-assignment-of-array-types-to-local-variables">Value Assignment of Array Types to Local Variables</a></li>
+<li><a href="spec/04-basic-concepts.html#deferred-array-copying">Deferred Array Copying</a></li>
+<li><a href="spec/04-basic-concepts.html#general-value-assignment">General Value Assignment</a></li>
+<li><a href="spec/04-basic-concepts.html#general-byref-assignment">General ByRef Assignment</a></li>
+</ul>
+</li>
+<li><a href="spec/04-basic-concepts.html#argument-passing">Argument Passing</a></li>
+<li><a href="spec/04-basic-concepts.html#value-returning">Value Returning</a></li>
+<li><a href="spec/04-basic-concepts.html#cloning-objects">Cloning objects</a></li>
+</ul>
+</li>
+<li><a href="spec/04-basic-concepts.html#scope">Scope</a></li>
+<li><a href="spec/04-basic-concepts.html#storage-duration">Storage Duration</a></li>
+</ul>
+</li>
+<li><a href="spec/05-types.html#types">Types</a><ul>
+<li><a href="spec/05-types.html#general">General</a></li>
+<li><a href="spec/05-types.html#scalar-types">Scalar Types</a><ul>
+<li><a href="spec/05-types.html#general-1">General</a></li>
+<li><a href="spec/05-types.html#the-boolean-type">The Boolean Type</a></li>
+<li><a href="spec/05-types.html#the-integer-type">The Integer Type</a></li>
+<li><a href="spec/05-types.html#the-floating-point-type">The Floating-Point Type</a></li>
+<li><a href="spec/05-types.html#the-string-type">The String Type</a></li>
+<li><a href="spec/05-types.html#the-null-type">The Null Type</a></li>
+</ul>
+</li>
+<li><a href="spec/05-types.html#composite-types">Composite Types</a><ul>
+<li><a href="spec/05-types.html#the-array-type">The Array Type</a></li>
+<li><a href="spec/05-types.html#objects">Objects</a></li>
+<li><a href="spec/05-types.html#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/06-constants.html#constants">Constants</a><ul>
+<li><a href="spec/06-constants.html#general">General</a></li>
+<li><a href="spec/06-constants.html#context-dependent-constants">Context-Dependent Constants</a></li>
+<li><a href="spec/06-constants.html#core-predefined-constants">Core Predefined Constants</a></li>
+<li><a href="spec/06-constants.html#user-defined-constants">User-Defined Constants</a></li>
+</ul>
+</li>
+<li><a href="spec/07-variables.html#variables">Variables</a><ul>
+<li><a href="spec/07-variables.html#general">General</a></li>
+<li><a href="spec/07-variables.html#kinds-of-variables">Kinds of Variables</a><ul>
+<li><a href="spec/07-variables.html#constants">Constants</a></li>
+<li><a href="spec/07-variables.html#local-variables">Local Variables</a></li>
+<li><a href="spec/07-variables.html#array-elements">Array Elements</a></li>
+<li><a href="spec/07-variables.html#function-statics">Function Statics</a></li>
+<li><a href="spec/07-variables.html#global-variables">Global Variables</a></li>
+<li><a href="spec/07-variables.html#instance-properties">Instance Properties</a></li>
+<li><a href="spec/07-variables.html#static-properties">Static Properties</a></li>
+<li><a href="spec/07-variables.html#class-and-interface-constants">Class and Interface Constants</a></li>
+</ul>
+</li>
+<li><a href="spec/07-variables.html#predefined-variables">Predefined Variables</a></li>
+</ul>
+</li>
+<li><a href="spec/08-conversions.html#conversions">Conversions</a><ul>
+<li><a href="spec/08-conversions.html#general">General</a></li>
+<li><a href="spec/08-conversions.html#converting-to-boolean-type">Converting to Boolean Type</a></li>
+<li><a href="spec/08-conversions.html#converting-to-integer-type">Converting to Integer Type</a></li>
+<li><a href="spec/08-conversions.html#converting-to-floating-point-type">Converting to Floating-Point Type</a></li>
+<li><a href="spec/08-conversions.html#converting-to-string-type">Converting to String Type</a></li>
+<li><a href="spec/08-conversions.html#converting-to-array-type">Converting to Array Type</a></li>
+<li><a href="spec/08-conversions.html#converting-to-object-type">Converting to Object Type</a></li>
+</ul>
+</li>
+<li><a href="spec/09-lexical-structure.html#lexical-structure">Lexical Structure</a><ul>
+<li><a href="spec/09-lexical-structure.html#scripts">Scripts</a></li>
+<li><a href="spec/09-lexical-structure.html#grammars">Grammars</a></li>
+<li><a href="spec/09-lexical-structure.html#lexical-analysis">Lexical analysis</a><ul>
+<li><a href="spec/09-lexical-structure.html#general">General</a></li>
+<li><a href="spec/09-lexical-structure.html#comments">Comments</a></li>
+<li><a href="spec/09-lexical-structure.html#white-space">White Space</a></li>
+<li><a href="spec/09-lexical-structure.html#tokens">Tokens</a><ul>
+<li><a href="spec/09-lexical-structure.html#general-1">General</a></li>
+<li><a href="spec/09-lexical-structure.html#names">Names</a></li>
+<li><a href="spec/09-lexical-structure.html#keywords">Keywords</a></li>
+<li><a href="spec/09-lexical-structure.html#literals">Literals</a><ul>
+<li><a href="spec/09-lexical-structure.html#general-2">General</a></li>
+<li><a href="spec/09-lexical-structure.html#integer-literals">Integer Literals</a></li>
+<li><a href="spec/09-lexical-structure.html#floating-point-literals">Floating-Point Literals</a></li>
+<li><a href="spec/09-lexical-structure.html#string-literals">String Literals</a><ul>
+<li><a href="spec/09-lexical-structure.html#single-quoted-string-literals">Single-Quoted String Literals</a></li>
+<li><a href="spec/09-lexical-structure.html#double-quoted-string-literals">Double-Quoted String Literals</a></li>
+<li><a href="spec/09-lexical-structure.html#heredoc-string-literals">Heredoc String Literals</a></li>
+<li><a href="spec/09-lexical-structure.html#nowdoc-string-literals">Nowdoc String Literals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/09-lexical-structure.html#operators-and-punctuators">Operators and Punctuators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#expressions">Expressions</a><ul>
+<li><a href="spec/10-expressions.html#general">General</a></li>
+<li><a href="spec/10-expressions.html#primary-expressions">Primary Expressions</a><ul>
+<li><a href="spec/10-expressions.html#general-1">General</a></li>
+<li><a href="spec/10-expressions.html#intrinsics">Intrinsics</a><ul>
+<li><a href="spec/10-expressions.html#general-2">General</a></li>
+<li><a href="spec/10-expressions.html#array">array</a></li>
+<li><a href="spec/10-expressions.html#echo">echo</a></li>
+<li><a href="spec/10-expressions.html#empty">empty</a></li>
+<li><a href="spec/10-expressions.html#eval">eval</a></li>
+<li><a href="spec/10-expressions.html#exitdie">exit/die</a></li>
+<li><a href="spec/10-expressions.html#isset">isset</a></li>
+<li><a href="spec/10-expressions.html#list">list</a></li>
+<li><a href="spec/10-expressions.html#print">print</a></li>
+<li><a href="spec/10-expressions.html#unset">unset</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#anonymous-function-creation">Anonymous Function Creation</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#postfix-operators">Postfix Operators</a><ul>
+<li><a href="spec/10-expressions.html#general-3">General</a></li>
+<li><a href="spec/10-expressions.html#the-clone-operator">The <code>clone</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#the-new-operator">The <code>new</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#array-creation-operator">Array Creation Operator</a></li>
+<li><a href="spec/10-expressions.html#subscript-operator">Subscript Operator</a></li>
+<li><a href="spec/10-expressions.html#function-call-operator">Function Call Operator</a></li>
+<li><a href="spec/10-expressions.html#member-selection-operator">Member-Selection Operator</a></li>
+<li><a href="spec/10-expressions.html#postfix-increment-and-decrement-operators">Postfix Increment and Decrement Operators</a></li>
+<li><a href="spec/10-expressions.html#scope-resolution-operator">Scope-Resolution Operator</a></li>
+<li><a href="spec/10-expressions.html#exponentiation-operator">Exponentiation Operator</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#unary-operators">Unary Operators</a><ul>
+<li><a href="spec/10-expressions.html#general-4">General</a></li>
+<li><a href="spec/10-expressions.html#prefix-increment-and-decrement-operators">Prefix Increment and Decrement Operators</a></li>
+<li><a href="spec/10-expressions.html#unary-arithmetic-operators">Unary Arithmetic Operators</a></li>
+<li><a href="spec/10-expressions.html#error-control-operator">Error Control Operator</a></li>
+<li><a href="spec/10-expressions.html#shell-command-operator">Shell Command Operator</a></li>
+<li><a href="spec/10-expressions.html#cast-operator">Cast Operator</a></li>
+<li><a href="spec/10-expressions.html#variable-name-creation-operator">Variable-Name Creation Operator</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#instanceof-operator"><code>instanceof</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#multiplicative-operators">Multiplicative Operators</a></li>
+<li><a href="spec/10-expressions.html#additive-operators">Additive Operators</a></li>
+<li><a href="spec/10-expressions.html#bitwise-shift-operators">Bitwise Shift Operators</a></li>
+<li><a href="spec/10-expressions.html#relational-operators">Relational Operators</a></li>
+<li><a href="spec/10-expressions.html#equality-operators">Equality Operators</a></li>
+<li><a href="spec/10-expressions.html#bitwise-and-operator">Bitwise AND Operator</a></li>
+<li><a href="spec/10-expressions.html#bitwise-exclusive-or-operator">Bitwise Exclusive OR Operator</a></li>
+<li><a href="spec/10-expressions.html#bitwise-inclusive-or-operator">Bitwise Inclusive OR Operator</a></li>
+<li><a href="spec/10-expressions.html#logical-and-operator-form-1">Logical AND Operator (form 1)</a></li>
+<li><a href="spec/10-expressions.html#logical-inclusive-or-operator-form-1">Logical Inclusive OR Operator (form 1)</a></li>
+<li><a href="spec/10-expressions.html#conditional-operator">Conditional Operator</a></li>
+<li><a href="spec/10-expressions.html#coalesce-operator">Coalesce Operator</a></li>
+<li><a href="spec/10-expressions.html#assignment-operators">Assignment Operators</a><ul>
+<li><a href="spec/10-expressions.html#general-5">General</a></li>
+<li><a href="spec/10-expressions.html#simple-assignment">Simple Assignment</a></li>
+<li><a href="spec/10-expressions.html#byref-assignment">byRef Assignment</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#compound-assignment">Compound Assignment</a></li>
+<li><a href="spec/10-expressions.html#logical-and-operator-form-2">Logical AND Operator (form 2)</a></li>
+<li><a href="spec/10-expressions.html#logical-exclusive-or-operator">Logical Exclusive OR Operator</a></li>
+<li><a href="spec/10-expressions.html#logical-inclusive-or-operator-form-2">Logical Inclusive OR Operator (form 2)</a></li>
+<li><a href="spec/10-expressions.html#yield-operator"><code>yield</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#script-inclusion-operators">Script Inclusion Operators</a><ul>
+<li><a href="spec/10-expressions.html#general-6">General</a></li>
+<li><a href="spec/10-expressions.html#the-include-operator">The <code>include</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#the-include_once-operator">The <code>include_once</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#the-require-operator">The <code>require</code> Operator</a></li>
+<li><a href="spec/10-expressions.html#the-require_once-operator">The <code>require_once</code> Operator</a></li>
+</ul>
+</li>
+<li><a href="spec/10-expressions.html#constant-expressions">Constant Expressions</a></li>
+</ul>
+</li>
+<li><a href="spec/11-statements.html#statements">Statements</a><ul>
+<li><a href="spec/11-statements.html#general">General</a></li>
+<li><a href="spec/11-statements.html#compound-statements">Compound Statements</a></li>
+<li><a href="spec/11-statements.html#labeled-statements">Labeled Statements</a></li>
+<li><a href="spec/11-statements.html#expression-statements">Expression Statements</a></li>
+<li><a href="spec/11-statements.html#selection-statements">Selection Statements</a><ul>
+<li><a href="spec/11-statements.html#general-1">General</a></li>
+<li><a href="spec/11-statements.html#the-if-statement">The <code>if</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-switch-statement">The <code>switch</code> Statement</a></li>
+</ul>
+</li>
+<li><a href="spec/11-statements.html#iteration-statements">Iteration Statements</a><ul>
+<li><a href="spec/11-statements.html#general-2">General</a></li>
+</ul>
+</li>
+<li><a href="spec/11-statements.html#the-while-statement">The <code>while</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-do-statement">The <code>do</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-for-statement">The <code>for</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-foreach-statement">The <code>foreach</code> Statement</a></li>
+<li><a href="spec/11-statements.html#jump-statements">Jump Statements</a><ul>
+<li><a href="spec/11-statements.html#general-3">General</a></li>
+<li><a href="spec/11-statements.html#the-goto-statement">The <code>goto</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-continue-statement">The <code>continue</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-break-statement">The <code>break</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-return-statement">The <code>return</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-throw-statement">The <code>throw</code> Statement</a></li>
+</ul>
+</li>
+<li><a href="spec/11-statements.html#the-try-statement">The <code>try</code> Statement</a></li>
+<li><a href="spec/11-statements.html#the-declare-statement">The <code>declare</code> Statement</a></li>
+</ul>
+</li>
+<li><a href="spec/12-arrays.html#arrays">Arrays</a><ul>
+<li><a href="spec/12-arrays.html#general">General</a></li>
+<li><a href="spec/12-arrays.html#array-creation-and-initialization">Array Creation and Initialization</a></li>
+<li><a href="spec/12-arrays.html#element-access-and-insertion">Element Access and Insertion</a></li>
+</ul>
+</li>
+<li><a href="spec/13-functions.html#functions">Functions</a><ul>
+<li><a href="spec/13-functions.html#general">General</a></li>
+<li><a href="spec/13-functions.html#function-calls">Function Calls</a></li>
+<li><a href="spec/13-functions.html#function-definitions">Function Definitions</a></li>
+<li><a href="spec/13-functions.html#return-typing">Return typing</a></li>
+<li><a href="spec/13-functions.html#type-check-modes">Type check modes</a></li>
+<li><a href="spec/13-functions.html#variable-functions">Variable Functions</a></li>
+<li><a href="spec/13-functions.html#anonymous-functions">Anonymous Functions</a></li>
+</ul>
+</li>
+<li><a href="spec/14-classes.html#classes">Classes</a><ul>
+<li><a href="spec/14-classes.html#general">General</a></li>
+<li><a href="spec/14-classes.html#class-declarations">Class Declarations</a></li>
+<li><a href="spec/14-classes.html#class-members">Class Members</a></li>
+<li><a href="spec/14-classes.html#dynamic-members">Dynamic Members</a></li>
+<li><a href="spec/14-classes.html#constants">Constants</a></li>
+<li><a href="spec/14-classes.html#properties">Properties</a></li>
+<li><a href="spec/14-classes.html#methods">Methods</a></li>
+<li><a href="spec/14-classes.html#constructors">Constructors</a></li>
+<li><a href="spec/14-classes.html#destructors">Destructors</a></li>
+<li><a href="spec/14-classes.html#inheritance">Inheritance</a></li>
+<li><a href="spec/14-classes.html#methods-with-special-semantics">Methods with Special Semantics</a><ul>
+<li><a href="spec/14-classes.html#general-1">General</a></li>
+<li><a href="spec/14-classes.html#method-__call">Method <code>__call</code></a></li>
+<li><a href="spec/14-classes.html#method-__callstatic">Method <code>__callStatic</code></a></li>
+<li><a href="spec/14-classes.html#method-__clone">Method <code>__clone</code></a></li>
+<li><a href="spec/14-classes.html#method-__debuginfo">Method <code>__debugInfo</code></a></li>
+<li><a href="spec/14-classes.html#method-__get">Method <code>__get</code></a></li>
+<li><a href="spec/14-classes.html#method-__invoke">Method <code>__invoke</code></a></li>
+<li><a href="spec/14-classes.html#method-__isset">Method <code>__isset</code></a></li>
+<li><a href="spec/14-classes.html#method-__set">Method <code>__set</code></a></li>
+<li><a href="spec/14-classes.html#method-__set_state">Method <code>__set_state</code></a></li>
+<li><a href="spec/14-classes.html#method-__sleep">Method <code>__sleep</code></a></li>
+<li><a href="spec/14-classes.html#method-__tostring">Method <code>__toString</code></a></li>
+<li><a href="spec/14-classes.html#method-__unset">Method <code>__unset</code></a></li>
+<li><a href="spec/14-classes.html#method-__wakeup">Method <code>__wakeup</code></a></li>
+</ul>
+</li>
+<li><a href="spec/14-classes.html#serialization">Serialization</a></li>
+<li><a href="spec/14-classes.html#predefined-classes">Predefined Classes</a><ul>
+<li><a href="spec/14-classes.html#class-closure">Class <code>Closure</code></a></li>
+<li><a href="spec/14-classes.html#class-generator">Class <code>Generator</code></a></li>
+<li><a href="spec/14-classes.html#class-__php_incomplete_class">Class <code>__PHP_Incomplete_Class</code></a></li>
+<li><a href="spec/14-classes.html#class-stdclass">Class <code>stdClass</code></a></li>
+<li><a href="spec/14-classes.html#predefined-error-classes">Predefined Error Classes</a><ul>
+<li><a href="spec/14-classes.html#class-error">Class <code>Error</code></a></li>
+<li><a href="spec/14-classes.html#class-arithmeticerror">Class <code>ArithmeticError</code></a></li>
+<li><a href="spec/14-classes.html#class-assertionerror">Class <code>AssertionError</code></a></li>
+<li><a href="spec/14-classes.html#class-divisionbyzeroerror">Class <code>DivisionByZeroError</code></a></li>
+<li><a href="spec/14-classes.html#class-parseerror">Class <code>ParseError</code></a></li>
+<li><a href="spec/14-classes.html#class-typeerror">Class <code>TypeError</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/15-interfaces.html#interfaces">Interfaces</a><ul>
+<li><a href="spec/15-interfaces.html#general">General</a></li>
+<li><a href="spec/15-interfaces.html#interface-declarations">Interface Declarations</a></li>
+<li><a href="spec/15-interfaces.html#interface-members">Interface Members</a></li>
+<li><a href="spec/15-interfaces.html#constants">Constants</a></li>
+<li><a href="spec/15-interfaces.html#methods">Methods</a></li>
+<li><a href="spec/15-interfaces.html#predefined-interfaces">Predefined Interfaces</a><ul>
+<li><a href="spec/15-interfaces.html#interface-arrayaccess">Interface <code>ArrayAccess</code></a></li>
+<li><a href="spec/15-interfaces.html#interface-iterator">Interface <code>Iterator</code></a></li>
+<li><a href="spec/15-interfaces.html#interface-iteratoraggregate">Interface <code>IteratorAggregate</code></a></li>
+<li><a href="spec/15-interfaces.html#interface-throwable">Interface <code>Throwable</code></a></li>
+<li><a href="spec/15-interfaces.html#interface-traversable">Interface <code>Traversable</code></a></li>
+<li><a href="spec/15-interfaces.html#interface--serializable">Interface  <code>Serializable</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/16-traits.html#traits">Traits</a><ul>
+<li><a href="spec/16-traits.html#general">General</a></li>
+<li><a href="spec/16-traits.html#trait-declarations">Trait Declarations</a></li>
+<li><a href="spec/16-traits.html#trait-uses">Trait Uses</a></li>
+</ul>
+</li>
+<li><a href="spec/17-exception-handling.html#exception-handling">Exception Handling</a><ul>
+<li><a href="spec/17-exception-handling.html#general">General</a></li>
+<li><a href="spec/17-exception-handling.html#class-exception">Class <code>Exception</code></a></li>
+<li><a href="spec/17-exception-handling.html#tracing-exceptions">Tracing Exceptions</a></li>
+<li><a href="spec/17-exception-handling.html#user-defined-exception-classes">User-Defined Exception Classes</a></li>
+</ul>
+</li>
+<li><a href="spec/18-namespaces.html#namespaces">Namespaces</a><ul>
+<li><a href="spec/18-namespaces.html#general">General</a></li>
+<li><a href="spec/18-namespaces.html#defining-namespaces">Defining Namespaces</a></li>
+<li><a href="spec/18-namespaces.html#namespace-use-declarations">Namespace Use Declarations</a></li>
+<li><a href="spec/18-namespaces.html#name-lookup">Name Lookup</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#grammar">Grammar</a><ul>
+<li><a href="spec/19-grammar.html#general">General</a></li>
+<li><a href="spec/19-grammar.html#lexical-grammar">Lexical Grammar</a><ul>
+<li><a href="spec/19-grammar.html#general-1">General</a></li>
+<li><a href="spec/19-grammar.html#comments">Comments</a></li>
+<li><a href="spec/19-grammar.html#white-space">White Space</a></li>
+<li><a href="spec/19-grammar.html#tokens">Tokens</a><ul>
+<li><a href="spec/19-grammar.html#general-2">General</a></li>
+<li><a href="spec/19-grammar.html#names">Names</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#keywords">Keywords</a></li>
+<li><a href="spec/19-grammar.html#literals">Literals</a><ul>
+<li><a href="spec/19-grammar.html#general-3">General</a></li>
+<li><a href="spec/19-grammar.html#integer-literals">Integer Literals</a></li>
+<li><a href="spec/19-grammar.html#floating-point-literals">Floating-Point Literals</a></li>
+<li><a href="spec/19-grammar.html#string-literals">String Literals</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#operators-and-punctuators">Operators and Punctuators</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#syntactic-grammar">Syntactic Grammar</a><ul>
+<li><a href="spec/19-grammar.html#program-structure">Program Structure</a></li>
+<li><a href="spec/19-grammar.html#variables">Variables</a></li>
+<li><a href="spec/19-grammar.html#expressions">Expressions</a><ul>
+<li><a href="spec/19-grammar.html#primary-expressions">Primary Expressions</a></li>
+<li><a href="spec/19-grammar.html#postfix-operators">Postfix Operators</a></li>
+<li><a href="spec/19-grammar.html#unary-operators">Unary Operators</a></li>
+<li><a href="spec/19-grammar.html#instanceof-operator">instanceof Operator</a></li>
+<li><a href="spec/19-grammar.html#multiplicative-operators">Multiplicative Operators</a></li>
+<li><a href="spec/19-grammar.html#additive-operators">Additive Operators</a></li>
+<li><a href="spec/19-grammar.html#bitwise-shift-operators">Bitwise Shift Operators</a></li>
+<li><a href="spec/19-grammar.html#relational-operators">Relational Operators</a></li>
+<li><a href="spec/19-grammar.html#equality-operators">Equality Operators</a></li>
+<li><a href="spec/19-grammar.html#bitwise-logical-operators">Bitwise Logical Operators</a></li>
+<li><a href="spec/19-grammar.html#logical-operators-form-1">Logical Operators (form 1)</a></li>
+<li><a href="spec/19-grammar.html#conditional-operator">Conditional Operator</a></li>
+<li><a href="spec/19-grammar.html#coalesce-operator">Coalesce Operator</a></li>
+<li><a href="spec/19-grammar.html#assignment-operators">Assignment Operators</a></li>
+<li><a href="spec/19-grammar.html#logical-operators-form-2">Logical Operators (form 2)</a></li>
+<li><a href="spec/19-grammar.html#yield-operator">yield Operator</a></li>
+<li><a href="spec/19-grammar.html#script-inclusion-operators">Script Inclusion Operators</a></li>
+<li><a href="spec/19-grammar.html#constant-expressions">Constant Expressions</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#statements">Statements</a><ul>
+<li><a href="spec/19-grammar.html#general-4">General</a></li>
+<li><a href="spec/19-grammar.html#compound-statements">Compound Statements</a></li>
+<li><a href="spec/19-grammar.html#labeled-statements">Labeled Statements</a></li>
+<li><a href="spec/19-grammar.html#expression-statements">Expression Statements</a></li>
+<li><a href="spec/19-grammar.html#iteration-statements">Iteration Statements</a></li>
+<li><a href="spec/19-grammar.html#jump-statements">Jump Statements</a></li>
+<li><a href="spec/19-grammar.html#the-try-statement">The try Statement</a></li>
+<li><a href="spec/19-grammar.html#the-declare-statement">The declare Statement</a></li>
+</ul>
+</li>
+<li><a href="spec/19-grammar.html#functions">Functions</a></li>
+<li><a href="spec/19-grammar.html#classes">Classes</a></li>
+<li><a href="spec/19-grammar.html#interfaces">Interfaces</a></li>
+<li><a href="spec/19-grammar.html#traits">Traits</a></li>
+<li><a href="spec/19-grammar.html#namespaces">Namespaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="spec/20-bibliography.html#bibliography">Bibliography</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: 关于本书"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./spec/01-introduction.html" class="navigation navigation-next " aria-label="Next page: 介绍.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

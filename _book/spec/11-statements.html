@@ -1,0 +1,1503 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>11-statements.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/12-arrays.html" />
+    
+    
+    <link rel="prev" href="../spec/10-expressions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.11"
+        data-chapter-title="11-statements.md"
+        data-filepath="spec/11-statements.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="statements">Statements</h1>
+<h2 id="general">General</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+
+  <i>statement:</i>
+    <i>compound-statement</i>
+    <i>labeled-statement</i>
+    <i>expression-statement</i>
+    <i>selection-statement</i>
+    <i>iteration-statement</i>
+    <i>jump-statement</i>
+    <i>try-statement</i>
+    <i>declare-statement</i>
+    <i>const-declaration</i>
+    <i>function-definition</i>
+    <i>class-declaration</i>
+    <i>interface-declaration</i>
+    <i>trait-declaration</i>
+    <i>namespace-definition</i>
+    <i>namespace-use-declaration</i>
+    <i>global-declaration</i>
+    <i>function-static-declaration</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#compound-statements"><em>compound-statement</em></a></li>
+<li><a href="#labeled-statements"><em>labeled-statement</em></a></li>
+<li><a href="#expression-statements"><em>expression-statement</em></a></li>
+<li><a href="#general-1"><em>selection-statement</em></a></li>
+<li><a href="#general-2"><em>iteration-statement</em></a></li>
+<li><a href="#general-3"><em>jump-statement</em></a></li>
+<li><a href="#the-declare-statement"><em>declare-statement</em></a></li>
+<li><a href="14-classes.html#constants"><em>const-declaration</em></a></li>
+<li><a href="13-functions.html#function-definitions"><em>function-definition</em></a></li>
+<li><a href="14-classes.html#class-declarations"><em>class-declaration</em></a></li>
+<li><a href="15-interfaces.html#interface-declarations"><em>interface-declaration</em></a></li>
+<li><a href="16-traits.html#trait-declarations"><em>trait-declaration</em></a></li>
+<li><a href="18-namespaces.html#defining-namespaces"><em>namespace-definition</em></a></li>
+<li><a href="18-namespaces.html#namespace-use-declarations"><em>namespace-use-declaration</em></a></li>
+<li><a href="07-variables.html#global-variables"><em>global-declaration</em></a></li>
+<li><a href="07-variables.html#function-statics"><em>function-static-declaration</em></a></li>
+</ul>
+<h2 id="compound-statements">Compound Statements</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>compound-statement:</i>
+    {   <i>statement-list<sub>opt</sub></i>  }
+
+  <i>statement-list:</i>
+    <i>statement</i>
+    <i>statement-list   statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#general"><em>statement</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>A <em>compound statement</em> allows a group of zero or more statements to be
+treated syntactically as a single statement. A compound statement is
+often referred to as a <em>block</em>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">if</span> (condition)
+{ <span class="hljs-comment">// braces are needed as the true path has more than one statement</span>
+  <span class="hljs-comment">// statement-1</span>
+  <span class="hljs-comment">// statement-2</span>
+}
+<span class="hljs-keyword">else</span>
+{ <span class="hljs-comment">// braces are optional as the false path has only one statement</span>
+  <span class="hljs-comment">// statement-3</span>
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">while</span> (condition)
+{ <span class="hljs-comment">// the empty block is equivalent to a null statement</span>
+}
+</code></pre>
+<h2 id="labeled-statements">Labeled Statements</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>labeled-statement:</i>
+    <i>named-label-statement</i>
+    <i>case-statement</i>
+    <i>default-statement</i>
+
+  <i>named-label-statement:</i>
+    <i>name</i>  :  <i>statement</i>
+
+  <i>case-statement:</i>
+    case   <i>expression   case-default-label-terminator   statement</i>
+
+  <i>default-statement:</i>
+    default  <i>case-default-label-terminator   statement</i>
+
+  <i>case-default-label-terminator:</i>
+    :
+    ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>A named label can be used as the target of a <a href="#the-goto-statement"><code>goto</code> statement</a>.</p>
+<p>Named labels must be unique within a function.</p>
+<p>A case and default labeled statements must only occur inside a <a href="#the-switch-statement"><code>switch</code> statement</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>Any statement may be preceded by a token sequence that declares a name
+as a label name. The presence of a label does not alter the &#xFB02;ow of
+execution.</p>
+<h2 id="expression-statements">Expression Statements</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+   <i>expression-statement:</i>
+     <i>expression<sub>opt</sub></i>  ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>If present, <em>expression</em> is evaluated for its side effects, if any, and
+any resulting value is discarded. If <em>expression</em> is omitted, the
+statement is a <em>null statement</em>, which has no effect on execution.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP">$i = 10;  // $i is assigned the value 10; result (10) is discarded
+++$i; // $i is incremented; result (11) is discarded
+$i++; // $i is incremented; result (11) is discarded
+DoIt(); // function DoIt is called; result (return value) is discarded
+// -----------------------------------------
+$i;   // no side effects, result is discarded. Vacuous but permitted
+123;  // likewise for this one and the two statements following
+34.5 * 12.6 + 11.987;
+TRUE;
+// -----------------------------------------
+function findValue($table, $value)  // where $table is 2x3 array
+{
+  for ($row = 0; $row &lt;= 1; ++$row)
+  {
+    for ($colm = 0; $colm &lt;= 2; ++$colm)
+    {
+      if ($table[$row][$colm] == $value)
+      {
+        // ...
+        goto done;
+      }
+    }
+  }
+  // ...
+done:
+  ;     // null statement needed as a label must precede a statement
+}
+</code></pre>
+<h2 id="selection-statements">Selection Statements</h2>
+<h3 id="general">General</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>selection-statement:</i>
+    <i>if-statement</i>
+    <i>switch-statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#the-if-statement"><em>if-statement</em></a></li>
+<li><a href="#the-switch-statement"><em>switch-statement</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>Based on the value of a controlling expression, a selection statement
+selects among a set of statements.</p>
+<h3 id="the-if-statement">The <code>if</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>if-statement:</i>
+    if   (   <i>expression</i>   )   <i>statement   elseif-clauses-1<sub>opt</sub>   else-clause-1<sub>opt</sub></i>
+    if   (   <i>expression</i>   )   :   <i>statement-list   elseif-clauses-2<sub>opt</sub>   else-clause-2<sub>opt</sub></i>   endif   ;
+
+  <i>elseif-clauses-1:</i>
+    <i>elseif-clause-1</i>
+    <i>elseif-clauses-1   elseif-clause-1</i>
+
+  <i>elseif-clause-1:</i>
+    elseif   (   <i>expression</i>   )   <i>statement</i>
+
+  <i>else-clause-1:</i>
+    else   <i>statement</i>
+
+  <i>elseif-clauses-2:</i>
+    <i>elseif-clause-2</i>
+    <i>elseif-clauses-2   elseif-clause-2</i>
+
+  <i>elseif-clause-2:</i>
+    elseif   (   <i>expression</i>   )   :   <i>statement-list</i>
+
+  <i>else-clause-2:</i>
+    else   :   <i>statement-list</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The two forms of the <code>if</code> statement are equivalent; they simply provide
+alternate styles.</p>
+<p>The result of the controlling expression <em>expression</em> will be <a href="08-conversions.html#converting-to-boolean-type">converted to type <code>bool</code></a>
+if it does not have this type.</p>
+<p>If <em>expression</em> is <code>TRUE</code>, the <em>statement</em> that follows immediately is
+executed. Otherwise, if an <code>elseif</code> clause is present its <em>expression</em> is evaluated
+in turn, and if it is <code>TRUE</code>, the <em>statement</em> immediately following the <code>elseif</code> is executed.
+This repeats for every <code>elseif</code> clause in turn. If none of those tests <code>TRUE</code>, if an
+<code>else</code> clause is present the <em>statement</em> immediately following the <code>else</code> is
+executed.</p>
+<p>An <code>else</code> clause is associated with the lexically nearest preceding <code>if</code> or
+<code>elseif</code> that is permitted by the syntax.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$count</span> &gt; <span class="hljs-number">0</span>)
+{
+  ...
+  ...
+  ...
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">goto</span> label1;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;Unreachable code\n&quot;</span>;
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$a</span>)
+{
+label1:
+  ...
+}
+<span class="hljs-keyword">else</span>
+{
+  ...
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-number">1</span>)
+  ...
+  <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span>)
+    ...
+<span class="hljs-keyword">else</span>  <span class="hljs-comment">// this else does NOT go with the outer if</span>
+  ...
+
+<span class="hljs-keyword">if</span> (<span class="hljs-number">1</span>)
+{
+  ...
+  <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span>)
+    ...
+}
+<span class="hljs-keyword">else</span>  <span class="hljs-comment">// this else does go with the outer if</span>
+    ...
+</code></pre>
+<h3 id="the-switch-statement">The <code>switch</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>switch-statement:</i>
+    switch  (  <i>expression</i>  )  { <i>case-statements<sub>opt</sub></i> }
+    switch  (  <i>expression</i>  )  :   <i>case-statements<sub>opt</sub></i>  endswitch;
+
+  <i>case-statements:</i>
+    <i>case-statement</i> <i>statement-list<sub>opt</sub></i> <i>case-statements<sub>opt</sub></i>
+    <i>default-statement</i> <i>statement-list<sub>opt</sub></i> <i>case-statements<sub>opt</sub></i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+<li><a href="#labeled-statements"><em>case-statement</em></a></li>
+<li><a href="#labeled-statements"><em>default-statement</em></a></li>
+<li><a href="#compound-statements"><em>compound-statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>There must be at most one default label.</p>
+<p><strong>Semantics</strong></p>
+<p>The two forms of the <code>switch</code> statement are equivalent; they simply
+provide alternate styles.</p>
+<p>Based on the value of its <em>expression</em>, a <code>switch</code> statement transfers
+control to a <a href="#labeled-statements">case label</a>, to a <a href="#labeled-statements">default label</a>, if one
+exists; or to the statement immediately following the end of the <code>switch</code>
+statement. A case or default label is only reachable directly within its
+closest enclosing <code>switch</code> statement.</p>
+<p>On entry to the <code>switch</code> statement, the controlling expression is
+evaluated and then compared with the value of the case label <em>expression</em>
+values, in lexical order, using the same semantics as <code>==</code>.
+If one matches, control transfers to the
+statement following the corresponding case label. If there is no match,
+then if there is a default label, control transfers to the statement
+following that; otherwise, control transfers to the statement
+immediately following the end of the <code>switch</code> statement. If a <code>switch</code>
+contains more than one case label whose values compare equal to the
+controlling expression, the first in lexical order is considered the
+match.</p>
+<p>An arbitrary number of statements can be associated with any case or
+default label. In the absence of a <a href="#the-break-statement"><code>break</code> statement</a> at the end
+of a set of such statements, the execution continues into any following
+statements, ignoring the associated labels. If all cases and the default end in <code>break</code>
+and there are no duplicate-valued case labels, the order of case and
+default labels is insignificant.</p>
+<p>Case-label values can be runtime expressions, and the types of sibling
+case-label values need not be the same.</p>
+<p>Switches may be nested, in which case, each <code>switch</code> has its own set of
+<code>switch</code> clauses.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$v</span> = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">switch</span> (<span class="hljs-variable">$v</span>)
+{
+<span class="hljs-keyword">default</span>:
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;default case: \$v is $v\n&quot;</span>;
+  <span class="hljs-keyword">break</span>;    <span class="hljs-comment">// break ends &quot;group&quot; of default statements</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">20</span>:
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;case 20\n&quot;</span>;
+  <span class="hljs-keyword">break</span>;    <span class="hljs-comment">// break ends &quot;group&quot; of case 20 statements</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;case 10\n&quot;</span>; <span class="hljs-comment">// no break, so execution continues to the next label&apos;s &quot;group&quot;</span>
+<span class="hljs-keyword">case</span> <span class="hljs-number">30</span>:
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;case 30\n&quot;</span>; <span class="hljs-comment">// no break, but then none is really needed either</span>
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-variable">$v</span> = <span class="hljs-number">30</span>;
+<span class="hljs-keyword">switch</span> (<span class="hljs-variable">$v</span>)
+{
+<span class="hljs-keyword">case</span> <span class="hljs-number">30.0</span>:  <span class="hljs-comment">// &lt;===== this case matches with 30</span>
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;case 30.0\n&quot;</span>;
+  <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">default</span>:
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;default case: \$v is $v\n&quot;</span>;
+  <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">case</span> <span class="hljs-number">30</span>:    <span class="hljs-comment">// &lt;===== rather than this case matching with 30</span>
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;case 30\n&quot;</span>;
+  <span class="hljs-keyword">break</span>;
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">switch</span> (<span class="hljs-variable">$v</span>)
+{
+<span class="hljs-keyword">case</span> <span class="hljs-number">10</span> + <span class="hljs-variable">$b</span>: <span class="hljs-comment">// non-constant expression</span>
+  <span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">case</span> <span class="hljs-variable">$v</span> &lt; <span class="hljs-variable">$a</span>:   <span class="hljs-comment">// non-constant expression</span>
+  <span class="hljs-comment">// ...</span>
+<span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h2 id="iteration-statements">Iteration Statements</h2>
+<h3 id="general">General</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>iteration-statement:</i>
+    <i>while-statement</i>
+    <i>do-statement</i>
+    <i>for-statement</i>
+    <i>foreach-statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#the-while-statement"><em>while-statement</em></a></li>
+<li><a href="#the-do-statement"><em>do-statement</em></a></li>
+<li><a href="#the-for-statement"><em>for-statement</em></a></li>
+<li><a href="#the-foreach-statement"><em>foreach-statement</em></a></li>
+</ul>
+<h2 id="the-while-statement">The <code>while</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>while-statement:</i>
+    while  (  <i>expression</i>  )  <i>statement</i>
+    while  (  <i>expression</i>  )  :   <i>statement-list</i>  endwhile ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The two forms of the <code>while</code> statement are equivalent; they simply provide
+alternate styles.</p>
+<p>The result of the controlling expression <em>expression</em> is <a href="08-conversions.html#converting-to-boolean-type">converted to type <code>bool</code></a>
+if it does not have this type.</p>
+<p>If <em>expression</em> tests <code>TRUE</code>, the <em>statement</em> that follows immediately is
+executed, and the process is repeated. If <em>expression</em> tests <code>FALSE</code>,
+control transfers to the point immediately following the end of the
+<code>while</code> statement. The loop body is executed zero or more
+times.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (<span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">10</span>):
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t&quot;</span>.(<span class="hljs-variable">$i</span> * <span class="hljs-variable">$i</span>).<span class="hljs-string">&quot;\n&quot;</span>; <span class="hljs-comment">// output a table of squares</span>
+  ++<span class="hljs-variable">$i</span>;
+<span class="hljs-keyword">endwhile</span>;
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">TRUE</span>)
+{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$done</span>)
+    <span class="hljs-keyword">break</span>;  <span class="hljs-comment">// break out of the while loop</span>
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h2 id="the-do-statement">The <code>do</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>do-statement:</i>
+    do  <i>statement</i>  while  (  <i>expression</i>  )  ;
+</pre>
+
+<p>(Note: There is no alternate syntax).</p>
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The controlling expression <em>expression</em> must have type <code>bool</code> or be
+implicitly convertible to that type.</p>
+<p><strong>Semantics</strong></p>
+<p>First, <em>statement</em> is executed and then <em>expression</em> is evaluated.</p>
+<p>The result of the controlling expression <em>expression</em> is <a href="08-conversions.html#converting-to-boolean-type">converted to type <code>bool</code></a>
+if it does not have this type.</p>
+<p>If the value tests <code>TRUE</code>, the process is repeated. If <em>expression</em> tests <code>FALSE</code>,
+control transfers to the point immediately following the end of the <code>do</code>
+statement. The loop body, <em>statement</em>, is executed one or more times.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">do</span>
+{
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t&quot;</span>.(<span class="hljs-variable">$i</span> * <span class="hljs-variable">$i</span>).<span class="hljs-string">&quot;\n&quot;</span>; <span class="hljs-comment">// output a table of squares</span>
+  ++<span class="hljs-variable">$i</span>;
+}
+<span class="hljs-keyword">while</span> (<span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">10</span>);
+</code></pre>
+<h2 id="the-for-statement">The <code>for</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>for-statement:</i>
+    for   (   <i>for-initializer<sub>opt</sub></i>   ;   <i>for-control<sub>opt</sub></i>   ;   <i>for-end-of-loop<sub>opt</sub></i>   )   <i>statement</i>
+    for   (   <i>for-initializer<sub>opt</sub></i>   ;   <i>for-control<sub>opt</sub></i>   ;   <i>for-end-of-loop<sub>opt</sub></i>   )   :   <i>statement-list</i>   endfor   ;
+
+  <i>for-initializer:</i>
+    <i>for-expression-group</i>
+
+  <i>for-control:</i>
+    <i>for-expression-group</i>
+
+  <i>for-end-of-loop:</i>
+    <i>for-expression-group</i>
+
+  <i>for-expression-group:</i>
+    <i>expression</i>
+    <i>for-expression-group</i>   ,   <i>expression</i>
+</pre>
+
+<p>Note: Unlike C/C++, PHP does not support a comma operator, per se.
+However, the syntax for the <code>for</code> statement has been extended from that of
+C/C++ to achieve the same results in this context.</p>
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>The two forms of the <code>for</code> statement are equivalent; they simply provide
+alternate styles.</p>
+<p>The group of expressions in <em>for-initializer</em> is evaluated once,
+left-to-right, for their side effects. Then the group of expressions in
+<em>for-control</em> is evaluated left-to-right (with all but the right-most
+one for their side effects only), with the right-most expression&apos;s value
+being <a href="08-conversions.html#converting-to-boolean-type">converted to type <code>bool</code></a>.
+If the result is <code>TRUE</code>, <em>statement</em> is executed, and the group
+of expressions in <em>for-end-of-loop</em> is evaluated left-to-right, for
+their side effects only. Then the process is repeated starting with
+<em>for-control</em>. Once the right-most expression in <em>for-control</em> is
+<code>FALSE</code>, control transfers to the point immediately following the end of
+the <code>for</code> statement. The loop body, <em>statement</em>, is executed zero or more
+times.</p>
+<p>If <em>for-initializer</em> is omitted, no action is taken at the start of the
+loop processing. If <em>for-control</em> is omitted, this is treated as if
+<em>for-control</em> was an expression with the value <code>TRUE</code>. If
+<em>for-end-of-loop</em> is omitted, no action is taken at the end of each
+iteration.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">10</span>; ++<span class="hljs-variable">$i</span>)
+{
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t&quot;</span>.(<span class="hljs-variable">$i</span> * <span class="hljs-variable">$i</span>).<span class="hljs-string">&quot;\n&quot;</span>; <span class="hljs-comment">// output a table of squares</span>
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">// omit 1st and 3rd expressions</span>
+
+<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">for</span> (; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">10</span>;):
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t&quot;</span>.(<span class="hljs-variable">$i</span> * <span class="hljs-variable">$i</span>).<span class="hljs-string">&quot;\n&quot;</span>; <span class="hljs-comment">// output a table of squares</span>
+  ++<span class="hljs-variable">$i</span>;
+<span class="hljs-keyword">endfor</span>;
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">// omit all 3 expressions</span>
+
+<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">for</span> (;;)
+{
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$i</span> &gt; <span class="hljs-number">10</span>)
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t&quot;</span>.(<span class="hljs-variable">$i</span> * <span class="hljs-variable">$i</span>).<span class="hljs-string">&quot;\n&quot;</span>; <span class="hljs-comment">// output a table of squares</span>
+  ++<span class="hljs-variable">$i</span>;
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">//  use groups of expressions</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$a</span> = <span class="hljs-number">100</span>, <span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>; ++<span class="hljs-variable">$i</span>, <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">10</span>; ++<span class="hljs-variable">$i</span>, <span class="hljs-variable">$a</span> -= <span class="hljs-number">10</span>)
+{
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i\t$a\n&quot;</span>;
+}
+</code></pre>
+<h2 id="the-foreach-statement">The <code>foreach</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>foreach-statement:</i>
+    foreach  (  <i>foreach-collection-name</i>  as  <i>foreach-key<sub>opt</sub>  foreach-value</i>  )   statement
+    foreach  (  <i>foreach-collection-name</i>  as  <i>foreach-key<sub>opt</sub>  foreach-value</i>  )  :  <i>statement-list</i>  endforeach  ;
+
+  <i>foreach-collection-name</i>:
+    <i>expression</i>
+
+  <i>foreach-key:</i>
+    <i>expression</i>  =&gt;
+
+  <i>foreach-value:</i>
+    &amp;<sub>opt</sub>   <i>expression</i>
+    <i>list-intrinsic</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+<li><a href="10-expressions.html#list"><em>list-intrinsic</em></a></li>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The result of the expression <em>foreach-collection-name</em> must be a
+collection, i.e. either array or object implementing <a href="http://php.net/Traversable" target="_blank">Traversable</a>.</p>
+<p><em>expression</em> in <em>foreach-value</em> and <em>foreach-key</em> should designate a variable.</p>
+<p><strong>Semantics</strong></p>
+<p>The two forms of the <code>foreach</code> statement are equivalent; they simply
+provide alternate styles.</p>
+<p>The <em>foreach</em> statement iterates over the set of elements in the
+collection designated by <em>foreach-collection-name</em>, starting at the
+beginning, executing <em>statement</em> each iteration. On each iteration, if
+the <code>&amp;</code> is present in <em>foreach-value</em>, the variable designated by the
+corresponding <em>expression</em> is made an alias to the current element. If
+the <code>&amp;</code> is omitted, the value of the current element is assigned to the
+corresponding variable. The loop body, <em>statement</em>, is executed zero or
+more times. After the loop terminates, the variable designated by <em>expression</em>
+in <em>foreach-value</em> has the same value as it had after the final iteration, if any.</p>
+<p>If <em>foreach-key</em> is present, the variable designated by its <em>expression</em>
+is assigned the current element&apos;s key value.</p>
+<p>In the <em>list-intrinsic</em> case, a value that is an array is split into
+individual elements.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$colors</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;white&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$colors</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$color</span>):
+    <span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">endforeach</span>;
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$colors</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$key</span> =&gt; <span class="hljs-variable">$color</span>)
+{
+    <span class="hljs-comment">// ...</span>
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">// Modify the local copy of an element&apos;s value</span>
+
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$colors</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$color</span>)
+{
+  <span class="hljs-variable">$color</span> = <span class="hljs-string">&quot;black&quot;</span>;
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">// Modify the the actual element itself</span>
+
+<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$colors</span> <span class="hljs-keyword">as</span> &amp;<span class="hljs-variable">$color</span>)  <span class="hljs-comment">// note the &amp;</span>
+{
+  <span class="hljs-variable">$color</span> = <span class="hljs-string">&quot;black&quot;</span>;
+}
+</code></pre>
+<h2 id="jump-statements">Jump Statements</h2>
+<h3 id="general">General</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>jump-statement:</i>
+    <i>goto-statement</i>
+    <i>continue-statement</i>
+    <i>break-statement</i>
+    <i>return-statement</i>
+    <i>throw-statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#the-goto-statement"><em>goto-statement</em></a></li>
+<li><a href="#the-continue-statement"><em>continue-statement</em></a></li>
+<li><a href="#the-break-statement"><em>break-statement</em></a></li>
+<li><a href="#the-return-statement"><em>return-statement</em></a></li>
+<li><a href="#the-throw-statement"><em>throw-statement</em></a></li>
+</ul>
+<h3 id="the-goto-statement">The <code>goto</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>goto-statement:</i>
+    goto  <i>name</i>  ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The name in a <code>goto</code> statement must be that of a <a href="#labeled-statements">named label</a> located
+somewhere in the current script. Control must not be transferred into or
+out of a function, or into an <a href="#iteration-statements">iteration statement</a> or a <a href="#the-switch-statement"><code>switch</code>
+statement</a>.</p>
+<p>A <code>goto</code> statement must not attempt to transfer control out of a
+<a href="#the-try-statement">finally-block</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>A <code>goto</code> statement transfers control unconditionally to the <a href="#labeled-statements">named label</a>.</p>
+<p>A <code>goto</code> statement may break out of a construct that is fully contained
+within a <a href="#the-try-statement">finally-block</a>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP">function findValue($table, $v)  // where $table is 2x3 array
+{
+  for ($row = 0; $row &lt;= 1; ++$row)
+  {
+    for ($colm = 0; $colm &lt;= 2; ++$colm)
+    {
+      if ($table[$row][$colm] == $v)
+      {
+        echo &quot;$v was found at row $row, column $colm\n&quot;;
+        goto done; // not quite the same as break 2!
+      }
+    }
+  }
+  echo &quot;$v was not found\n&quot;;
+done:
+  ; // note that a label must always precede a statement
+}
+</code></pre>
+<h3 id="the-continue-statement">The <code>continue</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>continue-statement:</i>
+    continue   <i>breakout-level<sub>opt</sub></i>  ;
+
+  <i>breakout-level:</i>
+    <i>integer-literal</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#integer-literals"><em>integer-literal</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The breakout level must be greater than zero, and it must not exceed the level of
+actual enclosing iteration and/or <code>switch</code> statements.</p>
+<p>A <code>continue</code> statement must not attempt to break out of a <a href="#the-try-statement">finally-block</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>A <code>continue</code> statement terminates the execution of the innermost enclosing
+<a href="#iteration-statements">iteration</a> or <a href="#the-switch-statement"><code>switch</code></a> statement.
+<em>breakout-level</em> specifies which of these statements is targeted, with innermost being assigned
+number <code>1</code> and containing statements having levels increasing by 1.</p>
+<p>A <code>continue</code> statement terminates the execution of one or more enclosing
+<a href="#iteration-statements">iteration</a> or <a href="#the-switch-statement"><code>switch</code></a> statements,
+up to the specified level. If the statement at the <em>breakout-level</em> is an iteration statement,
+the next iteration (if any) of the next innermost enclosing iteration or switch statement is started.
+If that statement is a <code>for</code> statement and it has a <em>for-end-of-loop</em>, its
+end-of-loop expression group for the current iteration is evaluated first. If
+<em>breakout-level</em> is omitted, a level of 1 is assumed.</p>
+<p>A <code>continue</code> statement may break out of a construct that is fully
+contained within a finally-block.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">5</span>; ++<span class="hljs-variable">$i</span>)
+{
+  <span class="hljs-keyword">if</span> ((<span class="hljs-variable">$i</span> % <span class="hljs-number">2</span>) == <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">continue</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$i is odd\n&quot;</span>;
+}
+</code></pre>
+<h3 id="the-break-statement">The <code>break</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>break-statement:</i>
+    break  <i>breakout-level<sub>opt</sub></i>  ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#the-continue-statement"><em>breakout-level</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The breakout level must be greater than zero, and it must not exceed the level of
+actual enclosing iteration and/or <code>switch</code> statements.</p>
+<p>A <code>break</code> statement must not attempt to break out of a <a href="#the-try-statement">finally-block</a>.</p>
+<p><strong>Semantics</strong></p>
+<p>A <code>break</code> statement terminates the execution of one or more enclosing
+<a href="#iteration-statements">iteration</a> or <a href="#the-switch-statement">]<code>switch</code></a> statements. The number of levels
+broken out is specified by <em>breakout-level</em>. If <em>breakout-level</em> is
+omitted, a level of 1 is assumed.</p>
+<p>A <code>break</code> statement may break out of a construct that is fully contained
+within a finally-block.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-variable">$i</span> = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">for</span> (;;)
+{
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$i</span> &gt; <span class="hljs-number">10</span>)
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-comment">// ...</span>
+  ++<span class="hljs-variable">$i</span>;
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$row</span> = <span class="hljs-number">0</span>; <span class="hljs-variable">$row</span> &lt;= <span class="hljs-number">1</span>; ++<span class="hljs-variable">$row</span>)
+{
+  <span class="hljs-keyword">for</span> (<span class="hljs-variable">$colm</span> = <span class="hljs-number">0</span>; <span class="hljs-variable">$colm</span> &lt;= <span class="hljs-number">2</span>; ++<span class="hljs-variable">$colm</span>)
+  {
+    <span class="hljs-keyword">if</span> (some-condition-set)
+    {
+      <span class="hljs-keyword">break</span> <span class="hljs-number">2</span>;
+    }
+    <span class="hljs-comment">// ...</span>
+  }
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">10</span>; <span class="hljs-variable">$i</span> &lt;= <span class="hljs-number">40</span>; <span class="hljs-variable">$i</span> +=<span class="hljs-number">10</span>)
+{
+        <span class="hljs-keyword">switch</span>(<span class="hljs-variable">$i</span>)
+        {
+        <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>: <span class="hljs-comment">/* ... */</span>; <span class="hljs-keyword">break</span>;    <span class="hljs-comment">// breaks to the end of the switch</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">20</span>: <span class="hljs-comment">/* ... */</span>; <span class="hljs-keyword">break</span> <span class="hljs-number">2</span>;  <span class="hljs-comment">// breaks to the end of the for</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">30</span>: <span class="hljs-comment">/* ... */</span>; <span class="hljs-keyword">break</span>;    <span class="hljs-comment">// breaks to the end of the switch</span>
+        }
+}
+</code></pre>
+<h3 id="the-return-statement">The <code>return</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>return-statement:</i>
+    return  <i>expression<sub>opt</sub></i>  ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>A <code>return</code> statement from within a function terminates the execution of
+that function normally, and depending on how the <a href="13-functions.html#function-calls">function was defined</a>,
+it returns the value of <em>expression</em> to the function&apos;s caller
+by value or byRef. If <em>expression</em> is omitted the value <code>NULL</code> is used.</p>
+<p>If execution flows into the closing brace (<code>}</code>) of a function, <code>return
+NULL;</code> is implied.</p>
+<p>Explicit <code>return</code> statements with <em>expression</em> given are not permitted within a
+function with a <code>void</code> <a href="13-functions.html#return-typing">return type</a> and cause
+a fatal error.</p>
+<p>A function may have any number of <code>return</code> statements, whose returned
+values may have different types.</p>
+<p>If an undefined variable is returned byRef, that variable becomes
+defined, with a value of <code>NULL</code>.</p>
+<p>A <code>return</code> statement is permitted in a <a href="#the-try-statement">try-block</a>
+and a <a href="#the-try-statement">catch-block</a> and in <a href="#the-try-statement">finally-block</a>.</p>
+<p>Using a <code>return</code> statement inside a finally-block will override any other
+<code>return</code> statement or thrown exception from the try-block and all its
+catch-blocks. Code execution in the parent stack will continue as if
+the exception was never thrown.</p>
+<p>If an uncaught exception exists when a finally-block is executed, if
+that finally-block executes a <code>return</code> statement, the uncaught exception
+is discarded.</p>
+<p>A <code>return</code> statement may occur in a script outside any function. In an <a href="10-expressions.html#general-6">included file</a>,
+such statement terminates processing of that script file and
+returns control to the including file. If <em>expression</em> is present, that
+is the value returned; otherwise, the value <code>NULL</code> is returned. If
+execution flows to the end of the script, <code>return 1;</code> is implied. However,
+if execution flows to the end of the top level of a script, <code>return 0;</code> is
+implied. Likewise, if <em>expression</em> is omitted at the top level. (See also
+<a href="10-expressions.html#exitdie"><code>exit</code></a>).</p>
+<p>Returning from a constructor or destructor behaves just like returning
+from a function.</p>
+<p>A <code>return</code> statement inside a <a href="10-expressions.html#yield-operator">generator function</a> causes the generator to
+terminate.</p>
+<p>A generator function can contain a statement of the form <code>return</code> <em>expression</em> <code>;</code>. The value this returns
+can be fetched using the method <code>Generator::getReturn</code>, which can only be called once the generator
+has finishing yielding values. The value cannot be returned byRef.</p>
+<p>Return statements can also be used in the body of anonymous functions.</p>
+<p><code>return</code> also terminates the execution of source code given to the intrinsic
+<a href="10-expressions.html#eval"><code>eval</code></a>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-number">100</span>; }  <span class="hljs-comment">// f explicitly returns a value</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">g</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span>; }   <span class="hljs-comment">// g explicitly returns an implicit NULL</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">h</span><span class="hljs-params">()</span> </span>{ }      <span class="hljs-comment">// h implicitly returns NULL</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-comment">// j returns one of three dissimilarly-typed values</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">j</span><span class="hljs-params">(<span class="hljs-variable">$x</span>)</span>
+</span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$x</span> &gt; <span class="hljs-number">0</span>)
+  {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Positive&quot;</span>;
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-variable">$x</span> &lt; <span class="hljs-number">0</span>)
+  {
+    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+  }
+  <span class="hljs-comment">// for zero, implied return NULL</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> &amp;<span class="hljs-title">compute</span><span class="hljs-params">()</span> </span>{ ...; <span class="hljs-keyword">return</span> <span class="hljs-variable">$value</span>; } <span class="hljs-comment">// returns $value byRef</span>
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>
+</span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$pointCount</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPointCount</span><span class="hljs-params">()</span>
+  </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>::<span class="hljs-variable">$pointCount</span>;
+  }
+  ...
+}
+</code></pre>
+<p><strong>Implementation Notes</strong></p>
+<p>Although <em>expression</em> is a <a href="10-expressions.html#general">full expression</a>, and there is a
+<a href="10-expressions.html#general">sequence point</a> at the end of that expression,
+a side effect need not be executed if it can be determined that
+no other program code relies on its having happened. (For example, in
+the cases of <code>return $a++;</code> and <code>return ++$a;</code>, it is obvious what value
+must be returned in each case, but if <code>$a</code> is a variable local to the
+enclosing function, <code>$a</code> need not actually be incremented.</p>
+<h3 id="the-throw-statement">The <code>throw</code> Statement</h3>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>throw-statement:</i>
+    throw  <i>expression</i>  ;
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="10-expressions.html#general-6"><em>expression</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The type of <em>expression</em> must be <a href="17-exception-handling.html#class-exception">Exception</a> or a subclass of that
+class.</p>
+<p><em>expression</em> must be such that an alias to it can be created.</p>
+<p><strong>Semantics</strong></p>
+<p>A <code>throw</code> statement throws an exception immediately and unconditionally.
+Control never reaches the statement immediately following the throw. See
+<a href="17-exception-handling.html#general">exception handling</a> and <a href="#the-try-statement">try-statement</a>
+for more details of throwing and catching exceptions, and how uncaught exceptions are dealt with.</p>
+<p>Rather than handle an exception, a catch-block may (re-)throw the same
+exception that it caught, or it can throw an exception of a different
+type.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>;
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>(<span class="hljs-string">&quot;Some message&quot;</span>, <span class="hljs-number">123</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span> </span>{ ... }
+<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> MyException;
+</code></pre>
+<h2 id="the-try-statement">The <code>try</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>try-statement:</i>
+    try  <i>compound-statement   catch-clauses</i>
+    try  <i>compound-statement   finally-clause</i>
+    try  <i>compound-statement   catch-clauses   finally-clause</i>
+
+  <i>catch-clauses:</i>
+    <i>catch-clause</i>
+    <i>catch-clauses   catch-clause</i>
+
+  <i>catch-clause:</i>
+    catch  (  <i>qualified-name</i> <i>variable-name</i> )  <i>compound-statement</i>
+
+  <i>finally-clause:</i>
+    finally   <i>compound-statement</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#compound-statements"><em>compound-statement</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>variable-name</em></a></li>
+<li><a href="09-lexical-structure.html#names"><em>qualified-name</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>In a <em>catch-clause</em>, <em>parameter-declaration-list</em> must contain only one
+parameter, and its type must be <a href="17-exception-handling.html#class-exception"><code>Exception</code></a> or a type derived from
+that class, and that parameter must not be passed byRef.</p>
+<p><strong>Semantics</strong></p>
+<p>In a <em>catch-clause</em>, <em>variable-name</em> designates an <em>exception variable</em>
+passed in by value. This variable corresponds to a local variable with a
+scope that extends over the catch-block. During execution of the
+catch-block, the exception variable represents the exception currently
+being handled.</p>
+<p>Once an exception is thrown, the Engine searches for the nearest
+catch-block that can handle the exception. The process begins at the
+current function level with a search for a try-block that lexically
+encloses the throw point. All catch-blocks associated with that
+try-block are considered in lexical order. If no catch-block is found
+that can handle the run-time type of the exception, the function that
+called the current function is searched for a lexically enclosing
+try-block that encloses the call to the current function. This process
+continues until a catch-block is found that can handle the current
+exception.</p>
+<p>The matching is done by considering the class specified by <em>qualified-name</em>
+and comparing it to the type of the exception. If the exception is an
+<a href="10-expressions.html#instanceof-operator">instance of</a> this class then the clause matches.</p>
+<p>If a matching catch-block is located, the Engine prepares to transfer
+control to the first statement of that catch-block. However, before
+execution of that catch-block can start, the Engine first executes, in
+order, any finally-blocks associated with try-blocks nested more deeply
+than the one that caught the exception.</p>
+<p>If no matching catch-block is found, the exception is uncaught and the behavior is
+implementation-defined.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTextLines</span><span class="hljs-params">(<span class="hljs-variable">$filename</span>)</span>
+</span>{
+  <span class="hljs-variable">$infile</span> = fopen(<span class="hljs-variable">$filename</span>, <span class="hljs-string">&apos;r&apos;</span>);
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$infile</span> == <span class="hljs-keyword">FALSE</span>) { <span class="hljs-comment">/* deal with an file-open failure */</span> }
+  <span class="hljs-keyword">try</span>
+  {
+    <span class="hljs-keyword">while</span> (<span class="hljs-variable">$textLine</span> = fgets(<span class="hljs-variable">$infile</span>))  <span class="hljs-comment">// while not EOF</span>
+    {
+      <span class="hljs-keyword">yield</span> <span class="hljs-variable">$textLine</span>;  <span class="hljs-comment">// leave line terminator attached</span>
+    }
+  }
+  <span class="hljs-keyword">finally</span>
+  {
+    fclose(<span class="hljs-variable">$infile</span>);
+  }
+}
+<span class="hljs-comment">// -----------------------------------------</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeviceException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span> </span>{ ... }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DiskException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DeviceException</span> </span>{ ... }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RemovableDiskException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DiskException</span> </span>{ ... }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FloppyDiskException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">RemovableDiskException</span> </span>{ ... }
+
+<span class="hljs-keyword">try</span>
+{
+  process(); <span class="hljs-comment">// call a function that might generate a disk-related exception</span>
+}
+<span class="hljs-keyword">catch</span> (FloppyDiskException <span class="hljs-variable">$fde</span>) { ... }
+<span class="hljs-keyword">catch</span> (RemovableDiskException <span class="hljs-variable">$rde</span>) { ... }
+<span class="hljs-keyword">catch</span> (DiskException <span class="hljs-variable">$de</span>) { ... }
+<span class="hljs-keyword">catch</span> (DeviceException <span class="hljs-variable">$dve</span>) { ... }
+<span class="hljs-keyword">finally</span> { ... }
+</code></pre>
+<h2 id="the-declare-statement">The <code>declare</code> Statement</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>declare-statement:</i>
+    declare  (  <i>declare-directive</i>  )  <i>statement</i>
+    declare  (  <i>declare-directive</i>  )  :  <i>statement-list</i>  enddeclare  ;
+    declare  (  <i>declare-directive</i>  )  ;
+
+  <i>declare-directive:</i>
+    ticks  =  <i>literal</i>
+    encoding  =  <i>literal</i>
+    strict_types  =  <i>literal</i>
+
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="#general"><em>statement</em></a></li>
+<li><a href="#compound-statements"><em>statement-list</em></a></li>
+<li><a href="09-lexical-structure.html#literals"><em>literal</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The literal for <em>ticks</em> must designate a value that is, or can be converted, to an
+integer having a non-negative value.</p>
+<p>The literal for <em>encoding</em> must designate a string whose value names an
+8-bit-<a href="http://en.wikipedia.org/wiki/Character_encoding" target="_blank">character
+encoding</a>.</p>
+<p>Except for white space, a <em>declare-statement</em> in a script that specifies
+<em>character-encoding</em> must be the first thing in that script.</p>
+<p>The literal for <em>strict_types</em> should be either <code>0</code> or <code>1</code>. Only the statement-less
+form can be used for <em>strict_types</em> declare. The <em>strict_types</em> declare should be the first statement
+in the script, excepting other declare statements.</p>
+<p><strong>Semantics</strong></p>
+<p>The first two forms of the <code>declare</code> statement are equivalent; they simply
+provide alternate styles.</p>
+<p>The <code>declare</code> statement sets an <em>execution directive</em> for its <em>statement</em>
+body, or for the <code>;</code>-form, for the remainder of the script or until the
+statement is overridden by another <em>declare-statement</em>, whichever comes
+first.</p>
+<p><em>ticks</em>: as the parser is executing, certain statements are considered
+<em>tickable</em>. For every <em>tick-count</em> ticks, an event occurs, which can be
+serviced by the function previously registered by the library function
+<a href="http://php.net/manual/function.register-tick-function.php" target="_blank"><code>register_tick_function</code></a>.
+Tick event monitoring can be disabled by calling the library function
+<a href="http://php.net/manual/function.unregister-tick-function.php" target="_blank"><code>unregister_tick_function</code></a>.
+This facility allows a profiling mechanism to be developed.</p>
+<p><em>encoding</em>: character encoding can be specified on a script-by-script basis using
+the encoding directive. The joint ISO and IEC standard <a href="http://en.wikipedia.org/wiki/ISO/IEC_8859" target="_blank">ISO/IEC
+8859 standard series</a>
+specifies a number of 8-bit-<a href="http://en.wikipedia.org/wiki/Character_encoding" target="_blank">character
+encodings</a> whose names
+can be used with this directive.
+This directive applies only to the file it appears in, and does not affect the included files.</p>
+<p><em>strict_types</em>: if set to <code>1</code>, scalar type checking for function calls will be
+checked using <a href="13-functions.html#type-check-modes">strict mode</a>. If set to <code>0</code>, the coercive mode (default) is used.
+This directive applies only to the file it appears in, and does not affect the included files.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">declare</span>(ticks = <span class="hljs-number">1</span>) { ... }
+<span class="hljs-keyword">declare</span>(encoding = <span class="hljs-string">&apos;ISO-8859-1&apos;</span>); <span class="hljs-comment">// Latin-1 Western European</span>
+<span class="hljs-keyword">declare</span>(encoding = <span class="hljs-string">&apos;ISO-8859-5&apos;</span>); <span class="hljs-comment">// Latin/Cyrillic</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/10-expressions.html" class="navigation navigation-prev " aria-label="Previous page: 10-expressions.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/12-arrays.html" class="navigation navigation-next " aria-label="Next page: 12-arrays.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

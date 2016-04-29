@@ -1,0 +1,660 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>16-traits.md | PHP Language Specifications</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../spec/17-exception-handling.html" />
+    
+    
+    <link rel="prev" href="../spec/15-interfaces.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.16"
+        data-chapter-title="16-traits.md"
+        data-filepath="spec/16-traits.md"
+        data-basepath=".."
+        data-revision="Fri Apr 29 2016 18:07:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本书
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="spec.html">
+            
+                
+                    <a href="../spec.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        语法篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="spec/01-introduction.html">
+            
+                
+                    <a href="../spec/01-introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        介绍.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="spec/02-conformance.html">
+            
+                
+                    <a href="../spec/02-conformance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        一致性.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="spec/03-terms-and-definitions.html">
+            
+                
+                    <a href="../spec/03-terms-and-definitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        03-terms-and-definitions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="spec/04-basic-concepts.html">
+            
+                
+                    <a href="../spec/04-basic-concepts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        04-basic-concepts.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="spec/05-types.html">
+            
+                
+                    <a href="../spec/05-types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        05-types.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="spec/06-constants.html">
+            
+                
+                    <a href="../spec/06-constants.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        06-constants.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="spec/07-variables.html">
+            
+                
+                    <a href="../spec/07-variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        07-variables.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="spec/08-conversions.html">
+            
+                
+                    <a href="../spec/08-conversions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        08-conversions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="spec/09-lexical-structure.html">
+            
+                
+                    <a href="../spec/09-lexical-structure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        09-lexical-structure.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="spec/10-expressions.html">
+            
+                
+                    <a href="../spec/10-expressions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        10-expressions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="spec/11-statements.html">
+            
+                
+                    <a href="../spec/11-statements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        11-statements.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="spec/12-arrays.html">
+            
+                
+                    <a href="../spec/12-arrays.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        12-arrays.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="spec/13-functions.html">
+            
+                
+                    <a href="../spec/13-functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        13-functions.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="spec/14-classes.html">
+            
+                
+                    <a href="../spec/14-classes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        14-classes.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="spec/15-interfaces.html">
+            
+                
+                    <a href="../spec/15-interfaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        15-interfaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="spec/16-traits.html">
+            
+                
+                    <a href="../spec/16-traits.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        16-traits.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="spec/17-exception-handling.html">
+            
+                
+                    <a href="../spec/17-exception-handling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        17-exception-handling.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="spec/18-namespaces.html">
+            
+                
+                    <a href="../spec/18-namespaces.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        18-namespaces.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="spec/19-grammar.html">
+            
+                
+                    <a href="../spec/19-grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        19-grammar.md
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="spec/20-bibliography.html">
+            
+                
+                    <a href="../spec/20-bibliography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        20-bibliography.md
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >PHP Language Specifications</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="traits">Traits</h1>
+<h2 id="general">General</h2>
+<p>PHP&apos;s class model allows <a href="14-classes.html#general">single inheritance</a> only with contracts
+being enforced separately via <a href="15-interfaces.html#general">interfaces</a>. A <em>trait</em> can provide
+both implementation and contracts. Specifically, a class can inherit
+from a base class while also using code from one or more traits.
+At the same time, that class can implement contracts from one or more
+interfaces as well as from one or more traits. The use of a trait by a
+class does not involve any inheritance hierarchy, so unrelated classes
+can use the same trait. In summary, a trait is a set of methods and/or
+state information that can be reused.</p>
+<p>Traits are designed to support classes; a trait cannot be instantiated
+directly.</p>
+<p>The members of a trait each have <a href="14-classes.html#general">visibility</a>, which applies once
+they are used by a given class. The class that uses a trait can change
+the visibility of any of that trait&apos;s members, by either widening or
+narrowing that visibility. For example, a private trait member can be
+made public in the using class, and a public trait member can be made
+private in that class.</p>
+<p>Once implementation comes from both a base class and one or more traits,
+name conflicts can occur. However, trait usage provides the means for
+disambiguating such conflicts. Names gotten from a trait can also be
+given aliases.</p>
+<p>A class member with a given name overrides one with the same name in any
+traits that class uses, which, in turn, overrides any such name from
+base classes.</p>
+<p>Traits can contain both instance and static members, including both
+methods and properties. In the case of a trait with a static property,
+each class using that trait has its own instance of that property.</p>
+<p>Methods in a trait have full access to all members of any class in which
+that trait is used.</p>
+<h2 id="trait-declarations">Trait Declarations</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>trait-declaration:</i>
+    trait   <i>name</i>   {   trait-member-declarations<sub>opt</sub>   }
+
+  <i>trait-member-declarations:</i>
+    <i>trait-member-declaration</i>
+    <i>trait-member-declarations   trait-member-declaration</i>
+
+  <i>trait-member-declaration:</i>
+    <i>property-declaration</i>
+    <i>method-declaration</i>
+    <i>constructor-declaration</i>
+    <i>destructor-declaration</i>
+    <i>trait-use-clauses</i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="14-classes.html#properties"><em>property-declaration</em></a></li>
+<li><a href="14-classes.html#methods"><em>method-declaration</em></a></li>
+<li><a href="14-classes.html#constructors"><em>constructor-declaration</em></a></li>
+<li><a href="14-classes.html#destructors"><em>destructor-declaration</em></a></li>
+<li><a href="#trait-uses"><em>trait-use-clauses</em></a></li>
+</ul>
+<p><strong>Semantics</strong></p>
+<p>A <em>trait-declaration</em> defines a named set of members, which are made
+available to any class that uses that trait.</p>
+<p>Trait names are case-insensitive.</p>
+<p>The members of a trait are those specified by its <em>trait-member-declaration</em>
+clauses, and members imported from any other traits using <em>trait-use-clauses</em>.</p>
+<p>A trait may contain the following members:</p>
+<ul>
+<li><a href="14-classes.html#properties">Properties</a> &#x2013; the variables made available to the class in which the
+trait is used.</li>
+<li><a href="14-classes.html#methods">Methods</a> &#x2013; the computations and actions that can be performed by the
+class in which the trait is used.</li>
+<li><a href="14-classes.html#constructors">Constructor</a> &#x2013; the actions required to initialize an instance of the
+class in which the trait is used.</li>
+<li><a href="14-classes.html#destructors">Destructor</a> &#x2013; the actions to be performed when an instance of the
+class in which the trait is used is no longer needed.</li>
+</ul>
+<p>If a member has no explicit visibility, <code>public</code> is assumed.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">trait</span> T
+{
+  <span class="hljs-keyword">private</span> <span class="hljs-variable">$prop1</span> = <span class="hljs-number">1000</span>;
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">static</span> <span class="hljs-variable">$prop2</span>;
+  <span class="hljs-keyword">var</span> <span class="hljs-variable">$prop3</span>;
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compute</span><span class="hljs-params">( ... )</span> </span>{ ... }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getData</span><span class="hljs-params">( ... )</span> </span>{ ... }
+}
+</code></pre>
+<h2 id="trait-uses">Trait Uses</h2>
+<p><strong>Syntax</strong></p>
+<pre>
+  <i>trait-use-clauses:</i>
+    <i>trait-use-clause</i>
+    <i>trait-use-clauses   trait-use-clause</i>
+
+  <i>trait-use-clause:</i>
+    use   <i>trait-name-list   trait-use-specification</i>
+
+  <i>trait-name-list:</i>
+    <i>qualified-name</i>
+    <i>trait-name-list</i>   ,   <i>qualified-name</i>
+
+  <i>trait-use-specification:</i>
+    ;
+    {   <i>trait-select-and-alias-clauses<sub>opt</sub></i>   }
+
+  <i>trait-select-and-alias-clauses:</i>
+    <i>trait-select-and-alias-clause</i>
+    <i>trait-select-and-alias-clauses   trait-select-and-alias-clause</i>
+
+  <i>trait-select-and-alias-clause:</i>
+    <i>trait-select-insteadof-clause</i> ;
+    <i>trait-alias-as-clause</i> ;
+
+  <i>trait-select-insteadof-clause:</i>
+    <i>name</i>   insteadof   <i>name</i>
+
+  <i>trait-alias-as-clause:</i>
+    <i>name</i>   as   <i>visibility-modifier<sub>opt</sub>   name</i>
+    <i>name</i>   as   <i>visibility-modifier   name<sub>opt</sub></i>
+</pre>
+
+<p><strong>Defined elsewhere</strong></p>
+<ul>
+<li><a href="09-lexical-structure.html#names"><em>name</em></a></li>
+<li><a href="14-classes.html#properties"><em>visibility-modifier</em></a></li>
+</ul>
+<p><strong>Constraints</strong></p>
+<p>The <em>name</em> items in <em>trait-name-list</em> must designate trait names, excluding
+the name of the trait being declared.</p>
+<p>The left-hand <em>name</em> in <em>trait-select-insteadof-clause</em> must
+unambiguously designate a member of a trait made available by
+<em>trait-use-clauses</em>. The right-hand <em>name</em> in
+<em>trait-select-insteadof-clause</em> must unambiguously designate a trait
+made available by <em>trait-use-clauses</em>.</p>
+<p>The left-hand <em>name</em> in <em>trait-alias-as-clause</em> must unambiguously
+designate a member of a trait made available by <em>trait-use-clauses</em>.
+The right-hand <em>name</em> in <em>trait-alias-as-clause</em> must be a new,
+unqualified name.</p>
+<p><strong>Semantics</strong></p>
+<p><em>trait-use-clauses</em> can be used as part of <em>trait-member-declarations</em>
+or <em>class-member-declarations</em> to import members of a trait into a
+different trait or a class. This is done via one or more <em>trait-use-clause</em>
+items, each of which contains a comma-separated list of trait names.
+A <em>trait-use-clause</em> list ends in a semicolon or a brace-delimited set of
+<em>trait-select-insteadof-clause</em> and <em>trait-alias-as-clause</em> statements.</p>
+<p>A <em>trait-select-insteadof-clause</em> allows to avoid name clashes.
+Specifically, the left-hand <em>name</em> designates which name to be used from
+of a pair of names. That is, <code>T1::compute insteadof T2</code>; indicates that
+calls to method compute, for example, should be satisfied by a method of
+that name in trait <code>T1</code> rather than <code>T2</code>.</p>
+<p>A <em>trait-alias-as-clause</em> allows a (possibly qualified) name to be
+assigned a simple alias name. Specifically, the left-hand <em>name</em> in
+<em>trait-alias-as-clause</em> designates a name made available by
+<em>trait-use-clauses</em> - that is to be aliased, and the right-hand <em>name</em>
+is the alias.</p>
+<p>If <em>trait-alias-as-clause</em> contains a visibility-modifier,
+if a right-hand name is provided, the modifier controls the visibility of the alias,
+otherwise, it controls the visibility of the left-hand name.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="lang-PHP"><span class="hljs-keyword">trait</span> T1 { <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compute</span><span class="hljs-params">( ... )</span> </span>{ ... } }
+<span class="hljs-keyword">trait</span> T2 { <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compute</span><span class="hljs-params">( ... )</span> </span>{ ... } }
+<span class="hljs-keyword">trait</span> T3 { <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sort</span><span class="hljs-params">( ... )</span> </span>{ ... } }
+<span class="hljs-keyword">trait</span> T4
+{
+  <span class="hljs-keyword">use</span> <span class="hljs-title">T3</span>;
+  <span class="hljs-keyword">use</span> <span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>
+  {
+    <span class="hljs-title">T1</span>::<span class="hljs-title">compute</span> <span class="hljs-title">insteadof</span> <span class="hljs-title">T2</span>; <span class="hljs-comment">// disambiguate between two computes</span>
+    T3::sort <span class="hljs-keyword">as</span> <span class="hljs-keyword">private</span> sorter; <span class="hljs-comment">// make alias with adjusted visibility</span>
+  }
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../spec/15-interfaces.html" class="navigation navigation-prev " aria-label="Previous page: 15-interfaces.md"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../spec/17-exception-handling.html" class="navigation navigation-next " aria-label="Next page: 17-exception-handling.md"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

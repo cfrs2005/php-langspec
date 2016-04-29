@@ -1,7 +1,6 @@
-#Conformance
-In this specification, "must" is to be interpreted as a requirement on
-an implementation or on a program; conversely, "must not" is to be
-interpreted as a prohibition.
+# 一致性
+
+在这本PHP语法规范中,当描述使用 ＊＊must＊＊ 则代表必须如此实行. ＊＊must not＊＊ 则表示必须不能这么实行你可以理解为禁止
 
 If a "must" or "must not" requirement that appears outside of a
 constraint is violated, the behavior is undefined. Undefined behavior is
@@ -52,4 +51,3 @@ to exist in future revisions. Usually, they are old approaches that have
 been superseded by new ones, and use of the old approach is discouraged.
 (Examples of this include the use of braces ({ }) for subscripting, and
 the use of old-style constructor names).
-
